@@ -1,0 +1,24 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logo {
+    color: $color-white;
+    width: rem(164);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: {
+        top: rem(12);
+        bottom: rem(12);
+    }
+}

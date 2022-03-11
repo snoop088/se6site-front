@@ -1,0 +1,94 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+
+.footer {
+    flex-grow: 0;
+}
+
+.logo {
+    color: $color-brand;
+    width: rem(164);
+    &Wrapper {
+        grid-area: logoWrapper;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        @media (max-width: $phone-v) {
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+.wrapper {
+    display: grid;
+    align-items: center;
+    grid-template-columns: minmax(min-content, max-content) minmax(max-content, 1fr) max-content;
+    // grid-template-columns: 203px minmax(max-content, 1fr) 203px;
+    grid-template-areas:
+        "logoWrapper menu socials"
+        "address ... mailWrapper";
+    gap: 20px 40px;
+    padding: {
+        top: 20px;
+        bottom: 20px;
+    }
+    @media (max-width: $desktop) {
+        grid-template-columns: 1fr max-content;
+        grid-template-areas:
+            "logoWrapper socials"
+            "menu menu"
+            "address mailWrapper";
+    }
+    @media (max-width: $phone-v) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "logoWrapper"
+            "socials"
+            "menu"
+            "address"
+            "mailWrapper";
+    }
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.menu {
+    grid-area: menu;
+    justify-content: center;
+}
+
+.socials {
+    grid-area: socials;
+    justify-content: flex-end;
+    @media (max-width: $phone-v) {
+        justify-content: center;
+    }
+}
+
+.address {
+    grid-area: address;
+    margin: 0;
+    @media (max-width: $phone-v) {
+        text-align: center;
+    }
+}
+
+.mail {
+    font-size: 20px;
+    @media (max-width: $desktop) {
+        font-size: 16px;
+    }
+    &Wrapper {
+        grid-area: mailWrapper;
+        text-align: right;
+        align-self: baseline;
+        @media (max-width: $phone-v) {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+
+.button {
+    @include resetButton;
+    box-shadow: 0px em(10, 22) em(12, 22) rgba($color-black, 0.21);
+    background-color: $color-white;
+    color: $color-accent;
+    font-size: rem(22);
+    padding: em(16, 22) em(26, 22);
+    display: inline-flex;
+    align-items: center;
+    gap: em(10, 22);
+    transition: $transition;
+    &:hover {
+        box-shadow: 0px em(10, 22) em(24, 22) rgba($color-black, 0.35);
+    }
+    @media (max-width: $tablet-v) {
+        font-size: rem(20);
+    }
+    @media (max-width: $phone-v) {
+        font-size: rem(18);
+    }
+}
+
+.icon {
+    width: em(16, 22);
+    height: em(16, 22);
+    fill: currentColor;
+}

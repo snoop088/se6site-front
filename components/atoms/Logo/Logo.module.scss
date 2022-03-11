@@ -1,0 +1,11 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+
+.logo {
+    display: inline-block;
+    &Image {
+        fill: currentColor;
+        width: 100%;
+        height: 100%;
+    }
+}
