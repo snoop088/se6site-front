@@ -1,13 +1,8 @@
-import type { NextPage } from 'next';
-
-import MainContainer from '../components/organisms/MainContainer/MainContainer';
+import type { NextPage } from "next";
+import styles from "./about.module.scss";
 
 const About: NextPage = () => {
-    return (
-        <MainContainer metaDescription='Aboutpage'>
-            <h1>Aboutpage</h1>
-        </MainContainer>
-    );
+  return <div className={styles.container}>About Page</div>;
 };
 
 export default About;

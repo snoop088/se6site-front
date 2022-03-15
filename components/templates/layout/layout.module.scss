@@ -1,0 +1,12 @@
+.container {
+  flex: 1;
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  &.general {
+    display: grid;
+    grid-template-rows: 5rem 1fr 12rem;
+  }
+}
