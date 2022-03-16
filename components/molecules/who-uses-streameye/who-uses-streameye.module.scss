@@ -1,0 +1,22 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+.container {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    color: $color-alt-copy;
+  }
+  .partners {
+    margin: $subsection-margin 0;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @include se6-grid(4, rem(32));
+  }
+}

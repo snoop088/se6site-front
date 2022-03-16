@@ -1,53 +1,75 @@
 @mixin fluid-size($properties, $min-vw, $max-vw, $min-size, $max-size) {
+  @each $property in $properties {
+    #{$property}: $min-size;
+  }
+  @media (min-width: $min-vw) {
     @each $property in $properties {
-        #{$property}: $min-size;
+      #{$property}: calc(
+        #{$min-size} +
+          #{strip-unit($max-size - $min-size)} *
+          (100vw - #{$min-vw}) /
+          #{strip-unit($max-vw - $min-vw)}
+      );
     }
-    @media (min-width: $min-vw) {
-        @each $property in $properties {
-            #{$property}: calc(
-                #{$min-size} +
-                    #{strip-unit($max-size - $min-size)} *
-                    (100vw - #{$min-vw}) /
-                    #{strip-unit($max-vw - $min-vw)}
-            );
-        }
+  }
+  @media (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-size;
     }
-    @media (min-width: $max-vw) {
-        @each $property in $properties {
-            #{$property}: $max-size;
-        }
-    }
+  }
 }
 
 @function em($size, $base-font-size: 16px) {
-    @return strip-unit($size) / strip-unit($base-font-size) * 1em;
+  @return strip-unit($size) / strip-unit($base-font-size) * 1em;
 }
 
 @function rem($size) {
-    $remValue: ($size / 16) + rem;
-    @return $remValue;
+  $remValue: ($size / 16) + rem;
+  @return $remValue;
 }
 
 @function strip-unit($number) {
-    @if type-of($number) == "number" and not unitless($number) {
-        @return $number / ($number * 0 + 1);
-    }
-    @return $number;
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
 }
 
 @mixin resetButton {
-    border: 0;
-    background-color: transparent;
-    padding: 0;
-    cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
 }
 
 @mixin menuLink {
-    font-size: rem(16);
-    text-transform: uppercase;
-    line-height: 1;
-    text-align: center;
-    line-height: 1;
-    position: relative;
-    font-weight: 400;
+  font-size: rem(16);
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  line-height: 1;
+  position: relative;
+  font-weight: 400;
+}
+@mixin se6-grid($cols: 12, $gap: rem(16)) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  gap: $gap;
+}
+@mixin se6-col($cols: 1) {
+  grid-column: auto / span $cols;
+}
+@mixin se6-grid-cols($cols: 1) {
+  @for $col from 1 through $cols {
+    .col-#{$col} {
+      @include se6-col($col);
+    }
+  }
+}
+@mixin se6-cols-list($colList) {
+  @each $col in $colList {
+    .col-#{$col} {
+      @include se6-col($col);
+    }
+  }
 }
