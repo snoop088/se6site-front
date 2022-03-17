@@ -76,3 +76,9 @@ export const WHO_USES_STREAMEYE: {
     },
   ],
 };
+export const WHAT_IS_STREAMEYE = {
+  copyMd:
+    "*Streameye* is a modular, scalable ad content management platform - a SaaS to rapidly generate, update and deploy ads for omni - channel audiences.  \n\nUse Streameye to streamline your ad production, saving valuable employee time, boosting ROI, while making your marketing team more independent.",
+  boldCopy: "Let’s start a conversation today!",
+  cta: "Enquire about your free trial",
+};

@@ -35,7 +35,9 @@ const Footer = ({ menuLinks, socialsItems, address, mail }: Props) => {
         </div>
         <FooterMenu links={menuLinks} className={styles.menu} />
         <FooterSocials items={socialsItems} className={styles.socials} />
-        <p className={styles.address}>{address}</p>
+        <p className={styles.address}>
+          <span>{address}</span>
+        </p>
         <div className={styles.mailWrapper}>
           <a href={`mailto:${mail}`} className={styles.mail}>
             {mail}

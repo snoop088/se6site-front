@@ -1,0 +1,42 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+
+.button {
+  @include resetButton;
+  &.whiteVariant {
+    background-color: $color-white;
+  }
+  &.greenVariant {
+    background-color: $color-brand;
+    color: $color-white;
+    font-size: rem(20);
+    @media (max-width: $phone-v) {
+      font-size: rem(16);
+    }
+  }
+  &.elevated {
+    box-shadow: 0px em(10, 22) em(12, 22) rgba($color-black, 0.21);
+    &:hover {
+      box-shadow: 0px em(10, 22) em(24, 22) rgba($color-black, 0.35);
+    }
+  }
+  color: $color-accent;
+  font-size: rem(22);
+  padding: em(16, 22) em(26, 22);
+  display: inline-flex;
+  align-items: center;
+  gap: em(16, 22);
+  transition: $transition;
+  @media (max-width: $tablet-v) {
+    font-size: rem(20);
+  }
+  @media (max-width: $phone-v) {
+    font-size: rem(18);
+  }
+}
+
+.icon {
+  width: em(16, 22);
+  height: em(16, 22);
+  fill: currentColor;
+}

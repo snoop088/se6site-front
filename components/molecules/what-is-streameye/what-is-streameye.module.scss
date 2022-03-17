@@ -1,0 +1,43 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+.container {
+  display: flex;
+
+  div {
+    flex: 1;
+    padding: 0 2rem;
+    @media (max-width: $tablet-h) {
+      padding: 0 1rem;
+    }
+  }
+  @media (max-width: $tablet-v) {
+    flex-wrap: wrap;
+    div {
+      flex: 1 100%;
+    }
+  }
+  .whatIsSe {
+    margin: 1rem 2rem;
+    em {
+      color: $color-brand;
+      font-style: normal;
+    }
+    p {
+      margin: 2em 0;
+    }
+    h2 {
+      color: $color-accent;
+      @include fluid-size(font-size, $phone-v, $tablet-v, 20px, 24px);
+    }
+    @media (max-width: $tablet-h) {
+      margin: 0 1rem;
+      p {
+        margin: revert;
+      }
+    }
+  }
+  .robotEyeVid {
+    width: 100%;
+    height: auto;
+  }
+}

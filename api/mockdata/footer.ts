@@ -12,10 +12,6 @@ export const FOOTER_MENUS = [
     href: "/showcase",
   },
   {
-    title: "PRICING",
-    href: "/pricing",
-  },
-  {
     title: "ABOUT",
     href: "/about",
   },

@@ -1,8 +1,10 @@
+import { WhatIsStreameye } from "@/components/molecules/what-is-streameye/what-is-streameye";
 import { WhoUsesStreameye } from "@/components/molecules/who-uses-streameye/who-uses-streameye";
 import { WhyStreameye } from "@/components/molecules/why-streameye/why-streameye";
 import Hero from "@/components/organisms/Hero/Hero";
 import {
   HERO_BANNER,
+  WHAT_IS_STREAMEYE,
   WHO_USES_STREAMEYE,
   WHY_STREAMEYE,
 } from "api/mockdata/home";
@@ -34,6 +36,13 @@ const Home: NextPage = () => {
           title={WHO_USES_STREAMEYE.title}
           copy={WHO_USES_STREAMEYE.copy}
           partners={WHO_USES_STREAMEYE.partners}
+        />
+      </div>
+      <div className={styles.whatIsStreameye}>
+        <WhatIsStreameye
+          copyMd={WHAT_IS_STREAMEYE.copyMd}
+          boldCopy={WHAT_IS_STREAMEYE.boldCopy}
+          cta={WHAT_IS_STREAMEYE.cta}
         />
       </div>
     </div>

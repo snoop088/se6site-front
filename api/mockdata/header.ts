@@ -14,10 +14,6 @@ export const HEADER_MENUS: MenuLink[] = [
     href: "/showcase",
   },
   {
-    title: "PRICING",
-    href: "/pricing",
-  },
-  {
     title: "ABOUT",
     href: "/about",
   },

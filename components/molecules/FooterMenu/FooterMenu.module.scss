@@ -2,18 +2,14 @@
 @import "@/styles/variables";
 
 .nav {
-    display: flex;
-    align-items: baseline;
-    gap: rem(10) rem(32);
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap;
-    @media (max-width: $desktop) {
-        gap: rem(10) rem(24);
-    }
-}
-
-.link {
-    @include menuLink;
+  display: flex;
+  align-items: baseline;
+  gap: rem(10) rem(32);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  @media (max-width: $desktop) {
+    gap: rem(10) rem(24);
+  }
 }

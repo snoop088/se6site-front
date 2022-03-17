@@ -11,9 +11,10 @@
     height: 45rem;
   }
   .whyStreameye,
-  .whoUsesStreameye {
+  .whoUsesStreameye,
+  .whatIsStreameye {
     display: flex;
     flex-direction: column;
-    margin-top: $section-margin;
+    @include fluid-size(margin-top, $tablet-v, $desktop, 48px, 96px);
   }
 }

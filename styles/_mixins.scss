@@ -1,22 +1,24 @@
 @mixin fluid-size($properties, $min-vw, $max-vw, $min-size, $max-size) {
   @each $property in $properties {
-    #{$property}: $min-size;
-  }
-  @media (min-width: $min-vw) {
-    @each $property in $properties {
-      #{$property}: calc(
+    #{$property}: clamp(
+      #{$min-size},
+      calc(
         #{$min-size} +
-          #{strip-unit($max-size - $min-size)} *
-          (100vw - #{$min-vw}) /
-          #{strip-unit($max-vw - $min-vw)}
-      );
-    }
+          (
+            #{strip-unit($max-size - $min-size)} *
+              ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+          )
+      ),
+      #{$max-size}
+    );
   }
-  @media (min-width: $max-vw) {
-    @each $property in $properties {
-      #{$property}: $max-size;
-    }
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
   }
+  @return $number;
 }
 
 @function em($size, $base-font-size: 16px) {
@@ -49,7 +51,6 @@
   text-align: center;
   line-height: 1;
   position: relative;
-  font-weight: 400;
 }
 @mixin se6-grid($cols: 12, $gap: rem(16)) {
   display: grid;

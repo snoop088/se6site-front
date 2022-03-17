@@ -25,8 +25,8 @@ export const WhoUsesStreameye = ({
                 alt={partner.name}
                 key={partner.icon}
                 src={partner.icon}
-                width={partner.aspect === "wide" ? 112 : 56}
-                height={56}
+                width={partner.aspect === "wide" ? 144 : 72}
+                height={72}
               />
             </span>
           ))}
