@@ -1,0 +1,29 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+.container {
+  display: flex;
+  align-items: top;
+  figure {
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    margin: 0 2rem 0 0;
+    min-width: 9rem;
+    max-height: 4rem;
+    justify-content: flex-end;
+  }
+  .summary {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+  }
+  a {
+    margin-top: 1rem;
+    color: $color-brand;
+  }
+  .icon {
+    width: em(16, 22);
+    height: em(16, 22);
+    fill: currentColor;
+  }
+}

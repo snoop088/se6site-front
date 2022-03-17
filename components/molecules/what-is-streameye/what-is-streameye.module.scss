@@ -30,13 +30,14 @@
       @include fluid-size(font-size, $phone-v, $tablet-v, 20px, 24px);
     }
     @media (max-width: $tablet-h) {
-      margin: 0 1rem;
+      margin: 0 1rem 1rem 1rem;
       p {
         margin: revert;
       }
     }
   }
   .robotEyeVid {
+    mix-blend-mode: multiply;
     width: 100%;
     height: auto;
   }

@@ -1,11 +1,15 @@
+import { NotConvinced } from "@/components/molecules/not-convinced/not-convinced";
 import { WhatIsStreameye } from "@/components/molecules/what-is-streameye/what-is-streameye";
 import { WhoUsesStreameye } from "@/components/molecules/who-uses-streameye/who-uses-streameye";
+import { WhyIsStreameyeRight } from "@/components/molecules/why-is-streameye-right/why-is-streameye-right";
 import { WhyStreameye } from "@/components/molecules/why-streameye/why-streameye";
 import Hero from "@/components/organisms/Hero/Hero";
 import {
   HERO_BANNER,
+  NOT_CONVINCED,
   WHAT_IS_STREAMEYE,
   WHO_USES_STREAMEYE,
+  WHY_IS_STREAMEYE_RIGHT,
   WHY_STREAMEYE,
 } from "api/mockdata/home";
 import type { NextPage } from "next";
@@ -43,6 +47,20 @@ const Home: NextPage = () => {
           copyMd={WHAT_IS_STREAMEYE.copyMd}
           boldCopy={WHAT_IS_STREAMEYE.boldCopy}
           cta={WHAT_IS_STREAMEYE.cta}
+        />
+      </div>
+      <div className={styles.notConvinced}>
+        <NotConvinced
+          title={NOT_CONVINCED.title}
+          cta={NOT_CONVINCED.cta}
+          caseStudyPreviews={NOT_CONVINCED.caseStudyPreviews}
+        />
+      </div>
+      <div className={styles.whyIsStreameyeRight}>
+        <WhyIsStreameyeRight
+          title={WHY_IS_STREAMEYE_RIGHT.title}
+          copy={WHY_IS_STREAMEYE_RIGHT.copy}
+          cta={WHY_IS_STREAMEYE_RIGHT.cta}
         />
       </div>
     </div>

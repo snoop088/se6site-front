@@ -10,6 +10,9 @@
     background-color: $color-brand;
     color: $color-white;
     font-size: rem(20);
+    &:hover {
+      background-color: #5fc975;
+    }
     @media (max-width: $phone-v) {
       font-size: rem(16);
     }

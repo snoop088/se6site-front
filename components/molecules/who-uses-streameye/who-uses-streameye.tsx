@@ -5,7 +5,7 @@ import Wrapper from "@/components/organisms/Wrapper/Wrapper";
 interface WhoUsesStreameyeProps {
   title: string;
   copy: string;
-  partners: { icon: string; name: string; aspect: "wide" | "sq" }[];
+  partners: { logo: string; name: string; aspect: "wide" | "sq" }[];
 }
 
 export const WhoUsesStreameye = ({
@@ -23,8 +23,8 @@ export const WhoUsesStreameye = ({
             <span key={index}>
               <Image
                 alt={partner.name}
-                key={partner.icon}
-                src={partner.icon}
+                key={partner.logo}
+                src={partner.logo}
                 width={partner.aspect === "wide" ? 144 : 72}
                 height={72}
               />

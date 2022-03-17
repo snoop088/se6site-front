@@ -1,0 +1,32 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+.container {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    text-align: center;
+  }
+  .caseStudyPreviews {
+    margin: $subsection-margin 0 calc(#{$subsection-margin} / 2) 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: $desktop) {
+      justify-content: space-around;
+    }
+
+    .preview {
+      margin-bottom: 2rem;
+      flex: 0 rem(400);
+      padding: 0 1rem;
+      @media (max-width: $desktop) {
+        flex: 0 rem(480);
+      }
+    }
+  }
+  .actionButton {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+}
