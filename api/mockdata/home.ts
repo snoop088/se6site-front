@@ -127,6 +127,6 @@ export const NOT_CONVINCED: {
 };
 export const WHY_IS_STREAMEYE_RIGHT = {
   title: "Why is Streameye the Right Solution For Me?",
-  copy: "Request a call with one of our specialists to see if our creative services are a good fit for your business",
+  copy: "Request a call with one of our specialists to see if our creative services are a good fit for your business.",
   cta: "Talk to us",
 };

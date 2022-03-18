@@ -18,7 +18,7 @@ export const WhatIsStreameye = ({
     <Wrapper className={styles.container}>
       <div className={styles.robotVideo}>
         <video autoPlay loop muted className={styles.robotEyeVid}>
-          <source src="/roboteye.mp4" />
+          <source src="/roboteye_1.mp4" />
         </video>
       </div>
       <div className={styles.whatIsSe}>

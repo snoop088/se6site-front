@@ -9,6 +9,10 @@
     flex-direction: column;
     display: flex;
     height: 45rem;
+    max-height: 70vh;
+    @media (max-width: $tablet-v) {
+      max-height: rem(500);
+    }
   }
   .whyStreameye,
   .whoUsesStreameye,

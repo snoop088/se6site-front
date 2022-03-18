@@ -23,6 +23,12 @@ const Hero = ({ title, buttonTitle, buttonOnClick }: Props) => {
           icon={"button-arrow"}
         />
       </Wrapper>
+      <div className={styles.videoContainer}>
+        <video muted className={styles.heroVideoBanner}>
+          <source src="/video-mock.mp4" />
+        </video>
+      </div>
+      <div className={styles.videoOverlay}></div>
     </div>
   );
 };
