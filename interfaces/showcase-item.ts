@@ -1,7 +1,9 @@
 type AdSize = {
   w: number; // in pixes
   h: number;
-  seId?: string;
+  seId?: string; // if it is an HTML5 banner
+  adUrl?: string; // if it is a builder or a video
+  adType?: "static" | "video";
 };
 export interface IShowcaseItem {
   id: string;

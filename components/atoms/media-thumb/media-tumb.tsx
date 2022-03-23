@@ -25,13 +25,22 @@ export const MediaThumb = ({
           onMouseLeave={() => setShowAnimated(false)}
         >
           {showAnimated && streameyeId && (
-            <iframe
-              src={"https://banners.streameye.net/" + streameyeId}
-              frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              scrolling="no"
-            ></iframe>
+            <>
+              <iframe
+                src={"https://banners.streameye.net/" + streameyeId}
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                scrolling="no"
+              ></iframe>
+              <Image
+                className={styles.loadingAd}
+                src="/loader-puff-dark.svg"
+                width={32}
+                height={32}
+                alt="Loading"
+              />
+            </>
           )}
           {!showAnimated && (
             <figure>

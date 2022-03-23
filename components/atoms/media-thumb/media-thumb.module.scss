@@ -1,7 +1,11 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
 .container {
   width: 100%;
   a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -22,6 +26,10 @@
     }
     iframe {
       z-index: -1;
+    }
+    .loadingAd {
+      z-index: -2;
+      opacity: 0.5;
     }
   }
 }

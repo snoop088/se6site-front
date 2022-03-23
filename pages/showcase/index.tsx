@@ -10,6 +10,9 @@ const Index: NextPage = () => {
   const handleSelectTag = (tag: string | null) => {
     setSelectedTag(tag);
   };
+  const filtered = SHOWCASE_ITEMS.filter(
+    (item) => !selectedTag || item.tags.some((tag) => tag === selectedTag)
+  );
   return (
     <div className={styles.container}>
       <TagFilter
@@ -18,10 +21,7 @@ const Index: NextPage = () => {
         selectedTag={selectedTag}
       />
       <div className={styles.showcaseList}>
-        <ShowcaseList
-          showcaseItems={SHOWCASE_ITEMS}
-          onSelectTag={handleSelectTag}
-        />
+        <ShowcaseList showcaseItems={filtered} onSelectTag={handleSelectTag} />
       </div>
     </div>
   );
