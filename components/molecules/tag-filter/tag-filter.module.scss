@@ -1,0 +1,27 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent
+    linear-gradient(87deg, #288ab5 0%, #6ec0ad 39%, #d6edff 100%) 0% 0%
+    no-repeat padding-box;
+  height: rem(140);
+  .tag {
+    color: $color-accent;
+    margin: 0 1rem;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    height: 2.66rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-color: $color-white;
+    &.active {
+      background-color: #e2f6fa;
+      box-shadow: inset 0px 6px 6px #ffffff;
+      border: 1px solid #ffffff;
+    }
+  }
+}

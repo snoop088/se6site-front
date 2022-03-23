@@ -22,7 +22,7 @@ export const CaseStudyPreview = ({
 }: CaseStudyPreviewProps) => {
   return (
     <div className={styles.container}>
-      <Link href={"casestudies/" + id} passHref>
+      <Link href={"/casestudies/" + id} passHref>
         <figure>
           <Image
             className={styles.image}
@@ -36,7 +36,7 @@ export const CaseStudyPreview = ({
 
       <div className={styles.summary}>
         {summary}
-        <Link href={"casestudies/" + id} passHref>
+        <Link href={"/casestudies/" + id} passHref>
           <a>
             {cta} <Icon icon="button-arrow" className={styles.icon}></Icon>
           </a>

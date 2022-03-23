@@ -23,7 +23,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 66% center;
+      object-position: 85% center;
       @media (max-width: $tablet-v) {
         object-position: 90% center;
       }
@@ -63,7 +63,7 @@
 .title {
   margin: 0;
   font-size: rem(40);
-  @include fluid-size(font-size, $phone-h, $tablet-v, 24px, 40px);
+  @include fluid-size(font-size, $phone-h, $tablet-v, 28px, 40px);
   line-height: 1.4;
   max-width: rem(550);
   color: $color-white;

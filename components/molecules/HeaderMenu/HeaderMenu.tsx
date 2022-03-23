@@ -5,6 +5,7 @@ import HamburgerButton from "@/components/atoms/HamburgerButton/HamburgerButton"
 import cn from "classnames";
 import styles from "./HeaderMenu.module.scss";
 import { MenuLink } from "interfaces/menu-link";
+import { ActivatedLink } from "../activated-link/activated-link";
 
 interface Props {
   links: MenuLink[];
@@ -36,9 +37,13 @@ const HeaderMenu = ({ links }: Props) => {
             [styles.cta]: link.isCta,
           });
           return (
-            <Link href={link.href} key={index}>
+            <ActivatedLink
+              href={link.href}
+              key={index}
+              activeStyle={styles.active}
+            >
               <a className={linkClassNames}>{link.title}</a>
-            </Link>
+            </ActivatedLink>
           );
         })}
       </nav>

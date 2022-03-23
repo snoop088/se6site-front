@@ -24,8 +24,14 @@ const Hero = ({ title, buttonTitle, buttonOnClick }: Props) => {
         />
       </Wrapper>
       <div className={styles.videoContainer}>
-        <video muted className={styles.heroVideoBanner}>
-          <source src="/video-mock.mp4" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={styles.heroVideoBanner}
+        >
+          <source src="/se_site_1920x720_c.mp4" />
         </video>
       </div>
       <div className={styles.videoOverlay}></div>

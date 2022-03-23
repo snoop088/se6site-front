@@ -23,7 +23,6 @@ interface Props {
 }
 
 const Footer = ({ menuLinks, socialsItems, address, mail }: Props) => {
-  const c = useContext(AppContext);
   return (
     <footer className={styles.footer}>
       <Wrapper className={styles.wrapper} isWide>

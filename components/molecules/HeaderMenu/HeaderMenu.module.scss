@@ -2,85 +2,86 @@
 @import "@/styles/variables";
 
 .menu {
-    position: relative;
+  position: relative;
 }
 
 .nav {
-    display: flex;
-    align-items: baseline;
-    gap: rem(32);
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    @media (max-width: $desktop) {
-        gap: rem(24);
+  display: flex;
+  align-items: baseline;
+  gap: rem(32);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  @media (max-width: $desktop) {
+    gap: rem(24);
+  }
+  @media (max-width: $tablet-h) {
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    background-color: $color-white;
+    gap: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: $transition;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
     }
-    @media (max-width: $tablet-h) {
-        position: absolute;
-        right: 0;
-        flex-direction: column;
-        background-color: $color-white;
-        gap: 0;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(10px);
-        transition: $transition;
-        &.active {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(0);
-        }
-    }
+  }
 }
 
 .link {
-    @include menuLink;
-    &:not(.cta):before {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: currentColor;
-        border-radius: 2px;
-        bottom: 0;
-        transform: translateY(8px);
-        opacity: 0;
-        transition: $transition;
-        @media (max-width: $tablet-h) {
-            display: none;
-        }
-    }
-    @media (hover: hover) {
-        &:not(.cta):hover {
-            &:before {
-                transform: translateY(5px);
-                opacity: 1;
-            }
-        }
-    }
+  @include menuLink;
+  &:not(.cta):before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 2px;
+    bottom: 0;
+    transform: translateY(8px);
+    opacity: 0;
+    transition: $transition;
     @media (max-width: $tablet-h) {
-        width: 100%;
-        white-space: nowrap;
-        padding: 10px;
+      display: none;
     }
+  }
+  @media (hover: hover) {
+    &:not(.cta):hover,
+    &.active {
+      &:before {
+        transform: translateY(5px);
+        opacity: 1;
+      }
+    }
+  }
+  @media (max-width: $tablet-h) {
+    width: 100%;
+    white-space: nowrap;
+    padding: 10px;
+  }
 }
 
 .cta {
-    background-color: $color-white;
-    border: 1px solid $color-border;
-    border-radius: 4px;
-    padding: em(17) em(17) em(15);
-    transition: background-color $transition;
-    font-weight: 500;
-    &:hover {
-        background-color: $color-light;
-    }
+  background-color: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 4px;
+  padding: em(17) em(17) em(15);
+  transition: background-color $transition;
+  font-weight: 500;
+  &:hover {
+    background-color: $color-light;
+  }
 }
 
 .hamburger {
-    display: none;
-    @media (max-width: $tablet-h) {
-        display: inline-block;
-    }
+  display: none;
+  @media (max-width: $tablet-h) {
+    display: inline-block;
+  }
 }
