@@ -6,10 +6,11 @@ import Header from "@/components/organisms/Header/Header";
 import { HEADER_MENUS } from "api/mockdata/header";
 import Footer from "@/components/organisms/Footer/Footer";
 import { FOOTER_DATA, FOOTER_MENUS, SOCIAL_ICONS } from "api/mockdata/footer";
+import { PageMeta } from "interfaces/page-meta";
 
 interface LayoutProps {
   children: ReactElement;
-  meta?: { description: string; title: string; keywords: string[] };
+  meta?: PageMeta;
 }
 // use Router or other means to decide multiple layouts later.
 // below is just the General Layout with header/ main/ footer.

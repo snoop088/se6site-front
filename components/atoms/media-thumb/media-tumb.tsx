@@ -21,8 +21,8 @@ export const MediaThumb = ({
     <div className={styles.container}>
       <Link href={"/showcase/" + itemId} passHref>
         <a
-          onMouseEnter={() => setShowAnimated(true)}
-          onMouseLeave={() => setShowAnimated(false)}
+          onMouseEnter={() => streameyeId && setShowAnimated(true)}
+          onMouseLeave={() => streameyeId && setShowAnimated(false)}
         >
           {showAnimated && streameyeId && (
             <>

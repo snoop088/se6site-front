@@ -13,4 +13,5 @@ export interface IShowcaseItem {
   client: string;
   title: string;
   streameyeId?: string;
+  copyMd?: string;
 }

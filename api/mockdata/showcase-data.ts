@@ -2,7 +2,7 @@ import { IShowcaseItem } from "interfaces/showcase-item";
 
 export const SHOWCASE_ITEMS: IShowcaseItem[] = [
   {
-    id: "Sportsbet-promos-2020",
+    id: "Sportsbet-Promos-2020",
     thumbUrl: "sb_nrl_20_thumb.jpeg",
     sizes: [
       {
@@ -15,15 +15,16 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
         w: 728,
         h: 90,
       },
-      {
-        seId: "a2dcedb0-e9c5-42d0-b599-a0f5bc58e4cf",
-        w: 300,
-        h: 250,
-      },
+
       {
         seId: "b749b782-a761-4830-8f8f-a7e2abdd9769",
         w: 300,
         h: 600,
+      },
+      {
+        seId: "a2dcedb0-e9c5-42d0-b599-a0f5bc58e4cf",
+        w: 300,
+        h: 250,
       },
       {
         seId: "1a3c1109-954f-4a9d-8228-46b489d27ba6",
@@ -35,6 +36,8 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     client: "Sportsbet",
     title: "Sportsbet Promo Banners 2020",
     streameyeId: "a2dcedb0-e9c5-42d0-b599-a0f5bc58e4cf",
+    copyMd:
+      "A versatile Sportsbet template to promote offers accross different sports popular in Australia.  \n\nPrimarily targeted towards the AFL and NRL leagues, the template was later adapted to promote additional offers:  \n\n - Same Game Multi  \n\n - Double Your Winnings  \n\n - Horse Racing ",
   },
   {
     id: "VirginBet-Rebrand-2021",
@@ -50,11 +53,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
         w: 728,
         h: 90,
       },
-      {
-        seId: "df9c9ef4-e114-4ec8-afb2-3c98c72bcc0f",
-        w: 300,
-        h: 250,
-      },
+
       {
         seId: "ad4a7119-441a-42de-bb15-fcbcaddea0d2",
         w: 300,
@@ -66,6 +65,11 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
         h: 600,
       },
       {
+        seId: "df9c9ef4-e114-4ec8-afb2-3c98c72bcc0f",
+        w: 300,
+        h: 250,
+      },
+      {
         seId: "2f8256a6-4059-4b06-8bc5-0d652cef1ade",
         w: 320,
         h: 50,
@@ -75,6 +79,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     client: "Virgin Bet",
     title: "VirginBet HTML5 - Rebrand 2021",
     streameyeId: "df9c9ef4-e114-4ec8-afb2-3c98c72bcc0f",
+    copyMd: "",
   },
   {
     id: "Holland-Casino-Cards-2021",
@@ -113,8 +118,9 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     ],
     tags: ["HTML5", "Mobile"],
     client: "Holland Casino",
-    title: "Holland Casino Live - Cards template 21",
+    title: "Holland Casino Live - Cards 21",
     streameyeId: "ca2869d6-db4e-4626-8aa6-d4240740aa55",
+    copyMd: "",
   },
   {
     id: "Betfair-Cheltenham-19-Display",
@@ -155,31 +161,88 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     client: "Betfair",
     title: "Betfair Cheltenham 2019 Display",
     streameyeId: "3d68dbf3-8e88-4dac-9fcc-4f0d10fb206e",
+    copyMd: "",
+  },
+  {
+    id: "Pokerstars-Casino-21",
+    thumbUrl: "pokerstars-casino-21-thumb.jpeg",
+    sizes: [
+      {
+        adUrl: "Pokerstars-Casino-21_1200x628.jpg",
+        adType: "static",
+        w: 1200,
+        h: 628,
+      },
+      {
+        adUrl: "Pokerstars-Casino-21_970x250.jpg",
+        adType: "static",
+        w: 970,
+        h: 250,
+      },
+      {
+        adUrl: "Pokerstars-Casino-21_768x1024.jpg",
+        adType: "static",
+        w: 768,
+        h: 1024,
+      },
+      {
+        adUrl: "Pokerstars-Casino-21_300x600.jpg",
+        adType: "static",
+        w: 300,
+        h: 600,
+      },
+      {
+        adUrl: "Pokerstars-Casino-21_300x250.jpg",
+        adType: "static",
+        w: 300,
+        h: 250,
+      },
+    ],
+    tags: ["Social"],
+    client: "Pokerstars Casino",
+    title: "Pokerstars Casino Social Ads",
+    copyMd: "Some copy would go here",
   },
   {
     id: "Betfair-Chelt-2022",
     thumbUrl: "chelt-bf-2022.jpeg",
     sizes: [
       {
-        seId: "e033840e-19ca-4125-9875-be6ed9663d87/637835570951577766",
-        w: 300,
+        seId: "8430fe6a-4e85-43e3-b945-bd5f60b5c791",
+        w: 970,
         h: 250,
       },
       {
-        seId: "6054afd2-91f8-4729-aa15-fef5981cfe11/637835570951577794",
+        seId: "ac0816b4-f572-4ca8-bfb9-6d276f3317d8",
         w: 728,
         h: 90,
       },
       {
-        seId: "6e0a04b9-8bbc-467d-857f-6883a5d01719/63783557095157779",
-        w: 970,
+        seId: "8646f49e-400a-47e4-9ce7-d909831c503a",
+        w: 300,
+        h: 600,
+      },
+      {
+        seId: "d46baefe-a813-41a6-b531-f7898cc7974e",
+        w: 160,
+        h: 600,
+      },
+      {
+        seId: "4013ef48-df15-496f-af91-e6ed635bacd5",
+        w: 300,
         h: 250,
+      },
+      {
+        seId: "a420af47-f557-4684-8b74-8b51a62cd184",
+        w: 320,
+        h: 50,
       },
     ],
     tags: ["HTML5", "Mobile"],
     client: "Betfair",
     title: "Betfair Cheltenham 2022 Display",
-    streameyeId: "e033840e-19ca-4125-9875-be6ed9663d87/637835570951577766",
+    streameyeId: "4013ef48-df15-496f-af91-e6ed635bacd5",
+    copyMd: "",
   },
   {
     id: "someID_here",
@@ -200,6 +263,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     client: "Paddy Power",
     title: "Galway Responsive Ads",
     streameyeId: "98e9adc4-2cdd-4e52-9b7f-667e37925242/637835544527234284",
+    copyMd: "",
   },
 ];
 export const SHOWCASE_TAGS = [
