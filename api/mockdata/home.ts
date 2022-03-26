@@ -8,19 +8,19 @@ export const WHY_STREAMEYE = {
   usps: [
     {
       icon: "/icon_1_marketing.svg",
-      copy: "Make your marketing self - provisioned",
+      copy: "Make your marketing self-provisioned",
     },
     {
       icon: "/icon_2_customised_ui.svg",
-      copy: "Customised UI to a specific campaign requirements",
+      copy: "Customised UI to specific campaign requirements",
     },
     {
       icon: "/icon_3_decrease_costs.svg",
-      copy: "Decrease costs of digital production, increasing ROI",
+      copy: "Decrease costs of digital production, increasing ROAS",
     },
     {
       icon: "/icon_4_premium_support.svg",
-      copy: "Leverage on premium service and support",
+      copy: "Leverage on premium service and expertise",
     },
   ],
 };
