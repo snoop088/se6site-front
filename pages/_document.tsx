@@ -11,11 +11,12 @@ export default function Document() {
       }
     }
   };
-  typeof window !== "undefined" && disableReactDevTools();
+
   return (
     <Html>
       <Head></Head>
       <body>
+        {typeof window !== "undefined" && disableReactDevTools()}
         <Main />
         <NextScript />
       </body>
