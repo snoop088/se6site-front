@@ -1,0 +1,8 @@
+.container {
+  list-style-image: url(/arrow.svg);
+  list-style-position: outside;
+  margin-left: -1.5rem;
+  li {
+    padding-left: 0.5rem;
+  }
+}

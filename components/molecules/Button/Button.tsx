@@ -6,7 +6,8 @@ import styles from "./Button.module.scss";
 type ButtonProps = React.ComponentPropsWithoutRef<"button"> & {
   icon?: string;
   iconPosition?: "pre" | "post";
-  variant?: "white" | "green";
+  variant?: "white" | "green" | "secondary";
+  small?: boolean;
   elevated?: boolean;
 };
 
@@ -15,6 +16,7 @@ const Button = ({
   icon,
   iconPosition = "post",
   type,
+  small,
   variant = "white",
   elevated,
   onClick,
@@ -26,6 +28,7 @@ const Button = ({
         styles.button,
         styles[variant + "Variant"],
         { [styles.elevated]: elevated },
+        { [styles.small]: small },
       ])}
       onClick={onClick}
     >

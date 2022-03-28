@@ -1,0 +1,23 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  .featuresContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 3rem;
+    gap: 2rem;
+    .feature {
+      display: flex;
+      flex: 1;
+    }
+    @media (max-width: $tablet-h) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $phone-h) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -17,6 +17,18 @@
       font-size: rem(16);
     }
   }
+  &.secondaryVariant {
+    background: $color-white;
+    color: $color-accent;
+    font-size: rem(20);
+    border: 1px solid $color-accent;
+    &:hover {
+      background-color: $color-light;
+    }
+    @media (max-width: $phone-v) {
+      font-size: rem(16);
+    }
+  }
   &.elevated {
     box-shadow: 0px em(10, 22) em(12, 22) rgba($color-black, 0.21);
     &:hover {
@@ -30,6 +42,9 @@
   align-items: center;
   gap: em(16, 22);
   transition: $transition;
+  &.small {
+    font-size: 1rem;
+  }
   @media (max-width: $tablet-v) {
     font-size: rem(20);
   }
