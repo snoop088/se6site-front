@@ -6,8 +6,6 @@ export type StreameyeContext = {
 };
 
 export const AppContext = React.createContext<StreameyeContext>({
-  data: {
-    someSharedData: "testing shared data",
-  },
+  data: {},
   setProp: () => {},
 });

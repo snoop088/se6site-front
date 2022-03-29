@@ -1,0 +1,66 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    color: $color-white;
+    @include brand-gradient;
+    min-height: 6rem;
+    margin: 0;
+  }
+  .revealFunction {
+    position: relative;
+
+    width: rem(40);
+    height: rem(20);
+    .arrowContainer {
+      cursor: pointer;
+      position: absolute;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      &.revealed {
+        top: -1rem;
+      }
+      .arrow,
+      .triangle {
+        grid-area: 1 / 1 / 1 / 1;
+        display: flex;
+      }
+      .triangle {
+        width: rem(40);
+        height: rem(16);
+        background-size: 50% 100%;
+        background-repeat: no-repeat;
+        background-position: left, right;
+        z-index: 1;
+        &.revealed {
+          transform: scaleY(-1);
+        }
+      }
+      .arrow {
+        background-image: url(/arrow-up.svg);
+        width: 100%;
+        height: 1.5rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        z-index: 2;
+        margin-top: 0.25rem;
+        &.toReveal {
+          background-image: url(/arrow-down.svg);
+          margin-top: -0.8rem;
+        }
+      }
+    }
+  }
+}

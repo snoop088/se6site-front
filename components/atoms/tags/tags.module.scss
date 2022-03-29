@@ -1,0 +1,20 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  &.clickable {
+    span {
+      cursor: pointer;
+      &:hover {
+        background-color: $color-light;
+      }
+    }
+  }
+  span {
+    margin: 0.125rem;
+    border: 1px solid $color-accent;
+    padding: 0.33rem 0.5rem;
+    color: $color-accent;
+  }
+}

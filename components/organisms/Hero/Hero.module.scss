@@ -8,9 +8,7 @@
   position: relative;
   flex-direction: column;
   .videoContainer {
-    background: transparent
-      linear-gradient(73deg, #288ab5 0%, #6ec0ad 39%, #d6edff 100%) 0% 0%
-      no-repeat padding-box;
+    @include brand-gradient;
     position: absolute;
     height: 100%;
     width: 100%;

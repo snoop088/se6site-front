@@ -1,4 +1,5 @@
 import { MediaThumb } from "@/components/atoms/media-thumb/media-tumb";
+import { Tags } from "@/components/atoms/tags/tags";
 import { IShowcaseItem } from "interfaces/showcase-item";
 import styles from "./showcase-item.module.scss";
 
@@ -16,23 +17,18 @@ export const ShowcaseItem = ({
 }: ShowcaseItemProps) => {
   return (
     <div className={styles.container}>
-      <figure>
+      <section>
         <MediaThumb
           title={title}
           thumbUrl={thumbUrl}
           itemId={id}
           streameyeId={streameyeId}
         />
-      </figure>
-      <h3>{client}</h3>
-      <div className={styles.title}>{title}</div>
-      <div className={styles.tags}>
-        {tags.map((tag) => (
-          <span key={tag} onClick={() => onTagClick(tag)}>
-            {tag}
-          </span>
-        ))}
-      </div>
+        <h3>{client}</h3>
+        <div className={styles.title}>{title}</div>
+      </section>
+
+      <Tags items={tags} onTagClick={onTagClick} />
     </div>
   );
 };

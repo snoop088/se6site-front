@@ -7,6 +7,7 @@ import { ShowcaseTitle } from "@/components/atoms/showcase-title/showcase-title"
 import Wrapper from "@/components/organisms/Wrapper/Wrapper";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
+import { Tags } from "@/components/atoms/tags/tags";
 
 interface PageProps {
   meta?: PageMeta;
@@ -61,6 +62,7 @@ const ShowcaseDetail: NextPage<PageProps> = ({ item, prevId, nextId }) => {
           <div className={styles.copyContainer}>
             <h2>{item.title}</h2>
             <ReactMarkdown>{item.copyMd ?? ""}</ReactMarkdown>
+            <Tags items={item.tags} className={styles.tagsContainer} />
           </div>
         </aside>
       </Wrapper>

@@ -5,19 +5,21 @@
   flex-direction: column;
   flex: 1;
   .featuresContainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 3rem;
-    gap: 2rem;
+    @include se6-grid(4, 2rem);
+    margin-top: 2rem;
+    @include fluid-size(margin-top, $phone-v, $tablet-h, 16px, 32px);
     .feature {
       display: flex;
       flex: 1;
     }
     @media (max-width: $tablet-h) {
-      grid-template-columns: repeat(2, 1fr);
+      @include se6-grid(2, 2rem);
     }
     @media (max-width: $phone-h) {
-      grid-template-columns: 1fr;
+      @include se6-grid(1, 2rem);
     }
+  }
+  .findOutMore {
+    margin-top: 3rem;
   }
 }

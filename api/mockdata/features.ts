@@ -14,7 +14,7 @@ export const FEATURES_SLIM: FeatureItemSlim[] = [
   },
   {
     id: "builders",
-    icon: "biulders",
+    icon: "builders",
     title: "Builders",
     benefits: [
       "Produce and edit social, email or onsiteimages with an intuitive, custom UI.",
@@ -25,24 +25,26 @@ export const FEATURES_SLIM: FeatureItemSlim[] = [
   },
   {
     id: "videos",
-    icon: "templates",
-    title: "Templates",
+    icon: "videos",
+    title: "Videos",
     benefits: [
-      "Produce engaging HTML5 animated ads with your latest offering",
-      "Go to market in a matter of minutes with new promotions",
-      "Engage audiences on desktop and mobile with ads that integrate your data",
+      "Produce templated videos with branded assets through an intuitive, custom UI",
+      "Export videos for your campaigns for social networks, YouTube or offline points of sale",
+      "Engage audiences across channels, rapidly iterating new offer messages",
     ],
     mediaUrl: "/768x576_637840758748332134.jpeg",
   },
   {
     id: "galleries",
-    icon: "templates",
-    title: "Templates",
+    icon: "asset_galleries",
+    title: "Galleries",
     benefits: [
-      "Produce engaging HTML5 animated ads with your latest offering",
-      "Go to market in a matter of minutes with new promotions",
-      "Engage audiences on desktop and mobile with ads that integrate your data",
+      "Manage branded assets in reusable galleries",
+      "Enable asset sharing across different roduction pipelines",
+      "Ensure that graphics in ads are relevant, on brand and readily available to marketing",
     ],
     mediaUrl: "/768x576_637840758748332134.jpeg",
   },
 ];
+export const FIND_OUT_MORE =
+  "FIND OUT MORE ABOUT OUR FREE ENTERPRISE FEATURES THAT ACCELERATE YOUR AD PODUCTION";

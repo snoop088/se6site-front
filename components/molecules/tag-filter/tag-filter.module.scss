@@ -6,10 +6,8 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background: transparent
-    linear-gradient(87deg, #288ab5 0%, #6ec0ad 39%, #d6edff 100%) 0% 0%
-    no-repeat padding-box;
   min-height: rem(140);
+  @include brand-gradient;
   @media (max-width: $phone-v) {
     min-height: rem(162);
     align-items: center;

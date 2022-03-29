@@ -59,6 +59,9 @@
         border: 1px solid #ffffff;
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
+        .tagsContainer {
+          margin-top: 2rem;
+        }
       }
     }
   }

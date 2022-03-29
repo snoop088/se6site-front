@@ -1,3 +1,4 @@
+import Button from "@/components/molecules/Button/Button";
 import { NotConvinced } from "@/components/molecules/not-convinced/not-convinced";
 import { WhatIsStreameye } from "@/components/molecules/what-is-streameye/what-is-streameye";
 import { WhoUsesStreameye } from "@/components/molecules/who-uses-streameye/who-uses-streameye";
@@ -60,7 +61,14 @@ const Home: NextPage = () => {
         <WhyIsStreameyeRight
           title={WHY_IS_STREAMEYE_RIGHT.title}
           copy={WHY_IS_STREAMEYE_RIGHT.copy}
-          cta={WHY_IS_STREAMEYE_RIGHT.cta}
+          cta={
+            <Button
+              variant="white"
+              elevated
+              title="Talk to us"
+              icon="button-arrow"
+            />
+          }
         />
       </div>
     </div>

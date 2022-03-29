@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from "react";
-import { AppContext, StreameyeContext } from "./app-context";
+import { AppContext } from "./app-context";
 
 interface ContextProviderProps {
   children: ReactNode;

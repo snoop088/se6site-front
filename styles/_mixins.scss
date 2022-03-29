@@ -74,3 +74,8 @@
     }
   }
 }
+@mixin brand-gradient {
+  background: transparent
+    linear-gradient(87deg, #288ab5 0%, #6ec0ad 39%, #d6edff 100%) 0% 0%
+    no-repeat padding-box;
+}

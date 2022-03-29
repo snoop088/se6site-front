@@ -34,7 +34,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     ],
     tags: ["HTML5", "Mobile"],
     client: "Sportsbet",
-    title: "Sportsbet Promo Banners 2020",
+    title: "Sportsbet Promo Banners 2020 blah blah blah",
     streameyeId: "a2dcedb0-e9c5-42d0-b599-a0f5bc58e4cf",
     copyMd:
       "A versatile Sportsbet template to promote offers accross different sports popular in Australia.  \n\nPrimarily targeted towards the AFL and NRL leagues, the template was later adapted to promote additional offers:  \n\n - Same Game Multi  \n\n - Double Your Winnings  \n\n - Horse Racing ",
