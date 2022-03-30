@@ -1,4 +1,5 @@
 @import url(https://use.typekit.net/nef4mwk.css);
+@import url("swiper/css");
 
 @import "./normalize";
 @import "./variables";
@@ -43,4 +44,35 @@ h4 {
 h1 {
   text-transform: uppercase;
   font-size: rem(40);
+}
+:root {
+  --swiper-theme-color: #{$color-brand};
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  background-image: url(/arrow-thin.svg);
+}
+.swiper-button-prev {
+  @media (max-width: $phone-v) {
+    margin-left: -0.5rem;
+  }
+}
+.swiper-button-next {
+  transform: scaleX(-1);
+  @media (max-width: $phone-v) {
+    margin-right: -0.5rem;
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+.swiper-slide {
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }

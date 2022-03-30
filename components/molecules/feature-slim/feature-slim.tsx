@@ -22,19 +22,24 @@ export const FeatureSlim = ({
       </section>
 
       <div className={styles.actionButtons}>
-        <Button
-          title="Book a Demo"
-          onClick={onDemoClick}
-          variant="green"
-          icon="button-arrow"
-          small
-        />
-        <Button
-          variant="secondary"
-          title="+ Read More"
-          onClick={onDemoClick}
-          small
-        />
+        <span className={styles.bookADemo}>
+          <Button
+            title="Book a demo"
+            onClick={onDemoClick}
+            variant="green"
+            icon="button-arrow"
+            small
+          />
+        </span>
+        <span className={styles.readMore}>
+          <Button
+            className={styles.readMore}
+            variant="secondary"
+            title="+ Read more"
+            onClick={onDemoClick}
+            small
+          />
+        </span>
       </div>
       <figure>
         <Image

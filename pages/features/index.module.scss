@@ -5,9 +5,8 @@
   flex-direction: column;
   flex: 1;
   .featuresContainer {
-    @include se6-grid(4, 2rem);
-    margin-top: 2rem;
-    @include fluid-size(margin-top, $phone-v, $tablet-h, 16px, 32px);
+    @include se6-grid(4, 3rem);
+
     .feature {
       display: flex;
       flex: 1;
@@ -16,10 +15,63 @@
       @include se6-grid(2, 2rem);
     }
     @media (max-width: $phone-h) {
-      @include se6-grid(1, 2rem);
+      @include se6-grid(1);
     }
   }
-  .findOutMore {
-    margin-top: 3rem;
+  .cta {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 2rem;
+    @media (max-width: $phone-h) {
+      Button {
+        display: none;
+      }
+    }
+  }
+  .entFeaturesSlides {
+    background-color: $color-light;
+    margin-top: -1.25rem;
+  }
+
+  .enterpriseFeature {
+    background-color: $color-white;
+    flex-direction: column;
+    margin: 4rem 2.5rem;
+    box-shadow: 0px 15px 26px #00000029;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    @media (max-width: $phone-v) {
+      margin: 4rem 0;
+    }
+    h1 {
+      color: $color-accent;
+      border-bottom: 1px solid $color-accent;
+      padding-bottom: 1rem;
+      margin: 2rem 2rem 1rem 2rem;
+      @include fluid-size(font-size, $phone-h, $tablet-h, 24px, 32px);
+    }
+    .copy {
+      flex: 1;
+      margin: 0 2rem 1rem 2rem;
+    }
+    .contract {
+      color: $color-white;
+      background-color: #5db3af;
+      padding: 1rem;
+    }
+  }
+  .help {
+    background: transparent
+      linear-gradient(180deg, #e3f3ff00 70%, #e3f3ffa0 100%) 0% 0% no-repeat
+      padding-box;
+  }
+  .mySwiper {
+    padding: 0 2rem;
+    // @media (min-width: 1920px) {
+    //   padding: 0;
+    //   margin: 0 -2rem;
+    // }
   }
 }

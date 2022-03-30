@@ -1,6 +1,6 @@
 export const HERO_BANNER = {
   title: "Create Eye-Catching Ads for Any Marketing Campaign in No Time",
-  buttonTitle: "Find Out More",
+  buttonTitle: "Find out more",
 };
 export const WHY_STREAMEYE = {
   title: "Why Streameye?",
