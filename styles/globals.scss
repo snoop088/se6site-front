@@ -72,7 +72,7 @@ h1 {
   display: none;
 }
 .swiper-slide {
-  height: auto;
-  display: flex;
-  flex-direction: column;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
