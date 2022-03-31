@@ -18,7 +18,7 @@ export const FEATURES_SLIM: FeatureItemSlim[] = [
     icon: "builders",
     title: "Builders",
     benefits: [
-      "Produce and edit social, email or onsiteimages with an intuitive, custom UI.",
+      "Produce and edit social, email or onsite images with an intuitive, custom UI.",
       "Export images for your campaigns or use permalinks that update graphics in your emails.",
       "Engage audiences across channels, rapidly iterating new offer messages.",
     ],
