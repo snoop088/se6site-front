@@ -1,4 +1,5 @@
 @import url("https://use.typekit.net/nef4mwk.css");
+@import "@/styles/normalize";
 @import "@/styles/mixins";
 @import "@/styles/variables";
 html,
@@ -43,7 +44,7 @@ h1 {
   font-size: rem(40);
 }
 :root {
-  --swiper-theme-color: #{$color-brand};
+  --swiper-theme-color: #{$color-brand} !important;
 }
 .swiper-button-prev,
 .swiper-button-next {
@@ -69,7 +70,7 @@ h1 {
   display: none;
 }
 .swiper-slide {
-  height: auto;
-  display: flex;
-  flex-direction: column;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
