@@ -15,16 +15,16 @@ export const RevealMore = ({
   const triangleColour = isRevealed
     ? `linear-gradient(
     to top right,
-    transparent 50%,
-    ${overlapColour} 0
+    transparent 48%,
+    ${overlapColour} 50%
   ),
-  linear-gradient(to bottom right, ${overlapColour} 50%, transparent 0)`
+  linear-gradient(to bottom right, ${overlapColour} 48%, transparent 50%)`
     : `linear-gradient(
     to top right,
-    transparent 50%,
-    #84c9bb	 0
+    transparent 48%,
+    #84c9bb	50%
   ),
-  linear-gradient(to bottom right, #84c9bb 50%, transparent 0)`;
+  linear-gradient(to bottom right, #84c9bb 48%, transparent 50%)`;
   return (
     <div className={styles.container}>
       <h2>{copy}</h2>
