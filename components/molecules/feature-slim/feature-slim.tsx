@@ -2,17 +2,16 @@ import { BulletListMd } from "@/components/atoms/bullet-list-md/bullet-list-md";
 import { IconTitle } from "@/components/atoms/icon-title/icon-title";
 import { FeatureItemSlim } from "interfaces/feature-item-slim";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../Button/Button";
 import styles from "./feature-slim.module.scss";
 interface FeatureSlimProps {
   featureItemSlim: FeatureItemSlim;
   onDemoClick: () => void;
-  onReadMoreClick: (id: string) => void;
 }
 export const FeatureSlim = ({
   featureItemSlim: { id, icon, title, benefits, mediaUrl },
   onDemoClick,
-  onReadMoreClick,
 }: FeatureSlimProps) => {
   return (
     <div className={styles.container}>
@@ -32,13 +31,16 @@ export const FeatureSlim = ({
           />
         </span>
         <span className={styles.readMore}>
-          <Button
-            className={styles.readMore}
-            variant="secondary"
-            title="+ Read more"
-            onClick={onDemoClick}
-            small
-          />
+          <Link href={"/features/" + id}>
+            <a>
+              <Button
+                className={styles.readMore}
+                variant="secondary"
+                title="+ Read more"
+                small
+              />
+            </a>
+          </Link>
         </span>
       </div>
       <figure>

@@ -2,7 +2,7 @@ export interface FeatureItem {
   id: string;
   icon: string;
   title: string;
-  description: string;
+  descriptionMd: string;
   usingFor: {
     title: string;
     uses: string[];

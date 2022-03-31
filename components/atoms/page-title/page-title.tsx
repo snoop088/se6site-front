@@ -1,21 +1,32 @@
 import Wrapper from "@/components/organisms/Wrapper/Wrapper";
+import classNames from "classnames";
 import Link from "next/link";
 import Icon from "../Icon/Icon";
-import styles from "./showcase-title.module.scss";
-interface ShowcaseTitleProps {
-  client: string;
+import styles from "./page-title.module.scss";
+interface PageTitleProps {
+  title: string;
+  icon?: string;
+  elevated?: boolean;
   prevId?: string;
   nextId?: string;
 }
-export const ShowcaseTitle = ({
-  client,
+export const PageTitle = ({
+  icon,
+  title,
   prevId,
   nextId,
-}: ShowcaseTitleProps) => {
+  elevated,
+}: PageTitleProps) => {
   return (
-    <div className={styles.container}>
+    <div
+      className={classNames([
+        styles.container,
+        { [styles.elevated]: elevated },
+      ])}
+    >
       <Wrapper isWide className={styles.title}>
-        <h1>{client}</h1>
+        {icon && <Icon icon={icon} className={styles.icon} />}
+        <h1>{title}</h1>
         <div className={styles.nav}>
           {prevId && (
             <Link href={"/showcase/" + prevId}>
@@ -32,9 +43,9 @@ export const ShowcaseTitle = ({
             </Link>
           )}
 
-          <Link href="/showcase" passHref>
+          <Link href="./" passHref>
             <a>
-              <Icon icon="close-thin" className={styles.icon} />
+              <Icon icon="close-thin" className={styles.closeIcon} />
             </a>
           </Link>
         </div>

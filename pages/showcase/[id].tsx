@@ -3,7 +3,7 @@ import styles from "./[id].module.scss";
 import { SHOWCASE_ITEMS } from "api/mockdata/showcase-data";
 import { PageMeta } from "interfaces/page-meta";
 import { IShowcaseItem } from "interfaces/showcase-item";
-import { ShowcaseTitle } from "@/components/atoms/showcase-title/showcase-title";
+import { PageTitle } from "@/components/atoms/page-title/page-title";
 import Wrapper from "@/components/organisms/Wrapper/Wrapper";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
@@ -17,16 +17,12 @@ interface PageProps {
 }
 
 const ShowcaseDetail: NextPage<PageProps> = ({ item, prevId, nextId }) => {
-  // const { query } = useRouter();
-
-  // const item = SHOWCASE_ITEMS.find((item) => item.id === query.id);
-
   return (
     <div
       className={styles.container}
       style={{ backgroundImage: `url(/showcase/${item?.id}_backdrop.jpg)` }}
     >
-      <ShowcaseTitle client={item.client} prevId={prevId} nextId={nextId} />
+      <PageTitle title={item.client} prevId={prevId} nextId={nextId} elevated />
       <Wrapper isWide className={styles.wrapper}>
         <div className={styles.adsContainer}>
           {item.sizes?.map((size) => (

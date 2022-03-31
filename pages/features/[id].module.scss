@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  .feature {
+    display: flex;
+    gap: 3rem;
+    .content {
+      display: flex;
+      flex: 3;
+    }
+    figure {
+      flex: 2;
+      padding: 0;
+      margin: 0;
+      video {
+        width: 100%;
+        height: auto;
+        border: 1px solid grey;
+      }
+    }
+  }
+}

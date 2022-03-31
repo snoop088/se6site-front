@@ -1,7 +1,5 @@
 import { NextPage } from "next";
 import { useRef, useState } from "react";
-import { Pagination, Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 import { FeatureSlim } from "@/components/molecules/feature-slim/feature-slim";
 import { RevealMore } from "@/components/molecules/reveal-more/reveal-more";
@@ -13,8 +11,6 @@ import Button from "@/components/molecules/Button/Button";
 import { FeatureEnterprise } from "interfaces/feature-enterprise";
 
 import styles from "./index.module.scss";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 import {
   ENTERPRISE_FEATURES,
@@ -22,7 +18,7 @@ import {
   FIND_OUT_MORE,
   HELPING,
 } from "api/mockdata/features";
-import ReactMarkdown from "react-markdown";
+import { FeaturesSlider } from "@/components/molecules/features-slider/features-slider";
 interface PageProps {
   meta?: PageMeta;
   features: FeatureItemSlim[];
@@ -39,12 +35,11 @@ const Index: NextPage<PageProps> = ({
   const [isRevealed, setIsRevealed] = useState(false);
   const scrollToRef = useRef<null | HTMLDivElement>(null);
   const scrollToTop = useRef<null | HTMLDivElement>(null);
+
   const demoClickHandler = () => {
     console.log("demo clicked");
   };
-  const readMoreClickHandler = (id: string) => {
-    console.log("read more on" + id);
-  };
+
   const handleRevealMore = () => {
     if (!isRevealed) {
       scrollToRef!.current!.scrollIntoView({ behavior: "smooth" });
@@ -62,13 +57,12 @@ const Index: NextPage<PageProps> = ({
             <FeatureSlim
               featureItemSlim={feature}
               onDemoClick={demoClickHandler}
-              onReadMoreClick={readMoreClickHandler}
             />
           </div>
         ))}
       </Wrapper>
       <div className={styles.cta}>
-        <Button title="Lets talk" variant="green" />
+        <Button title="Lets talk" variant="green" onClick={demoClickHandler} />
       </div>
       <div className={styles.findOutMore} ref={scrollToRef}>
         <RevealMore
@@ -79,44 +73,7 @@ const Index: NextPage<PageProps> = ({
         />
       </div>
       <div className={styles.entFeaturesSlides}>
-        <Wrapper isWide className={styles.swiperContainer}>
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={52}
-            pagination={{
-              clickable: true,
-            }}
-            breakpoints={{
-              769: {
-                slidesPerView: 2,
-                spaceBetween: 18,
-              },
-              1280: {
-                slidesPerView: 3,
-                spaceBetween: 18,
-              },
-              1920: {
-                slidesPerView: 4,
-                spaceBetween: 18,
-              },
-            }}
-            navigation
-            modules={[Pagination, Navigation]}
-            className={styles.mySwiper}
-          >
-            {featuresEnterprise.map((feature) => (
-              <SwiperSlide key={feature.title}>
-                <div className={styles.enterpriseFeature}>
-                  <h1>{feature.title}</h1>
-                  <div className={styles.copy}>
-                    <ReactMarkdown>{feature.copyMd}</ReactMarkdown>
-                  </div>
-                  <div className={styles.contract}>{feature.contract}</div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </Wrapper>
+        <FeaturesSlider features={featuresEnterprise} />
       </div>
       <div className={styles.help}>
         <WhyIsStreameyeRight
@@ -126,7 +83,7 @@ const Index: NextPage<PageProps> = ({
             <Button
               title="Get in touch"
               variant="green"
-              onClick={() => console.log("book a demo route")}
+              onClick={demoClickHandler}
             />
           }
         />

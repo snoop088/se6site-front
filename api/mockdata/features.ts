@@ -1,9 +1,10 @@
 import { FeatureEnterprise } from "interfaces/feature-enterprise";
+import { FeatureItem } from "interfaces/feature-item";
 import { FeatureItemSlim } from "interfaces/feature-item-slim";
 
 export const FEATURES_SLIM: FeatureItemSlim[] = [
   {
-    id: "templates",
+    id: "Templates",
     icon: "templates",
     title: "Templates",
     benefits: [
@@ -11,10 +12,10 @@ export const FEATURES_SLIM: FeatureItemSlim[] = [
       "Go to market in a matter of minutes with new promotions",
       "Engage audiences on desktop and mobile with ads that integrate your data",
     ],
-    mediaUrl: "/768x576_637840758748332134.jpeg",
+    mediaUrl: "/templates.jpg",
   },
   {
-    id: "builders",
+    id: "Builders",
     icon: "builders",
     title: "Builders",
     benefits: [
@@ -22,10 +23,10 @@ export const FEATURES_SLIM: FeatureItemSlim[] = [
       "Export images for your campaigns or use permalinks that update graphics in your emails.",
       "Engage audiences across channels, rapidly iterating new offer messages.",
     ],
-    mediaUrl: "/768x576_637840758748332134.jpeg",
+    mediaUrl: "/builders.jpg",
   },
   {
-    id: "videos",
+    id: "Videos",
     icon: "videos",
     title: "Videos",
     benefits: [
@@ -36,7 +37,7 @@ export const FEATURES_SLIM: FeatureItemSlim[] = [
     mediaUrl: "/768x576_637840758748332134.jpeg",
   },
   {
-    id: "galleries",
+    id: "Galleries",
     icon: "asset_galleries",
     title: "Galleries",
     benefits: [
@@ -83,5 +84,33 @@ export const ENTERPRISE_FEATURES: FeatureEnterprise[] = [
     copyMd:
       "Bring your own data in your ads via Streameye API integration. It is the ultimate automation as new content gets published without operator interaction on regular basis.",
     contract: "Free with 1 year contract",
+  },
+];
+export const FEATURES_FULL: FeatureItem[] = [
+  {
+    id: "Templates",
+    title: "Templates",
+    icon: "templates",
+    descriptionMd:
+      "Streameye templates are a core feature, which optimises the production of animated ads, keeping their production cost negligent. It is used by our partners and clients to generate ads en masse and deploy relevant promotions across wide array of ad servers with a click of a button.",
+    usingFor: {
+      title: "USE TEMPLATES TO:",
+      uses: [
+        "Produce engaging HTML5 animated ads with your latest promotions",
+        "Go to market in a matter of minutes and update your display ads without the need to republish them",
+        "Automate your ad production by integrating your data in the ads",
+        "Save time and free up resources by streamlining your production processes",
+        "Decrease production costs and increase ROI",
+      ],
+    },
+    gettingStarted: {
+      title: "GET STARTED IN FEW SIMPLE STEPS:",
+      steps: [
+        "Decide where you experience production bottlenecks",
+        "Discuss your priorities with our experienced digital team",
+        "Take advantage of a 1 month free trial with your own branded ads",
+      ],
+    },
+    mediaUrl: "templates.mp4",
   },
 ];
