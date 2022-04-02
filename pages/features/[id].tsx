@@ -12,8 +12,7 @@ import {
 import Wrapper from "@/components/organisms/Wrapper/Wrapper";
 import ReactMarkdown from "react-markdown";
 import Button from "@/components/molecules/Button/Button";
-import { RevealMore } from "@/components/molecules/reveal-more/reveal-more";
-import { FeaturesSlider } from "@/components/molecules/features-slider/features-slider";
+
 import { FeatureEnterprise } from "interfaces/feature-enterprise";
 
 interface PageProps {
@@ -22,8 +21,8 @@ interface PageProps {
   prevId?: string;
   nextId?: string;
   topRoute: string;
-  findOutMore: string;
-  featuresEnterprise: FeatureEnterprise[];
+  findOutMore?: string;
+  featuresEnterprise?: FeatureEnterprise[];
 }
 
 const Index: NextPage<PageProps> = ({
@@ -31,10 +30,7 @@ const Index: NextPage<PageProps> = ({
   prevId,
   nextId,
   topRoute,
-  findOutMore,
-  featuresEnterprise,
 }: PageProps) => {
-  const handleRevealMore = () => {};
   return (
     <div className={styles.container}>
       <PageTitle
@@ -76,8 +72,8 @@ const Index: NextPage<PageProps> = ({
           </div>
         </div>
         <figure>
-          <video autoPlay loop muted playsInline>
-            <source src="/templates.mp4" type="video/mp4" />
+          <video autoPlay loop muted playsInline src={"/" + mediaUrl}>
+            <source src={"/" + mediaUrl} type="video/mp4" />
           </video>
         </figure>
       </Wrapper>

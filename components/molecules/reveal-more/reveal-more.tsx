@@ -3,12 +3,14 @@ import styles from "./reveal-more.module.scss";
 interface RevealMoreProps {
   copy: string;
   isRevealed?: boolean;
+  isAnimated?: boolean;
   overlapColour?: string;
   onReveal: () => void;
 }
 export const RevealMore = ({
   copy,
   isRevealed = false,
+  isAnimated = false,
   overlapColour = "#fff",
   onReveal,
 }: RevealMoreProps) => {
@@ -26,9 +28,17 @@ export const RevealMore = ({
   ),
   linear-gradient(to bottom right, #84c9bb 48%, transparent 50%)`;
   return (
-    <div className={styles.container}>
-      <h2 onClick={() => onReveal()}>{copy}</h2>
-      <div className={styles.revealFunction} onClick={() => onReveal()}>
+    <div
+      className={classNames([
+        styles.container,
+        { [styles.animated]: isAnimated },
+      ])}
+    >
+      <h2 onClick={() => isAnimated && onReveal()}>{copy}</h2>
+      <div
+        className={styles.revealFunction}
+        onClick={() => isAnimated && onReveal()}
+      >
         <div
           className={classNames([
             styles.arrowContainer,
@@ -45,6 +55,7 @@ export const RevealMore = ({
           <span
             className={classNames([styles.arrow], {
               [styles.toReveal]: !isRevealed,
+              [styles.animated]: isAnimated,
             })}
           ></span>
         </div>

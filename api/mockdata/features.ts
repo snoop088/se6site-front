@@ -113,4 +113,30 @@ export const FEATURES_FULL: FeatureItem[] = [
     },
     mediaUrl: "templates.mp4",
   },
+  {
+    id: "Builders",
+    title: "Builders",
+    icon: "builders",
+    descriptionMd:
+      "Streameye builders are a core feature, which optimises the production of static ads. Export ads for social networks, onsite, CRM or served as permalinks providing dynamic content in emails. Our clients are using the builders to generate high volume of localised digital ads, which are then published across their media channels.",
+    usingFor: {
+      title: "USE BUILDERS TO:",
+      uses: [
+        "Interactively produce static images through a custom UI built for your specific brand.",
+        "Export images for social networks, emails, landing pages, your site or affiliates",
+        "Automate your ad production by integrating your data in the ads by using permalinks",
+        "Save time and free up resources by streamlining your production processes",
+        "Make your marketing self provisioned when deploying new offers live",
+      ],
+    },
+    gettingStarted: {
+      title: "GET STARTED IN FEW SIMPLE STEPS:",
+      steps: [
+        "Decide where you experience production bottlenecks",
+        "Discuss your priorities with our experienced digital team",
+        "Take advantage of a 1 month free trial with your own branded ads",
+      ],
+    },
+    mediaUrl: "builders.mp4",
+  },
 ];

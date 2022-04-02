@@ -9,7 +9,6 @@ import { PageMeta } from "interfaces/page-meta";
 import { WhyIsStreameyeRight } from "@/components/molecules/why-is-streameye-right/why-is-streameye-right";
 import Button from "@/components/molecules/Button/Button";
 import { FeatureEnterprise } from "interfaces/feature-enterprise";
-import { useDebouncedCallback } from "hooks/useDebouncedCallback";
 
 import styles from "./index.module.scss";
 
@@ -20,6 +19,7 @@ import {
   HELPING,
 } from "api/mockdata/features";
 import { FeaturesSlider } from "@/components/molecules/features-slider/features-slider";
+import { useWindowSize } from "hooks/useWindowSize";
 interface PageProps {
   meta?: PageMeta;
   features: FeatureItemSlim[];
@@ -36,6 +36,7 @@ const Index: NextPage<PageProps> = ({
   const [isRevealed, setIsRevealed] = useState(false);
   const scrollToRef = useRef<null | HTMLDivElement>(null);
   const scrollToTop = useRef<null | HTMLDivElement>(null);
+  const wSize = useWindowSize();
 
   const demoClickHandler = () => {
     console.log("demo clicked");
@@ -73,6 +74,7 @@ const Index: NextPage<PageProps> = ({
           onReveal={handleRevealMore}
           isRevealed={isRevealed}
           overlapColour="#e2f6fa"
+          isAnimated={!!wSize.width && wSize.width > 1280}
         />
       </div>
       <div className={styles.entFeaturesSlides}>

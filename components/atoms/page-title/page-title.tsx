@@ -31,14 +31,14 @@ export const PageTitle = ({
         <h1>{title}</h1>
         <div className={styles.nav}>
           {prevId && (
-            <Link href={"/showcase/" + prevId}>
+            <Link href={`${topRoute}/${prevId}`}>
               <a>
                 <Icon icon="arrow-thin" className={styles.prevIcon} />
               </a>
             </Link>
           )}
           {nextId && (
-            <Link href={"/showcase/" + nextId}>
+            <Link href={`${topRoute}/${nextId}`}>
               <a>
                 <Icon icon="arrow-thin" className={styles.nextIcon} />
               </a>

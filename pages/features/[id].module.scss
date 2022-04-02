@@ -6,6 +6,7 @@
   flex-direction: column;
   background: transparent linear-gradient(180deg, #e3f3ff00 70%, #e3f3ffa0 100%)
     0% 0% no-repeat padding-box;
+    padding-bottom: 3rem;
   .feature {
     display: flex;
     @media (max-width: $tablet-h) {
@@ -49,18 +50,18 @@
             margin-bottom: 0.5rem;
             color: $color-brand;
           }
-          @media (max-width: $tablet-h) {
+          @media (max-width: $tablet-v) {
             flex: 1 100%;
           }
         }
         .uses {
           margin-right: 3rem;
-          @media (max-width: $tablet-h) {
+          @media (max-width: $tablet-v) {
             margin-right: 0;
           }
         }
         .cta {
-          @media (max-width: $tablet-h) {
+          @media (max-width: $tablet-v) {
             margin-top: 1rem;
           }
         }
@@ -72,8 +73,8 @@
       margin: 0 0 0 5rem;
       @media (max-width: $tablet-h) {
         flex: 1 75%;
-        max-width: rem(720);
-        margin: 3rem auto;
+        max-width: rem(600);
+        margin: 3rem auto 0;
       }
       video {
         width: 100%;
