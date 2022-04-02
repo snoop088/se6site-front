@@ -77,7 +77,7 @@ const Index: NextPage<PageProps> = ({
         </div>
         <figure>
           <video autoPlay loop muted playsInline>
-            <source src={"/" + mediaUrl} />
+            <source src="/templates.mp4" type="video/mp4" />
           </video>
         </figure>
       </Wrapper>
