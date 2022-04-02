@@ -9,6 +9,7 @@ import { PageMeta } from "interfaces/page-meta";
 import { WhyIsStreameyeRight } from "@/components/molecules/why-is-streameye-right/why-is-streameye-right";
 import Button from "@/components/molecules/Button/Button";
 import { FeatureEnterprise } from "interfaces/feature-enterprise";
+import { useDebouncedCallback } from "hooks/useDebouncedCallback";
 
 import styles from "./index.module.scss";
 
@@ -42,6 +43,7 @@ const Index: NextPage<PageProps> = ({
 
   const handleRevealMore = () => {
     if (!isRevealed) {
+      // scroller();
       scrollToRef!.current!.scrollIntoView({ behavior: "smooth" });
     }
     if (isRevealed) {
@@ -50,7 +52,8 @@ const Index: NextPage<PageProps> = ({
     setIsRevealed(!isRevealed);
   };
   return (
-    <div className={styles.container} ref={scrollToTop}>
+    <div className={styles.container}>
+      <div className={styles.top} ref={scrollToTop}></div>
       <Wrapper isWide className={styles.featuresContainer}>
         {features.map((feature) => (
           <div key={feature.id} className={styles.feature}>

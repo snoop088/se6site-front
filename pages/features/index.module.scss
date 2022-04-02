@@ -1,9 +1,15 @@
 @import "@/styles/mixins";
 @import "@/styles/variables";
 .container {
-  display: flex;
+  display: absolute;
   flex-direction: column;
   flex: 1;
+  position: relative;
+  .top {
+    margin-top: -5rem;
+    height: 5rem;
+    pointer-events: none;
+  }
   .featuresContainer {
     @include se6-grid(4, 3rem);
 
@@ -29,6 +35,7 @@
       }
     }
   }
+
   .entFeaturesSlides {
     background-color: $color-light;
     margin-top: -1.25rem;

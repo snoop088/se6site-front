@@ -27,14 +27,13 @@ export const RevealMore = ({
   linear-gradient(to bottom right, #84c9bb 48%, transparent 50%)`;
   return (
     <div className={styles.container}>
-      <h2>{copy}</h2>
-      <div className={styles.revealFunction}>
+      <h2 onClick={() => onReveal()}>{copy}</h2>
+      <div className={styles.revealFunction} onClick={() => onReveal()}>
         <div
           className={classNames([
             styles.arrowContainer,
             { [styles.revealed]: isRevealed },
           ])}
-          onClick={() => onReveal()}
         >
           <span
             className={classNames([

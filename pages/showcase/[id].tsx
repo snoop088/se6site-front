@@ -12,17 +12,29 @@ import { Tags } from "@/components/atoms/tags/tags";
 interface PageProps {
   meta?: PageMeta;
   item: IShowcaseItem;
+  topRoute: string;
   prevId?: string;
   nextId?: string;
 }
 
-const ShowcaseDetail: NextPage<PageProps> = ({ item, prevId, nextId }) => {
+const ShowcaseDetail: NextPage<PageProps> = ({
+  item,
+  prevId,
+  nextId,
+  topRoute,
+}) => {
   return (
     <div
       className={styles.container}
-      style={{ backgroundImage: `url(/showcase/${item?.id}_backdrop.jpg)` }}
+      style={{ backgroundImage: `url(/showcase/${item?.id}_backdrop.jpg)` }} // maybe rewrite this with url as param
     >
-      <PageTitle title={item.client} prevId={prevId} nextId={nextId} elevated />
+      <PageTitle
+        title={item.client}
+        prevId={prevId}
+        nextId={nextId}
+        topRoute={topRoute}
+        elevated
+      />
       <Wrapper isWide className={styles.wrapper}>
         <div className={styles.adsContainer}>
           {item.sizes?.map((size) => (
@@ -90,9 +102,10 @@ export async function getStaticProps({
         keywords: ["kw1", "kw2"],
       },
       item: SHOWCASE_ITEMS[index],
+      topRoute: "/showcase",
       prevId,
       nextId,
-    }, // will be passed to the page component as props
+    } as PageProps, // will be passed to the page component as props
   };
 }
 export default ShowcaseDetail;

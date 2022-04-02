@@ -37,6 +37,7 @@
     h1 {
       flex: 1;
       color: $color-alt-copy;
+      @include fluid-size(font-size, $phone-s, $tablet-v, 24px, 40px);
     }
   }
 }

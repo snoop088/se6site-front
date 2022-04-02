@@ -3,29 +3,77 @@ import { FeatureItem } from "interfaces/feature-item";
 import styles from "./[id].module.scss";
 import { PageMeta } from "interfaces/page-meta";
 import { PageTitle } from "@/components/atoms/page-title/page-title";
-import { FEATURES_FULL } from "api/mockdata/features";
-import { features } from "process";
+import { BulletListMd } from "@/components/atoms/bullet-list-md/bullet-list-md";
+import {
+  ENTERPRISE_FEATURES,
+  FEATURES_FULL,
+  FIND_OUT_MORE,
+} from "api/mockdata/features";
 import Wrapper from "@/components/organisms/Wrapper/Wrapper";
 import ReactMarkdown from "react-markdown";
+import Button from "@/components/molecules/Button/Button";
+import { RevealMore } from "@/components/molecules/reveal-more/reveal-more";
+import { FeaturesSlider } from "@/components/molecules/features-slider/features-slider";
+import { FeatureEnterprise } from "interfaces/feature-enterprise";
 
 interface PageProps {
   feature: FeatureItem;
   meta?: PageMeta;
   prevId?: string;
   nextId?: string;
+  topRoute: string;
+  findOutMore: string;
+  featuresEnterprise: FeatureEnterprise[];
 }
 
 const Index: NextPage<PageProps> = ({
-  feature: { title, icon, descriptionMd, mediaUrl },
+  feature: { title, icon, descriptionMd, mediaUrl, usingFor, gettingStarted },
   prevId,
   nextId,
+  topRoute,
+  findOutMore,
+  featuresEnterprise,
 }: PageProps) => {
+  const handleRevealMore = () => {};
   return (
     <div className={styles.container}>
-      <PageTitle title={title} prevId={prevId} nextId={nextId} icon={icon} />
+      <PageTitle
+        title={title}
+        prevId={prevId}
+        nextId={nextId}
+        icon={icon}
+        topRoute={topRoute}
+      />
       <Wrapper isWide className={styles.feature}>
         <div className={styles.content}>
           <ReactMarkdown>{descriptionMd}</ReactMarkdown>
+          <div className={styles.usesAndSteps}>
+            <div className={styles.uses}>
+              <h3>{usingFor.title}</h3>
+              <div className={styles.copy}>
+                <BulletListMd
+                  listMd={usingFor.uses}
+                  className={styles.bullets}
+                />
+              </div>
+            </div>
+            <div className={styles.steps}>
+              <h3>{gettingStarted.title}</h3>
+              <div className={styles.copy}>
+                <BulletListMd
+                  listMd={gettingStarted.steps}
+                  className={styles.bullets}
+                />
+              </div>
+              <div className={styles.cta}>
+                <Button
+                  title="Get in touch to start"
+                  icon="button-arrow"
+                  variant="green"
+                />
+              </div>
+            </div>
+          </div>
         </div>
         <figure>
           <video autoPlay loop muted playsInline>
@@ -33,6 +81,17 @@ const Index: NextPage<PageProps> = ({
           </video>
         </figure>
       </Wrapper>
+      {/* <div className={styles.findOutMore}>
+        <RevealMore
+          copy={findOutMore}
+          onReveal={handleRevealMore}
+          isRevealed={false}
+          overlapColour="#e2f6fa"
+        />
+      </div>
+      <div className={styles.entFeaturesSlides}>
+        <FeaturesSlider features={featuresEnterprise} />
+      </div> */}
     </div>
   );
 };
@@ -63,7 +122,10 @@ export async function getStaticProps({
       feature: FEATURES_FULL[index],
       prevId,
       nextId,
-    }, // will be passed to the page component as props
+      topRoute: "/features",
+      findOutMore: FIND_OUT_MORE,
+      featuresEnterprise: ENTERPRISE_FEATURES,
+    } as PageProps, // will be passed to the page component as props
   };
 }
 export default Index;

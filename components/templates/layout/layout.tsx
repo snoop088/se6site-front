@@ -22,9 +22,12 @@ export const Layout = ({ children, meta }: LayoutProps) => {
         <meta name="description" content={meta?.description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <Header menuLinks={HEADER_MENUS} />
-      </header>
+      <div className={styles.headerDummy}>
+        <header>
+          <Header menuLinks={HEADER_MENUS} />
+        </header>
+      </div>
+
       <main>{children}</main>
       <footer>
         <Footer
