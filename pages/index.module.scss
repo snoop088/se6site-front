@@ -21,7 +21,7 @@
   .notConvinced {
     display: flex;
     flex-direction: column;
-    @include fluid-size(margin-top, $tablet-v, $desktop, 48px, 96px);
+    @include fluid-size(margin-top, $tablet-v, $desktop, 48px, 80px);
   }
   .whatIsStreameye {
     background: linear-gradient(180deg, #fff 0%, #fff 70%, #e3f3ff 100%);

@@ -11,14 +11,14 @@
     pointer-events: none;
   }
   .featuresContainer {
-    @include se6-grid(4, 3rem);
+    @include se6-grid(4, 5rem);
 
     .feature {
       display: flex;
       flex: 1;
     }
     @media (max-width: $desktop) {
-      @include se6-grid(2, 2rem);
+      @include se6-grid(2, 3rem);
     }
     @media (max-width: $phone-h) {
       @include se6-grid(1);
@@ -28,7 +28,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    padding: 2rem;
+    padding: 3rem;
     @media (max-width: $phone-h) {
       Button {
         display: none;
