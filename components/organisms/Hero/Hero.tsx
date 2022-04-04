@@ -4,6 +4,7 @@ import Wrapper from "@/components/organisms/Wrapper/Wrapper";
 import Button from "@/components/molecules/Button/Button";
 
 import styles from "./Hero.module.scss";
+import { useWindowSize } from "hooks/useWindowSize";
 
 interface Props {
   title: string;
@@ -12,6 +13,11 @@ interface Props {
 }
 
 const Hero = ({ title, buttonTitle, buttonOnClick }: Props) => {
+  const wSize = useWindowSize();
+  const videoSrc =
+    wSize.width && wSize.width > 768
+      ? "/se_site_1920x720.mp4"
+      : "/se_site_720x720.mp4";
   return (
     <div className={styles.container}>
       <Wrapper className={styles.wrapper}>
@@ -30,8 +36,9 @@ const Hero = ({ title, buttonTitle, buttonOnClick }: Props) => {
           muted
           playsInline
           className={styles.heroVideoBanner}
+          src={videoSrc}
         >
-          <source src="/se_site_1920x720_c.mp4" />
+          <source src={videoSrc} />
         </video>
       </div>
       <div className={styles.videoOverlay}></div>

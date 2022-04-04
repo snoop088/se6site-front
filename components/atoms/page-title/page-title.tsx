@@ -5,7 +5,7 @@ import Icon from "../Icon/Icon";
 import styles from "./page-title.module.scss";
 interface PageTitleProps {
   title: string;
-  topRoute: string;
+  topRoute?: string;
   icon?: string;
   elevated?: boolean;
   prevId?: string;
@@ -44,11 +44,13 @@ export const PageTitle = ({
               </a>
             </Link>
           )}
-          <Link href={topRoute}>
-            <a>
-              <Icon icon="close-thin" className={styles.closeIcon} />
-            </a>
-          </Link>
+          {topRoute && (
+            <Link href={topRoute}>
+              <a>
+                <Icon icon="close-thin" className={styles.closeIcon} />
+              </a>
+            </Link>
+          )}
         </div>
       </Wrapper>
     </div>
