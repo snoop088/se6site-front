@@ -10,6 +10,7 @@
   .title {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     .nav {
       cursor: pointer;
     }
@@ -34,10 +35,6 @@
       margin-right: 1.5rem;
       fill: $color-border;
     }
-    h1 {
-      flex: 1;
-      color: $color-alt-copy;
-      @include fluid-size(font-size, $phone-s, $tablet-v, 24px, 32px);
-    }
+    
   }
 }

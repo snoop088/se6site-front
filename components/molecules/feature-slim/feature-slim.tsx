@@ -47,9 +47,9 @@ export const FeatureSlim = ({
         <Image
           src={mediaUrl}
           alt={title}
-          layout="intrinsic"
           width={768}
-          height={576}
+          height={476}
+          quality={100}
         />
       </figure>
     </div>

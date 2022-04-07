@@ -1,0 +1,56 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -2rem;
+  &.reversed {
+    flex-direction: row-reverse;
+  }
+  .content, figure {
+    flex: 1 50%;
+    margin: 2rem 0;
+    padding: 0 2rem;
+    @media (max-width: $tablet-v) {
+      flex: 1 100%
+    }
+  }
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  h1 {
+    font-weight: 700;
+    @include fluid-size(font-size, $tablet-v, $desktop, 24px, 32px);
+    @media (max-width: $tablet-v) {
+      @include fluid-size(font-size, $phone-s, $tablet-v, 22px, 32px);
+    }
+    em {
+      font-weight: 300;
+      color: $color-brand;
+      font-style: normal;
+    }
+  }
+  h2 {
+    span {
+      color: $color-brand;
+    }
+    @include fluid-size(font-size, $tablet-v, $desktop, 20px, 24px);
+    @media (max-width: $tablet-v) {
+      @include fluid-size(font-size, $phone-s, $tablet-v, 18px, 24px);
+    }
+  }
+  .bullets {
+    font-size: 1.15em;
+  }
+  .copy {
+    margin-top: 2rem;
+  }
+
+  .cta {
+    margin-top: 2rem;
+  }
+}

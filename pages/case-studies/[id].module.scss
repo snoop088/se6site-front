@@ -1,0 +1,169 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+.container {
+  display: flex;
+  flex-direction: column;
+  .heroBanner {
+    overflow-x: hidden;
+  }
+  .heroBannerContent {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2rem -2rem 0 -2rem;
+    .header,
+    figure {
+      flex: 1 50%;
+      padding: 0 2rem;
+      @media (max-width: $tablet-v) {
+        flex: 1 100%;
+      }
+    }
+
+    h1 {
+      font-weight: 700;
+      @include fluid-size(font-size, $tablet-v, $desktop, 24px, 38px);
+      @media (max-width: $tablet-v) {
+        @include fluid-size(font-size, $phone-s, $tablet-v, 22px, 30px);
+      }
+      max-width: 40rem;
+      em {
+        font-weight: 300;
+        color: $color-brand;
+        font-style: normal;
+      }
+    }
+    h2 {
+      span {
+        color: $color-brand;
+      }
+      @include fluid-size(font-size, $tablet-v, $desktop, 20px, 24px);
+      @media (max-width: $tablet-v) {
+        @include fluid-size(font-size, $phone-s, $tablet-v, 18px, 24px);
+      }
+    }
+    figure {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .bullets {
+    padding: 1rem 0;
+    background-color: $color-light;
+    ul {
+      display: flex;
+      list-style-image: url(/arrow.svg);
+      list-style-position: outside;
+      margin-left: -1.5rem;
+      justify-content: space-evenly;
+      @media (max-width: $tablet-v) {
+        flex-direction: column;
+      }
+
+      li {
+        padding-left: 0.5rem;
+        margin: 0 1.5rem;
+        font-size: 1.2rem;
+        @media (max-width: $tablet-v) {
+          margin: 0.5rem 1.5rem;
+        }
+        @include fluid-size(font-size, $phone-v, $tablet-h, 16.5px, 20px);
+      }
+    }
+  }
+  .caseContent {
+    .caseSection {
+      margin: $subsection-margin auto;
+      .copy {
+        ul {
+          list-style-image: url(/arrow.svg);
+          list-style-position: outside;
+          margin-left: -1.5rem;
+          li {
+            padding-left: 0.5rem;
+            p {
+              margin: 0.75rem auto;
+            }
+          }
+        }
+        p {
+          margin: 0.5rem auto 2rem auto;
+          em {
+            color: $color-brand;
+            font-style: normal;
+          }
+        }
+        h3 {
+          color: $color-brand;
+          margin-bottom: 0.5rem;
+        }
+        img {
+          display: block;
+          width: 90%;
+          margin: 4rem auto;
+        }
+      }
+    }
+  }
+  .testimonial {
+    margin: 2rem 0 4rem 0;
+  }
+  .testimonialContent {
+    display: flex;
+    flex-direction: column;
+
+    blockquote {
+      position: relative;
+      &::before {
+        content: " ";
+        display: block;
+        width: 4px;
+        background-color: $color-brand;
+        position: absolute;
+        top: -0.25rem;
+        left: -1.5rem;
+        bottom: -0.25rem;
+      }
+      margin: 0;
+      quotes: "\e90f""\e90e";
+    }
+
+    .copy {
+      margin-bottom: 1rem;
+      color: $color-alt-copy;
+
+      p {
+        margin-top: 0;
+        &::before,
+        &::after {
+          display: inline-block;
+          font-family: icomoon;
+          vertical-align: super;
+          font-size: 0.66em;
+          color: $color-brand;
+        }
+        &::before {
+          content: open-quote;
+          margin-right: 0.33rem;
+        }
+        &::after {
+          content: close-quote;
+          margin-left: 0.33rem;
+        }
+      }
+      em {
+        color: $color-brand;
+        font-style: normal;
+      }
+    }
+    .personName {
+      font-weight: 700;
+    }
+  }
+  .whyStreameye {
+    background-color: $color-light;
+  }
+}

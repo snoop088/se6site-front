@@ -12,7 +12,7 @@ export const FOOTER_MENUS = [
     href: "/showcase",
   },
   {
-    title: "ABOUT",
+    title: "ABOUT US",
     href: "/about",
   },
   {

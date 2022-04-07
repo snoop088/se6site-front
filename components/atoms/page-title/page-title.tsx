@@ -1,6 +1,7 @@
 import Wrapper from "@/components/organisms/Wrapper/Wrapper";
 import classNames from "classnames";
 import Link from "next/link";
+import { IconTitle } from "../icon-title/icon-title";
 import Icon from "../Icon/Icon";
 import styles from "./page-title.module.scss";
 interface PageTitleProps {
@@ -27,8 +28,9 @@ export const PageTitle = ({
       ])}
     >
       <Wrapper isWide className={styles.title}>
-        {icon && <Icon icon={icon} className={styles.icon} />}
-        <h1>{title}</h1>
+        <div className={styles.iconTitle}>
+          <IconTitle title={title} icon={icon} />
+        </div>
         <div className={styles.nav}>
           {prevId && (
             <Link href={`${topRoute}/${prevId}`}>

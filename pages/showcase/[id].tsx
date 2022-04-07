@@ -8,9 +8,9 @@ import Wrapper from "@/components/organisms/Wrapper/Wrapper";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import { Tags } from "@/components/atoms/tags/tags";
+import { PageWithMeta } from "interfaces/page-with-meta";
 
-interface PageProps {
-  meta?: PageMeta;
+interface PageProps extends PageWithMeta {
   item: IShowcaseItem;
   topRoute: string;
   prevId?: string;

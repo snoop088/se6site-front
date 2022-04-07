@@ -3,6 +3,16 @@
 
 @import url("https://use.typekit.net/nef4mwk.css");
 
+@font-face {
+  font-family: 'icomoon';
+  src:  
+    url('../fonts/icomoon.woff?3osh3k') format('woff'),
+    url('../fonts/icomoon.svg?3osh3k#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
 @import "@/styles/mixins";
 @import "@/styles/variables";
 
