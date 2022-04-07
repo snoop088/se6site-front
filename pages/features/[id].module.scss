@@ -6,7 +6,7 @@
   flex-direction: column;
   background: transparent linear-gradient(180deg, #e3f3ff00 70%, #e3f3ffa0 100%)
     0% 0% no-repeat padding-box;
-    padding-bottom: 3rem;
+  padding-bottom: 3rem;
   .feature {
     display: flex;
     @media (max-width: $tablet-h) {
@@ -72,12 +72,14 @@
       flex: 1;
       padding: 0;
       margin: 0 0 0 5rem;
+
       @media (max-width: $tablet-h) {
         flex: 1 100%;
         max-width: rem(600);
         margin: 5rem auto 2rem;
       }
       video {
+        mix-blend-mode: multiply;
         width: 100%;
         height: auto;
       }
