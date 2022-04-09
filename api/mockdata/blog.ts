@@ -33,8 +33,26 @@ export const BLOG_POSTS_SLIM: BlogItemSlim[] = [
     medialUrl: "/blog/Streameye_Integrates_With_Google_Studio_725x480.jpg",
     title: "STREAMEYE NOW OFFERS POWERFUL GOOGLE STUDIO INTEGRATION",
     author: "Streameye",
-    date: "2020-10-20T13:22+0:002",
+    date: "2020-10-20T13:22+02:00",
     shortCopy:
       "Learn why StreamEye's new Google Studio integration can improve the way you create and manage banner ad campaigns.",
+  },
+  {
+    id: "What_Applies_To_RichMedia_Html5",
+    medialUrl: "/blog/What_Applies_To_RichMedia_Html5.jpg",
+    title: "WHICH FUNCTIONALITY APPLIES TO RICH MEDIA HTML5 ADS?",
+    author: "Streameye",
+    date: "2020-09-17T13:22+02:00",
+    shortCopy:
+      "There’s good reasons why HTML5 ads are quickly becoming standards for banner ads, see what HTML5 ads can do and how you can use them for better results.",
+  },
+  {
+    id: "Power_Of_Video_Ads",
+    medialUrl: "/blog/Power_Of_Video_Ads.jpg",
+    title: "STREAMEYE BRINGS THE POWER OF VIDEO ADS TO YOU",
+    author: "Streameye",
+    date: "2020-07-10T13:22+02:00",
+    shortCopy:
+      "Did you know that video banner ads perform up to 700% better than static ones? Discover how StreamEye will help you improve online advertising results.",
   },
 ];

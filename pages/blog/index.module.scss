@@ -19,5 +19,8 @@
     @media (max-width: $tablet-h) {
       @include se6-grid(2, 5rem);
     }
+    @media (max-width: $phone-v) {
+      @include se6-grid(1, 3rem);
+    }
   }
 }

@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@types/node': 16.11.6
   '@types/react': 17.0.34
+  '@types/react-infinite-scroller': ^1.2.3
   classnames: ^2.3.1
   eslint: 7.32.0
   eslint-config-next: 12.0.2
@@ -11,6 +12,7 @@ specifiers:
   node-sass: ^6.0.1
   react: 17.0.2
   react-dom: 17.0.2
+  react-infinite-scroller: ^1.2.5
   react-markdown: ^8.0.1
   swiper: ^8.0.7
   typescript: 4.4.4
@@ -22,12 +24,14 @@ dependencies:
   node-sass: 6.0.1
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-infinite-scroller: 1.2.5_react@17.0.2
   react-markdown: 8.0.1_27d7f75f5fffc1228c129be468caca5c
   swiper: 8.0.7
 
 devDependencies:
   '@types/node': 16.11.6
   '@types/react': 17.0.34
+  '@types/react-infinite-scroller': 1.2.3
   eslint: 7.32.0
   eslint-config-next: 12.0.2_dab3f5c43e355cb46f2bd42affbfbcdd
   typescript: 4.4.4
@@ -362,6 +366,12 @@ packages:
 
   /@types/prop-types/15.7.4:
     resolution: {integrity: sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==}
+
+  /@types/react-infinite-scroller/1.2.3:
+    resolution: {integrity: sha512-l60JckVoO+dxmKW2eEG7jbliEpITsTJvRPTe97GazjF5+ylagAuyYdXl8YY9DQsTP9QjhqGKZROknzgscGJy0A==}
+    dependencies:
+      '@types/react': 17.0.34
+    dev: true
 
   /@types/react/17.0.34:
     resolution: {integrity: sha512-46FEGrMjc2+8XhHXILr+3+/sTe3OfzSPU9YGKILLrUYbQ1CLQC9Daqo1KzENGXAWwrFwiY0l4ZbF20gRvgpWTg==}
@@ -3324,6 +3334,15 @@ packages:
       object-assign: 4.1.1
       react: 17.0.2
       scheduler: 0.20.2
+    dev: false
+
+  /react-infinite-scroller/1.2.5_react@17.0.2:
+    resolution: {integrity: sha512-2A+SFUliZhVcxr4R2kFBrW/naGSluNMLqT6wfgmXKCggN1u/H4AW7flBLWHcY/5n/KviVLnpQfaMfBb/pG/m7g==}
+    peerDependencies:
+      react: ^0.14.9 || ^15.3.0 || ^16.0.0 || ^17.0.0
+    dependencies:
+      prop-types: 15.8.1
+      react: 17.0.2
     dev: false
 
   /react-is/16.13.1:
