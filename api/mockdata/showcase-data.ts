@@ -245,6 +245,48 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     copyMd: "",
   },
   {
+    id: "DAZN-Global-Fixtures-21",
+    thumbUrl: "fixture_display_prevew.jpg",
+    sizes: [
+      {
+        seId: "10f2cae2-4b6c-477c-a3d9-be4311e7338c",
+        w: 970,
+        h: 250,
+      },
+      {
+        seId: "e23165d4-6a99-420c-95f9-c886588f4c2c",
+        w: 728,
+        h: 90,
+      },
+      {
+        seId: "7412c964-bf89-4d60-b00c-a0febeb3dd7a",
+        w: 300,
+        h: 600,
+      },
+      {
+        seId: "fb32aa00-cb4e-4de0-8dff-d3aaa37fe072",
+        w: 160,
+        h: 600,
+      },
+      {
+        seId: "fd9b421e-1b7f-4db2-ae86-32ad54c6877c",
+        w: 300,
+        h: 250,
+      },
+      {
+        seId: "c25cedea-c03b-4d2e-8c93-bd3766aef9cf",
+        w: 300,
+        h: 50,
+      },
+    ],
+    tags: ["HTML5", "Mobile", "Social"],
+    client: "DAZN",
+    title: "DAZN Global Fixtures 2021",
+    streameyeId: "fd9b421e-1b7f-4db2-ae86-32ad54c6877c",
+    copyMd:
+      "Some cool copy about DAZN here. It would be good to point out number of sizes and the fact that the template also produces statics for social automatically.",
+  },
+  {
     id: "someID_here",
     thumbUrl: "pp_galway_responsive_thumb.jpeg",
     sizes: [

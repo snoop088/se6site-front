@@ -36,7 +36,7 @@ export const CaseStudyPreview = ({
 
       <div className={styles.summary}>
         {summary}
-        <Link href={"/casestudies/" + id} passHref>
+        <Link href={"/case-studies/" + id} passHref>
           <a>
             {cta} <Icon icon="button-arrow" className={styles.icon}></Icon>
           </a>

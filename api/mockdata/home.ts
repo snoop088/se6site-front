@@ -98,7 +98,7 @@ export const NOT_CONVINCED: {
   cta: "Book a demo",
   caseStudyPreviews: [
     {
-      id: "DAZN_case_study_id",
+      id: "DAZN",
       client: "DAZN",
       summary:
         "Streameye helps DAZN scale their brand presence across the globe.",
@@ -107,7 +107,7 @@ export const NOT_CONVINCED: {
       aspect: "sq",
     },
     {
-      id: "Epson_case_study_id",
+      id: "Epson",
       client: "Epson",
       summary: "Streameye automates Epson's banner production in 20 languages.",
       cta: "more",
@@ -115,7 +115,7 @@ export const NOT_CONVINCED: {
       aspect: "wide",
     },
     {
-      id: "Betfair_case_study_id",
+      id: "PPB",
       client: "Betfair",
       summary:
         "Streameye streamlines the omni-channel ad production for Betfair.",

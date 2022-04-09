@@ -23,11 +23,14 @@ export const CaseStudySlim = ({
         { [styles.reversed]: order === "reverse" },
       ])}
     >
-      <Link href={"/case-studies/" + id} passHref>
-        <figure>
-          <Image src={mediaUrl} alt={client} width={725} height={625} />
-        </figure>
-      </Link>
+      <figure>
+        <Link href={"/case-studies/" + id} passHref>
+          <a>
+            <Image src={mediaUrl} alt={client} width={725} height={625} />
+          </a>
+        </Link>
+      </figure>
+
       <div className={styles.content}>
         <h2>
           CASE STUDY: <span>{client}</span>
@@ -39,7 +42,9 @@ export const CaseStudySlim = ({
         <ReactMarkdown className={styles.copy}>{copyMd}</ReactMarkdown>
         <div className={styles.cta}>
           <Link href={"/case-studies/" + id} passHref>
-            <Button title={cta} variant="green" small />
+            <a>
+              <Button title={cta} variant="green" small />
+            </a>
           </Link>
         </div>
       </div>

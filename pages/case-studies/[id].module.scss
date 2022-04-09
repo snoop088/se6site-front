@@ -3,6 +3,7 @@
 .container {
   display: flex;
   flex-direction: column;
+
   .heroBanner {
     overflow-x: hidden;
   }
@@ -109,60 +110,9 @@
     }
   }
   .testimonial {
-    margin: 2rem 0 4rem 0;
+    margin: 1rem 0 4rem 0;
   }
-  .testimonialContent {
-    display: flex;
-    flex-direction: column;
 
-    blockquote {
-      position: relative;
-      &::before {
-        content: " ";
-        display: block;
-        width: 4px;
-        background-color: $color-brand;
-        position: absolute;
-        top: -0.25rem;
-        left: -1.5rem;
-        bottom: -0.25rem;
-      }
-      margin: 0;
-      quotes: "\e90f""\e90e";
-    }
-
-    .copy {
-      margin-bottom: 1rem;
-      color: $color-alt-copy;
-
-      p {
-        margin-top: 0;
-        &::before,
-        &::after {
-          display: inline-block;
-          font-family: icomoon;
-          vertical-align: super;
-          font-size: 0.66em;
-          color: $color-brand;
-        }
-        &::before {
-          content: open-quote;
-          margin-right: 0.33rem;
-        }
-        &::after {
-          content: close-quote;
-          margin-left: 0.33rem;
-        }
-      }
-      em {
-        color: $color-brand;
-        font-style: normal;
-      }
-    }
-    .personName {
-      font-weight: 700;
-    }
-  }
   .whyStreameye {
     background-color: $color-light;
   }

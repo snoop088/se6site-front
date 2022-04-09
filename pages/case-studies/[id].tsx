@@ -1,5 +1,6 @@
 import { IconTitle } from "@/components/atoms/icon-title/icon-title";
 import Button from "@/components/molecules/Button/Button";
+import { TestimonialItem } from "@/components/molecules/testimonial-item/testimonial-item";
 import { WhyIsStreameyeRight } from "@/components/molecules/why-is-streameye-right/why-is-streameye-right";
 import Wrapper from "@/components/organisms/Wrapper/Wrapper";
 import { CASE_STUDIES_FULL } from "api/mockdata/case-studies";
@@ -70,20 +71,12 @@ const CaseStudy: NextPage<PageProps> = ({
         ))}
       </section>
       <section className={styles.testimonial}>
-        <Wrapper className={styles.testimonialContent}>
-          <blockquote>
-            <div className={styles.copy}>
-              <ReactMarkdown>{testimonial.copyMd}</ReactMarkdown>
-            </div>
-            <div className={styles.testimonialPerson}>
-              <div className={styles.personName}>{testimonial.person.name}</div>
-              <div className={styles.personPosition}>
-                {testimonial.person.position}
-              </div>
-            </div>
-            <div className={styles.testimonialClient}>{testimonial.client}</div>
-          </blockquote>
-        </Wrapper>
+        <TestimonialItem
+          personName={testimonial.person.name}
+          personPosition={testimonial.person.position}
+          personCompany={testimonial.client}
+          copyMd={testimonial.copyMd}
+        />
       </section>
       <section className={styles.whyStreameye}>
         <WhyIsStreameyeRight

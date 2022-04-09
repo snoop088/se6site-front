@@ -8,12 +8,13 @@
   &.reversed {
     flex-direction: row-reverse;
   }
-  .content, figure {
+  .content,
+  figure {
     flex: 1 50%;
     margin: 2rem 0;
     padding: 0 2rem;
     @media (max-width: $tablet-v) {
-      flex: 1 100%
+      flex: 1 100%;
     }
   }
   figure {

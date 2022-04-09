@@ -1,0 +1,23 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: transparent linear-gradient(180deg, #e3f3ff00 85%, #e3f3ffa0 100%)
+    0% 0% no-repeat padding-box;
+  padding: 3rem 0;
+  position: relative;
+  .blogGrid {
+    @include se6-grid(3, 5rem);
+    & > div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: $tablet-h) {
+      @include se6-grid(2, 5rem);
+    }
+  }
+}
