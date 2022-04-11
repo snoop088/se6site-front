@@ -1,0 +1,65 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+.container {
+  margin: 3rem auto;
+  display: block;
+  figure {
+    float: right;
+    margin: 0 0 3rem 3rem;
+    max-width: 50%;
+    @media (max-width: $phone-h) {
+      max-width: 100%;
+      margin: 0 0 2rem 0;
+    }
+  }
+  h1 {
+    @include fluid-size(font-size, $phone-v, $tablet-v, 20px, 32px);
+  }
+  .author {
+    font-weight: 700;
+  }
+  .date {
+    color: $color-brand;
+  }
+  .copy {
+    img {
+      max-width: 50%;
+      float: left;
+      margin: 3rem 3rem 3rem 0;
+      &:nth-of-type(2n) {
+        float: right;
+        margin: 3rem 0 3rem 3rem;
+      }
+      @media (max-width: $phone-h) {
+        max-width: 100%;
+        margin: 2rem 0;
+      }
+    }
+    ul {
+      list-style-image: url(/arrow.svg);
+      list-style-position: outside;
+      margin-left: -1.5rem;
+
+      li {
+        padding-left: 0.5rem;
+        p {
+          margin: 0.75rem auto;
+        }
+      }
+    }
+    p {
+      margin: 0.5rem auto 1.5rem auto;
+      em {
+        color: $color-brand;
+        font-style: normal;
+      }
+    }
+    h2 {
+      color: $color-brand;
+      margin-bottom: 1.5rem;
+    }
+    a {
+      color: $color-brand;
+    }
+  }
+}

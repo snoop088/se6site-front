@@ -1,6 +1,6 @@
 export interface BlogItemSlim {
   id: string;
-  medialUrl: string;
+  mediaUrl: string;
   title: string;
   author: string;
   date: string;

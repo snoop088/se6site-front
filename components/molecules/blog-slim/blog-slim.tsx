@@ -8,7 +8,7 @@ interface BlogSlimProps {
   blogItemSlim: BlogItemSlim;
 }
 export const BlogSlim = ({
-  blogItemSlim: { title, date, author, medialUrl, id, shortCopy },
+  blogItemSlim: { title, date, author, mediaUrl, id, shortCopy },
 }: BlogSlimProps) => {
   const formattedDate = new Date(date).toDateString();
   return (
@@ -16,7 +16,7 @@ export const BlogSlim = ({
       <figure>
         <Link href={"/blog/" + id} passHref>
           <a>
-            <Image src={medialUrl} width={725} height={480} alt={title} />
+            <Image src={mediaUrl} width={725} height={480} alt={title} />
           </a>
         </Link>
       </figure>
