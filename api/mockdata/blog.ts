@@ -86,3 +86,33 @@ export const BLOG_POSTS_FULL: BlogItem[] = [
       "  \n\n For companies without in-house marketing and technical teams, this can make using these ads effectively extremely difficult. That’s why working with a trusted external partner like [StreamEye](https://www.streameye.com), an IAB certified vendor, makes sense. We work with you to create all kinds of skins and banner ads. Then, our platform makes it easy to manage and modify them whenever you need, even without any technical know-how. To learn more, get in touch. We’ll be happy to chat.",
   },
 ];
+
+export const SELECTED_ARTICLES: BlogItemSlim[] = [
+  {
+    id: "How_To_Make_A_Banner",
+    mediaUrl: "/blog/How_To_Make_A_Banner_725x480.jpg",
+    title: "HOW TO MAKE A BANNER",
+    author: "Streameye",
+    date: "2020-12-10T13:48+02:00",
+    shortCopy:
+      "We break down everything you need to know about how to make a banner from choosing a hypothesis to test to the nuts and bolts of creating it.",
+  },
+  {
+    id: "How_To_Add_Video_To_Html5_Ads",
+    mediaUrl: "/blog/How_To_Add_Video_To_Html5_Ads_725x480.jpg",
+    title: "HOW TO ADD VIDEO TO HTML5 ADS",
+    author: "Streameye",
+    date: "2020-10-11T18:22+02:00",
+    shortCopy:
+      "Learn everything you need to know about in-banner HTML5 video ads, from how to create them to what techniques will get you the best results.",
+  },
+  {
+    id: "Streameye_Integrates_With_Google_Studio",
+    mediaUrl: "/blog/Streameye_Integrates_With_Google_Studio_725x480.jpg",
+    title: "STREAMEYE NOW OFFERS POWERFUL GOOGLE STUDIO INTEGRATION",
+    author: "Streameye",
+    date: "2020-10-20T13:22+02:00",
+    shortCopy:
+      "Learn why StreamEye's new Google Studio integration can improve the way you create and manage banner ad campaigns.",
+  },
+];

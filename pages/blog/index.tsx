@@ -48,7 +48,7 @@ const Index: NextPage<PageProps> = ({ blogPostsSlim }: PageProps) => {
   return (
     <div className={styles.container}>
       <InfiniteScroll
-        pageStart={1}
+        pageStart={0}
         loadMore={blogLoader}
         hasMore={hasNext}
         loader={
