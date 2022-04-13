@@ -36,18 +36,18 @@ const Index: NextPage<PageProps> = ({ blogPostsSlim }: PageProps) => {
   // must memoise or it will be recreated on re-render!
   // no dependencies needed as this is only derived once
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const nextPostsCall = useMemo(() => articleGenerator(3, 1000), []);
-  const blogLoader = async () => {
-    const loaded = await nextPostsCall.next();
-    if (loaded.done) {
-      setHasNext(false);
-    } else {
-      setPosts((current) => [...current, ...loaded.value]);
-    }
-  };
+  // const nextPostsCall = useMemo(() => articleGenerator(3, 1000), []);
+  // const blogLoader = async () => {
+  //   const loaded = await nextPostsCall.next();
+  //   if (loaded.done) {
+  //     setHasNext(false);
+  //   } else {
+  //     setPosts((current) => [...current, ...loaded.value]);
+  //   }
+  // };
   return (
     <div className={styles.container}>
-      <InfiniteScroll
+      {/* <InfiniteScroll
         pageStart={0}
         loadMore={blogLoader}
         hasMore={hasNext}
@@ -62,15 +62,15 @@ const Index: NextPage<PageProps> = ({ blogPostsSlim }: PageProps) => {
             />
           </div>
         }
-      >
-        <Wrapper isWide className={styles.blogGrid}>
-          {posts.map((post) => (
-            <div key={post.id}>
-              <BlogSlim blogItemSlim={post} />
-            </div>
-          ))}
-        </Wrapper>
-      </InfiniteScroll>
+      > */}
+      <Wrapper isWide className={styles.blogGrid}>
+        {posts.map((post) => (
+          <div key={post.id}>
+            <BlogSlim blogItemSlim={post} />
+          </div>
+        ))}
+      </Wrapper>
+      {/* </InfiniteScroll> */}
     </div>
   );
 };

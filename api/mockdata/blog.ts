@@ -70,9 +70,18 @@ export const BLOG_POSTS_SLIM: BlogItemSlim[] = [
     mediaUrl: "/blog/Why_Do_Reduntant_Work.jpg",
     title: "WHY ARE YOUR MARKETING AND CREATIVE TEAMS DOING REDUNDANT WORK?",
     author: "Streameye",
-    date: "2020-06-25T11:12+02:00",
+    date: "2020-06-17:15+02:00",
     shortCopy:
       "Redundant work assigned to teams may actually harm your employees' morale and hurt productivity. Learn how to identify it - and fix the issues quickly.",
+  },
+  {
+    id: "3_Keys_To_Successfull_Marketing_Design_Collaboration",
+    mediaUrl: "/blog/3_Keys_To_Successfull_Marketing_Design_Collaboration.jpg",
+    title: "3 KEYS TO SUCCESSFUL MARKETING AND DESIGN COLLABORATION",
+    author: "Streameye",
+    date: "2020-06-25T11:12+02:00",
+    shortCopy:
+      "Better marketing and design collaboration means better results from both teams. Here’s what you need to do to help your teams perform",
   },
 ];
 
@@ -161,6 +170,26 @@ export const BLOG_POSTS_FULL: BlogItem[] = [
     date: "2020-07-02T14:31+02:00",
     shortCopy:
       "When choosing the best banner software to supercharge your digital marketing and provide the highest ROI, you need to consider these five major elements.",
+    copyMd: "",
+  },
+  {
+    id: "Why_Do_Reduntant_Work",
+    mediaUrl: "/blog/Why_Do_Reduntant_Work.jpg",
+    title: "WHY ARE YOUR MARKETING AND CREATIVE TEAMS DOING REDUNDANT WORK?",
+    author: "Streameye",
+    date: "2020-06-25T11:12+02:00",
+    shortCopy:
+      "Redundant work assigned to teams may actually harm your employees' morale and hurt productivity. Learn how to identify it - and fix the issues quickly.",
+    copyMd: "",
+  },
+  {
+    id: "3_Keys_To_Successfull_Marketing_Design_Collaboration",
+    mediaUrl: "/blog/3_Keys_To_Successfull_Marketing_Design_Collaboration.jpg",
+    title: "3 KEYS TO SUCCESSFUL MARKETING AND DESIGN COLLABORATION",
+    author: "Streameye",
+    date: "2020-06-25T11:12+02:00",
+    shortCopy:
+      "Better marketing and design collaboration means better results from both teams. Here’s what you need to do to help your teams perform",
     copyMd: "",
   },
 ];
