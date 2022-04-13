@@ -24,6 +24,9 @@
     .date {
       color: $color-brand;
     }
+    .authorDate {
+      margin-bottom: 2rem;
+    }
     .copy {
       img {
         max-width: 50%;
@@ -62,7 +65,10 @@
         margin-bottom: 1.5rem;
       }
       a {
-        color: $color-brand;
+        color: $color-border;
+        &:hover {
+          color: $color-accent;
+        }
       }
     }
   }

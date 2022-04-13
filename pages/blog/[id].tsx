@@ -31,7 +31,7 @@ const BlogArticle: NextPage<PageProps> = ({
           <Image src={mediaUrl} width={725} height={480} alt={title} />
         </figure>
         <h1>{title}</h1>
-        <div>
+        <div className={styles.authorDate}>
           By <span className={styles.author}>{author}&nbsp;&nbsp;</span>|
           <span className={styles.date}>&nbsp;&nbsp;{formattedDate}</span>
         </div>
@@ -91,7 +91,7 @@ export async function getStaticProps({
     props: {
       meta: {
         title: "Streameye - Blog - " + BLOG_POSTS_FULL[index].title,
-        description: "I am the home page",
+        description: "Streameye's Blog - Our findings on few digital topics",
         keywords: ["kw1", "kw2"],
       },
       blogItem: BLOG_POSTS_FULL[index],

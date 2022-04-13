@@ -11,7 +11,7 @@ interface SelectedArticlesProps {
 export const SelectedArticles = ({ articles }: SelectedArticlesProps) => {
   return (
     <Wrapper isWide className={styles.container}>
-      <h2>Latest in the Blog</h2>
+      <h2>LATEST IN THE BLOG</h2>
       <ul>
         {articles.map((article) => (
           <li key={article.id}>
