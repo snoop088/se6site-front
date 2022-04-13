@@ -8,16 +8,20 @@ import { NextPage } from "next";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 
+import { readFile } from "fs";
+
 import styles from "./[id].module.scss";
 
 interface PageProps extends PageWithMeta {
   blogItem: BlogItem;
   selectedArticles?: BlogItemSlim[];
+  blogCopyString?: string;
 }
 
 const BlogArticle: NextPage<PageProps> = ({
   blogItem: { title, mediaUrl, author, date, copyMd },
   selectedArticles,
+  blogCopyString,
 }: PageProps) => {
   const formattedDate = new Date(date).toDateString();
   return (
@@ -32,7 +36,9 @@ const BlogArticle: NextPage<PageProps> = ({
           <span className={styles.date}>&nbsp;&nbsp;{formattedDate}</span>
         </div>
         <div className={styles.copy}>
-          <ReactMarkdown linkTarget="_blank">{copyMd}</ReactMarkdown>
+          <ReactMarkdown linkTarget="_blank">
+            {copyMd || blogCopyString || ""}
+          </ReactMarkdown>
         </div>
       </Wrapper>
       {selectedArticles && (
@@ -60,6 +66,27 @@ export async function getStaticProps({
   const nextId =
     index < BLOG_POSTS_FULL.length - 1 ? BLOG_POSTS_FULL[index + 1].id : 0;
 
+  const readTheFile = async (): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      readFile(
+        `./api/content/blog/${BLOG_POSTS_FULL[index].id}.md`,
+        "utf-8",
+        (err, data) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(data);
+          }
+        }
+      );
+    });
+  };
+  let md = "";
+  try {
+    md = await readTheFile();
+  } catch (err) {
+    console.error(err);
+  }
   return {
     props: {
       meta: {
@@ -68,6 +95,7 @@ export async function getStaticProps({
         keywords: ["kw1", "kw2"],
       },
       blogItem: BLOG_POSTS_FULL[index],
+      blogCopyString: md,
       selectedArticles: SELECTED_ARTICLES,
     } as PageProps, // will be passed to the page component as props
   };

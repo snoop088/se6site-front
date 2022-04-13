@@ -56,6 +56,24 @@ export const BLOG_POSTS_SLIM: BlogItemSlim[] = [
     shortCopy:
       "Did you know that video banner ads perform up to 700% better than static ones? Discover how StreamEye will help you improve online advertising results.",
   },
+  {
+    id: "Choose_The_Best_Banner_Software",
+    mediaUrl: "/blog/Choose_The_Best_Banner_Software.jpg",
+    title: "HOW TO CHOOSE THE BEST BANNER SOFTWARE",
+    author: "Streameye",
+    date: "2020-07-02T14:31+02:00",
+    shortCopy:
+      "When choosing the best banner software to supercharge your digital marketing and provide the highest ROI, you need to consider these five major elements.",
+  },
+  {
+    id: "Why_Do_Reduntant_Work",
+    mediaUrl: "/blog/Why_Do_Reduntant_Work.jpg",
+    title: "WHY ARE YOUR MARKETING AND CREATIVE TEAMS DOING REDUNDANT WORK?",
+    author: "Streameye",
+    date: "2020-06-25T11:12+02:00",
+    shortCopy:
+      "Redundant work assigned to teams may actually harm your employees' morale and hurt productivity. Learn how to identify it - and fix the issues quickly.",
+  },
 ];
 
 export const BLOG_POSTS_FULL: BlogItem[] = [
@@ -84,6 +102,16 @@ export const BLOG_POSTS_FULL: BlogItem[] = [
       "  \n\n[IAB display ads specifications](https://www.iab.com/wp-content/uploads/2019/04/IABNewAdPortfolio_LW_FixedSizeSpec.pdf)" +
       "  \n\n ## What you need to keep in mind when creating either ad  \n\nThe era of creating a few banners, throwing them up all over the internet, and waiting for the traffic to come in is over. Today you need to carefully consider the user and the sites on which your ads will be displayed to ensure you’re showing the right ad to the right person at the right time." +
       "  \n\n For companies without in-house marketing and technical teams, this can make using these ads effectively extremely difficult. That’s why working with a trusted external partner like [StreamEye](https://www.streameye.com), an IAB certified vendor, makes sense. We work with you to create all kinds of skins and banner ads. Then, our platform makes it easy to manage and modify them whenever you need, even without any technical know-how. To learn more, get in touch. We’ll be happy to chat.",
+  },
+  {
+    id: "How_To_Make_A_Banner",
+    mediaUrl: "/blog/How_To_Make_A_Banner_725x480.jpg",
+    title: "TAKEOVER SKINS AND RESPONSIVE BANNERS",
+    author: "Streameye",
+    date: "2021-11-08T15:48+02:00",
+    shortCopy:
+      "What are takeover skins and how they differ from responsive banners? Learn how to employ some more advanced ad formats to draw viewers' attention.",
+    copyMd: "",
   },
 ];
 

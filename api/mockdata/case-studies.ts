@@ -15,7 +15,7 @@ export const CASE_STUDIES_SLIM: CaseStudyItemSlim[] = [
     copyMd:
       "Paddy Power Betfair (PPB), a part of Flutter Entertainment, is a world-class sports betting and gaming operator. Their online, mobile, and sports-led presences have grown their brands to the No.1 position in key markets across the world...",
     cta: "Read more",
-    mediaUrl: "/ppb_case.png",
+    mediaUrl: "/ppb_case.jpg",
   },
   {
     id: "DAZN",
@@ -72,6 +72,6 @@ export const CASE_STUDIES_FULL: CaseStudyItem[] = [
       "Automated update of ads.",
       "Effective generation across channels and products.",
     ],
-    mediaUrl: "/ppb_case.png",
+    mediaUrl: "/ppb_case.jpg",
   },
 ];

@@ -45,7 +45,7 @@ export const FEATURES_SLIM: FeatureItemSlim[] = [
       "Enable asset sharing across different production pipelines",
       "Ensure that graphics in ads are relevant, on brand and readily available to marketing",
     ],
-    mediaUrl: "/768x576_637840758748332134.jpeg",
+    mediaUrl: "/galleries.jpg",
   },
 ];
 export const FIND_OUT_MORE =
