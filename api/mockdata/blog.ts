@@ -70,7 +70,7 @@ export const BLOG_POSTS_SLIM: BlogItemSlim[] = [
     mediaUrl: "/blog/Why_Do_Reduntant_Work.jpg",
     title: "WHY ARE YOUR MARKETING AND CREATIVE TEAMS DOING REDUNDANT WORK?",
     author: "Streameye",
-    date: "2020-06-17:15+02:00",
+    date: "2020-06-17T16:15+02:00",
     shortCopy:
       "Redundant work assigned to teams may actually harm your employees' morale and hurt productivity. Learn how to identify it - and fix the issues quickly.",
   },
@@ -177,7 +177,7 @@ export const BLOG_POSTS_FULL: BlogItem[] = [
     mediaUrl: "/blog/Why_Do_Reduntant_Work.jpg",
     title: "WHY ARE YOUR MARKETING AND CREATIVE TEAMS DOING REDUNDANT WORK?",
     author: "Streameye",
-    date: "2020-06-25T11:12+02:00",
+    date: "2020-06-17T16:15+02:00",
     shortCopy:
       "Redundant work assigned to teams may actually harm your employees' morale and hurt productivity. Learn how to identify it - and fix the issues quickly.",
     copyMd: "",

@@ -79,9 +79,19 @@ export async function getStaticProps() {
   return {
     props: {
       meta: {
-        title: "Streameye - App",
-        description: "I am the home page",
-        keywords: ["kw1", "kw2"],
+        title: "Streameye - App - Welcome",
+        description:
+          "Streameye is a modular, scalable ad content management platform - a SaaS to rapidly generate, update and deploy ads for omni - channel audiences.",
+        keywords: [
+          "digital",
+          "ads",
+          "creative",
+          "platform",
+          "omni-channel",
+          "SaaS",
+          "generate",
+          "generate ads",
+        ],
       },
     }, // will be passed to the page component as props
   };

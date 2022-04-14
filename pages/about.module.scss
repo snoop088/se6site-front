@@ -1,5 +1,60 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
 .container {
   display: flex;
   flex: 1;
   flex-direction: column;
+  .heroBanner {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    min-height: calc(100vh - 10rem);
+    background-image: url(/header_photo_2560x1080.jpg);
+    background-size: cover;
+    background-position: center;
+    color: $color-white;
+    @media (max-width: $phone-v) {
+      background-position: 40% center;
+    }
+    .heroCopy {
+      font-size: 2vmin;
+      h1 {
+        margin-bottom: 2rem;
+        font-size: calc(max(2.75em, 2rem));
+      }
+      ul {
+        list-style-image: url(/blue_arrow.svg);
+        list-style-position: outside;
+        margin-left: -2rem;
+        li {
+          padding-left: 1rem;
+          margin: 3rem auto;
+          h2 {
+            font-size: calc(max(1.35em, 1.5rem));
+            color: #adf0e2;
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+          }
+          p {
+            font-size: clamp(15px, 1em, 20px);
+            margin: 0.5rem 0;
+            padding: 0;
+          }
+        }
+      }
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      min-width: 35rem;
+      margin-right: 2rem;
+      @media (max-width: $phone-h) {
+        width: 90%;
+        margin: 0 auto;
+        min-width: 0;
+      }
+    }
+  }
 }

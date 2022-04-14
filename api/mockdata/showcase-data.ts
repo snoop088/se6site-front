@@ -79,7 +79,8 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     client: "Virgin Bet",
     title: "VirginBet HTML5 - Rebrand 2021",
     streameyeId: "df9c9ef4-e114-4ec8-afb2-3c98c72bcc0f",
-    copyMd: "",
+    copyMd:
+      "This template was created as a part of the Virgin Bet Rebrand. It incorporates Welcome Offer as well as their special Price Boost.  \n\nThe dynamic visuals help with customer acquisition and boost the engagement with accurate promotions.",
   },
   {
     id: "Holland-Casino-Cards-2021",
