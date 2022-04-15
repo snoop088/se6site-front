@@ -7,7 +7,7 @@ export const HERO_BANNER = {
     },
     {
       title: "PERFECT MIXTURE OF EXPERIENCE AND INNOVATION",
-      copy: "our team combines talents of javascript front end developers and motion designers.",
+      copy: "Our team combines talents of javascript front end developers and motion designers.",
     },
   ],
 };
@@ -17,6 +17,6 @@ export const OUR_MISSION = {
 };
 export const SHOWCASE = {
   title: "WE CREATE",
-  copy: "Ads that stand out. Some examples in our",
+  copy: "ads that stand out. Some examples in our",
   cta: "Showcase",
 };

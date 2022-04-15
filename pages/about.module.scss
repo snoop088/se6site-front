@@ -10,7 +10,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: flex-end;
-    min-height: calc(100vh - 10rem);
+    min-height: calc(100vh - 12rem);
     background-image: url(/header_photo_2560x1080.jpg);
     background-size: cover;
     background-position: center;
@@ -19,42 +19,149 @@
       background-position: 40% center;
     }
     .heroCopy {
-      font-size: 2vmin;
       h1 {
         margin-bottom: 2rem;
         font-size: calc(max(2.75em, 2rem));
       }
-      ul {
-        list-style-image: url(/blue_arrow.svg);
-        list-style-position: outside;
-        margin-left: -2rem;
-        li {
-          padding-left: 1rem;
-          margin: 3rem auto;
-          h2 {
-            font-size: calc(max(1.35em, 1.5rem));
-            color: #adf0e2;
-            font-weight: 300;
-            margin: 0;
-            padding: 0;
-          }
-          p {
-            font-size: clamp(15px, 1em, 20px);
-            margin: 0.5rem 0;
-            padding: 0;
-          }
-        }
-      }
+
       display: flex;
       flex-direction: column;
       width: 30%;
       min-width: 35rem;
-      margin-right: 2rem;
+      margin-right: 7.5vw;
       @media (max-width: $phone-h) {
         width: 90%;
         margin: 0 auto;
         min-width: 0;
       }
+    }
+  }
+  .missionStatement {
+    display: flex;
+    flex-direction: column;
+  }
+  .heroCopy,
+  .ourMission,
+  .ourAds {
+    font-size: 2vmin;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 3rem auto;
+        font-size: calc(max(1em, 1rem));
+        h2 {
+          color: #adf0e2;
+          font-weight: 300;
+          margin: 0;
+          padding: 0;
+          font-size: 1.5em;
+        }
+        p {
+          font-size: calc(max(0.85em, 15px));
+          margin: 0.5rem 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+  .ourMission,
+  .ourAds {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    margin: 3rem 0;
+    ul {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+      li {
+        h2 {
+          color: $color-brand;
+        }
+      }
+    }
+    .copy,
+    figure {
+      margin: 0 2rem;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      @media (max-width: $phone-v) {
+        flex: 1 100%;
+        margin: 0 1rem;
+      }
+    }
+    figure {
+      padding: 0;
+    }
+    @media (max-width: $phone-v) {
+      margin: 3rem 0 1rem 0;
+    }
+  }
+  .ourAds {
+    flex-wrap: wrap;
+    .cta {
+      margin: 1rem 0;
+      display: inline-block;
+      position: relative;
+      border: 1px solid $color-brand;
+
+      button {
+        background-color: transparent;
+        border: none;
+        padding: 1rem 3rem;
+        color: $color-brand;
+        cursor: pointer;
+        transition: all 0.5s;
+      }
+      &::after {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: scale(10%, 10%);
+        background-color: rgba($color: $color-brand, $alpha: 0);
+        transition: all 0.3s;
+      }
+      &:hover {
+        animation: borderAnim 300ms;
+
+        &::after {
+          transform: scale(100%, 100%);
+          background-color: rgba($color: $color-brand, $alpha: 1);
+        }
+        button {
+          color: $color-white;
+        }
+      }
+    }
+  }
+  .testimonials {
+    background-color: $color-light;
+    margin-top: 4rem;
+    padding: 2rem 0 3rem 0;
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+  @keyframes borderAnim {
+    0% {
+      transform: scale(100%, 100%);
+      border: 1px solid rgba($color: $color-brand, $alpha: 1);
+    }
+    66% {
+      transform: scale(120%, 120%);
+      border: 1px solid rgba($color: $color-brand, $alpha: 0);
+    }
+    100% {
+      transform: scale(100%, 100%);
+      border: 1px solid rgba($color: $color-brand, $alpha: 0);
     }
   }
 }
