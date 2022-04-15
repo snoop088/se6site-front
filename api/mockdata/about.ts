@@ -16,7 +16,7 @@ export const OUR_MISSION = {
   copy: "is to deliver a custom, exclusive UI to each client and each campaign ensuring the greatest efficiency when generating digital assets in scale.",
 };
 export const SHOWCASE = {
-  title: "WE CREATE",
+  title: "WE CRAFT",
   copy: "ads that stand out. Some examples in our",
   cta: "Showcase",
 };
