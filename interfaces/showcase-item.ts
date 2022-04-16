@@ -8,6 +8,7 @@ type AdSize = {
 export interface IShowcaseItem {
   id: string;
   thumbUrl: string;
+  backdropUrl: string;
   sizes?: AdSize[];
   tags: string[];
   client: string;

@@ -21,6 +21,7 @@ export const ShowcaseList = ({
             client={item.client}
             title={item.title}
             streameyeId={item.streameyeId}
+            backdropUrl={item.backdropUrl}
             onTagClick={onSelectTag}
           />
         </div>

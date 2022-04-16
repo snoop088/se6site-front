@@ -4,6 +4,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
   {
     id: "Sportsbet-Promos-2020",
     thumbUrl: "sb_nrl_20_thumb.jpeg",
+    backdropUrl: "/showcase/Sportsbet-Promos-2020_backdrop.jpg",
     sizes: [
       {
         seId: "5e5ccd3b-a4d4-4d8d-80c5-70b1101efb01",
@@ -42,6 +43,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
   {
     id: "VirginBet-Rebrand-2021",
     thumbUrl: "vb_rebrand_21_preview.jpeg",
+    backdropUrl: "/showcase/VirginBet-Rebrand-2021_backdrop.jpg",
     sizes: [
       {
         seId: "e0fb71e6-9ca4-479b-80e8-db941e2e6a0f",
@@ -85,6 +87,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
   {
     id: "Holland-Casino-Cards-2021",
     thumbUrl: "hc_cards_preview.jpeg",
+    backdropUrl: "/showcase/Holland-Casino-Cards-2021_backdrop.jpg",
     sizes: [
       {
         seId: "d01f7394-103c-4c56-8a6d-be78d60961fb",
@@ -126,6 +129,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
   {
     id: "Betfair-Cheltenham-19-Display",
     thumbUrl: "chelt_19_display_thumb.jpeg",
+    backdropUrl: "/showcase/Betfair-Cheltenham-19-Display_backdrop.jpg",
     sizes: [
       {
         seId: "954317d5-01c4-4e0c-8d99-797ea98a7519",
@@ -167,6 +171,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
   {
     id: "Pokerstars-Casino-21",
     thumbUrl: "pokerstars-casino-21-thumb.jpeg",
+    backdropUrl: "/showcase/Pokerstars-Casino-21_backdrop.jpg",
     sizes: [
       {
         adUrl: "Pokerstars-Casino-21_1200x628.jpg",
@@ -207,6 +212,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
   {
     id: "Betfair-Chelt-2022",
     thumbUrl: "chelt-bf-2022.jpeg",
+    backdropUrl: "/showcase/Betfair-Chelt-2022_backdrop.jpg",
     sizes: [
       {
         seId: "8430fe6a-4e85-43e3-b945-bd5f60b5c791",
@@ -248,6 +254,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
   {
     id: "DAZN-Global-Fixtures-21",
     thumbUrl: "fixture_display_prevew.jpg",
+    backdropUrl: "/showcase/DAZN-Global-Fixtures-21_backdrop.jpg",
     sizes: [
       {
         seId: "10f2cae2-4b6c-477c-a3d9-be4311e7338c",
@@ -290,6 +297,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
   {
     id: "someID_here",
     thumbUrl: "pp_galway_responsive_thumb.jpeg",
+    backdropUrl: "/showcase/Sportsbet-Promos-2020_backdrop.jpg",
     sizes: [
       {
         seId: "98e9adc4-2cdd-4e52-9b7f-667e37925242/637835544527234284",

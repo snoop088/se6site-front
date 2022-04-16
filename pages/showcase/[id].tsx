@@ -24,56 +24,66 @@ const ShowcaseDetail: NextPage<PageProps> = ({
   topRoute,
 }) => {
   return (
-    <div
-      className={styles.container}
-      style={{ backgroundImage: `url(/showcase/${item?.id}_backdrop.jpg)` }} // maybe rewrite this with url as param
-    >
-      <PageTitle
-        title={item.client}
-        prevId={prevId}
-        nextId={nextId}
-        topRoute={topRoute}
-        elevated
+    <div className={styles.container}>
+      <Image
+        src={item.backdropUrl}
+        layout="fill"
+        alt={item.client}
+        className={styles.backdropImage}
+        priority
+        objectFit="cover"
+        objectPosition={"center center"}
+        placeholder="empty"
+        quality={95}
       />
-      <Wrapper isWide className={styles.wrapper}>
-        <div className={styles.adsContainer}>
-          {item.sizes?.map((size) => (
-            <div
-              className={styles.ad}
-              key={size.seId || size.adUrl}
-              data-width={size.seId && size.w}
-            >
-              {size.seId && (
-                <iframe
-                  src={"https://banners.streameye.net/" + size.seId}
-                  frameBorder="0"
-                  marginHeight={0}
-                  marginWidth={0}
-                  scrolling="no"
-                  style={{ width: size.w, height: size.h }}
-                ></iframe>
-              )}
-              {size.adUrl && size.adType === "static" && (
-                <figure>
-                  <Image
-                    src={"/showcase/static/" + size.adUrl}
-                    width={size.w}
-                    height={size.h}
-                    alt={item.client}
-                  />
-                </figure>
-              )}
-            </div>
-          ))}
-        </div>
-        <aside>
-          <div className={styles.copyContainer}>
-            <h2>{item.title}</h2>
-            <ReactMarkdown>{item.copyMd ?? ""}</ReactMarkdown>
-            <Tags items={item.tags} className={styles.tagsContainer} />
+      <section className={styles.content}>
+        <PageTitle
+          title={item.client}
+          prevId={prevId}
+          nextId={nextId}
+          topRoute={topRoute}
+          elevated
+        />
+        <Wrapper isWide className={styles.wrapper}>
+          <div className={styles.adsContainer}>
+            {item.sizes?.map((size) => (
+              <div
+                className={styles.ad}
+                key={size.seId || size.adUrl}
+                data-width={size.seId && size.w}
+              >
+                {size.seId && (
+                  <iframe
+                    src={"https://banners.streameye.net/" + size.seId}
+                    frameBorder="0"
+                    marginHeight={0}
+                    marginWidth={0}
+                    scrolling="no"
+                    style={{ width: size.w, height: size.h }}
+                  ></iframe>
+                )}
+                {size.adUrl && size.adType === "static" && (
+                  <figure>
+                    <Image
+                      src={"/showcase/static/" + size.adUrl}
+                      width={size.w}
+                      height={size.h}
+                      alt={item.client}
+                    />
+                  </figure>
+                )}
+              </div>
+            ))}
           </div>
-        </aside>
-      </Wrapper>
+          <aside>
+            <div className={styles.copyContainer}>
+              <h2>{item.title}</h2>
+              <ReactMarkdown>{item.copyMd ?? ""}</ReactMarkdown>
+              <Tags items={item.tags} className={styles.tagsContainer} />
+            </div>
+          </aside>
+        </Wrapper>
+      </section>
     </div>
   );
 };
