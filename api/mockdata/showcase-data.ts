@@ -43,7 +43,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
   {
     id: "VirginBet-Rebrand-2021",
     thumbUrl: "vb_rebrand_21_preview.jpeg",
-    backdropUrl: "/showcase/VirginBet-Rebrand-2021_backdrop.jpg",
+    backdropUrl: "/showcase/virginbet-rebrand-21_backdrop.jpg",
     sizes: [
       {
         seId: "e0fb71e6-9ca4-479b-80e8-db941e2e6a0f",
@@ -254,7 +254,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
   {
     id: "DAZN-Global-Fixtures-21",
     thumbUrl: "fixture_display_prevew.jpg",
-    backdropUrl: "/showcase/DAZN-Global-Fixtures-21_backdrop.jpg",
+    backdropUrl: "/showcase/dazn-glo-21_backdrop.jpg",
     sizes: [
       {
         seId: "10f2cae2-4b6c-477c-a3d9-be4311e7338c",
