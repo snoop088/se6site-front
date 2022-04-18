@@ -43,6 +43,6 @@ export const SOCIAL_ICONS = [
   },
 ];
 export const FOOTER_DATA = {
-  address: "19, Alexander Dondukov Street, Sofia 1000, Bulgaria",
+  address: "19, Alexander Dondukov Street, floor 6, Sofia 1000, Bulgaria",
   mail: "hello@streameye.com",
 };

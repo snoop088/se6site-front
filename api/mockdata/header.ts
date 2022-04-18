@@ -23,7 +23,7 @@ export const HEADER_MENUS: MenuLink[] = [
   },
   {
     title: "GET IN TOUCH",
-    href: "/get-in-touch",
+    href: "/contact",
     isCta: true,
   },
 ];

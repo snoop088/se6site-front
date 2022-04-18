@@ -1,0 +1,74 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+
+.container {
+  display: flex;
+  flex: 1;
+  form {
+    display: grid;
+    width: 100%;
+    flex: 1;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+    @media (max-width: $tablet-h) {
+      grid-template-columns: 1fr;
+    }
+    h3 {
+      color: $color-accent;
+    }
+    .twoCols {
+      grid-column: 1 / span 2;
+      @media (max-width: $tablet-h) {
+        grid-column: 1;
+      }
+    }
+    .action {
+      margin: 2rem 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .formInput {
+      input,
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        width: 100%;
+      }
+      label {
+        display: flex;
+        justify-content: space-between;
+        span {
+          color: red;
+          font-size: 0.9em;
+        }
+      }
+      input,
+      textarea {
+        padding: 0.75rem 0.5rem;
+        border: 1px solid $color-accent;
+        color: $color-alt-copy;
+        background-color: rgba($color: $color-white, $alpha: 0.5);
+        transition: $transition;
+        &:hover,
+        &.filled {
+          background-color: rgba($color: $color-white, $alpha: 1);
+        }
+      }
+
+      textarea {
+        width: 100%;
+        max-width: 100%;
+        min-height: 5rem;
+        resize: vertical;
+      }
+    }
+  }
+}
+// grid-template-areas:
+//       "title title"
+//       "interests interests"
+//       "title title"
+//       "firstName lastName"
+//       "email phone"
+//       "company company"
+//       "message message";

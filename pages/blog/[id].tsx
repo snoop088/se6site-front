@@ -11,6 +11,7 @@ import ReactMarkdown from "react-markdown";
 import { readFile } from "fs";
 
 import styles from "./[id].module.scss";
+import { readTheFile } from "helpers/read-the-file";
 
 interface PageProps extends PageWithMeta {
   blogItem: BlogItem;
@@ -66,24 +67,11 @@ export async function getStaticProps({
   const nextId =
     index < BLOG_POSTS_FULL.length - 1 ? BLOG_POSTS_FULL[index + 1].id : 0;
 
-  const readTheFile = async (): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      readFile(
-        `./api/content/blog/${BLOG_POSTS_FULL[index].id}.md`,
-        "utf-8",
-        (err, data) => {
-          if (err) {
-            reject(err);
-          } else {
-            resolve(data);
-          }
-        }
-      );
-    });
-  };
   let md = "";
   try {
-    md = await readTheFile();
+    md = await readTheFile(
+      `./api/content/blog/${BLOG_POSTS_FULL[index].id}.md`
+    );
   } catch (err) {
     console.error(err);
   }

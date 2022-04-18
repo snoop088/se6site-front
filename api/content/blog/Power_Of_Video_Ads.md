@@ -28,4 +28,4 @@ Alongside our HTML5 ads and static ads for email and social networks, our video 
 
 If you’re new to StreamEye, you’ll discover that our system for building and running stronger banner ads at scale is easy to learn and surprisingly powerful.
 
-What are you waiting for? [Get in touch](/getintouch) to get better advertising results.
+What are you waiting for? [Get in touch](/contact) to get better advertising results.

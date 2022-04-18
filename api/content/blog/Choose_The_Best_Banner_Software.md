@@ -41,4 +41,4 @@ Automated and dynamic [HTML5 banner ads perform better than static ones](https:/
 
 ## Discover why StreamEye is the best banner software anywhere
 
-From Day 1, our goal was to create the simplest, most comprehensive banner solution. To learn more about how _Streameye_ can transform and improve your digital advertising and ROI, [contact one of our representatives today](/getintouch).
+From Day 1, our goal was to create the simplest, most comprehensive banner solution. To learn more about how _Streameye_ can transform and improve your digital advertising and ROI, [contact one of our representatives today](/contact).

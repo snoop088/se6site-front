@@ -1,0 +1,47 @@
+@import "@/styles/mixins";
+@import "@/styles/variables";
+.container {
+  display: flex;
+  flex-direction: column;
+  background: transparent linear-gradient(180deg, #e3f3ff00 70%, #e3f3ffa0 100%)
+    0% 0% no-repeat padding-box;
+}
+.containerGrid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  grid-template-areas:
+    "title title"
+    "address copy"
+    "address form";
+  gap: rem(20) rem(80);
+  grid-template-rows: auto;
+  h1.title {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 1rem;
+    }
+  }
+  .address {
+    a {
+      color: $color-brand;
+    }
+    grid-area: address;
+    .action {
+      margin: 2rem 0;
+    }
+  }
+  .copy {
+    em {
+      color: $color-brand;
+      font-style: normal;
+    }
+  }
+  .form {
+    // display: flex;
+    // padding: 1rem 2rem;
+    // background-color: $color-light;
+  }
+}

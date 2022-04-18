@@ -34,4 +34,4 @@ Using StreamEye, designers no longer need to create dozens of sizes of a single 
 
 ## Improve your marketing and creative work today
 
-At a time when many of us are working remotely, it’s never been more important to supercharge and streamline your marketing efforts. Our experts look forward to showing you how StreamEye can take your team to the next level. [Get in touch today!](/getintouch)
+At a time when many of us are working remotely, it’s never been more important to supercharge and streamline your marketing efforts. Our experts look forward to showing you how StreamEye can take your team to the next level. [Get in touch today!](/contact)

@@ -36,4 +36,4 @@ Avoid wasting golden opportunities (and the need to involve designers) during th
 
 ## StreamEye streamlines marketing and design work
 
-The right tool makes team collaboration far easier, and that’s why StreamEye was created: to make productive collaboration seamless. [Discover](/getintouch) how StreamEye can transform your PPC marketing.
+The right tool makes team collaboration far easier, and that’s why StreamEye was created: to make productive collaboration seamless. [Discover](/contact) how StreamEye can transform your PPC marketing.
