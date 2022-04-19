@@ -2,6 +2,7 @@
 @import "@/styles/variables";
 .container {
   display: flex;
+  flex: 1;
   flex-direction: column;
   background: transparent linear-gradient(180deg, #e3f3ff00 70%, #e3f3ffa0 100%)
     0% 0% no-repeat padding-box;
@@ -16,6 +17,14 @@
     "address form";
   gap: rem(20) rem(80);
   grid-template-rows: auto;
+  @media (max-width: $phone-h) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "address"
+      "copy"
+      "form";
+  }
   h1.title {
     grid-area: title;
     display: flex;
@@ -39,9 +48,9 @@
       font-style: normal;
     }
   }
-  .form {
-    // display: flex;
-    // padding: 1rem 2rem;
-    // background-color: $color-light;
-  }
+  // .form {
+  //   display: flex;
+  //   padding: 1rem 2rem;
+  //   background-color: $color-light;
+  // }
 }

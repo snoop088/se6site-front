@@ -32,6 +32,21 @@ export const CASE_STUDIES_SLIM: CaseStudyItemSlim[] = [
     cta: "Read more",
     mediaUrl: "/dazn_case.png",
   },
+  {
+    id: "EPSON",
+    client: "EPSON",
+    titleMd:
+      "ADVERTISE AND OPTIMISE YOUR BUSINESS IN *OVER 20 LANGUAGES AROUND THE WORLD*",
+    bullets: [
+      "Localisations at scale",
+      "Produce hundreds of banners per day",
+      "Streamlined collaboration across departments",
+    ],
+    copyMd:
+      "The Seiko Epson Corporation is a leading provider of digital imaging products and one of the world's largest manufacturers of imaging related equipment. The company’s wide range of scanners, printers, and 3LCD projectors are renowned for their incomparable quality, functionality, compactness and energy efficiency...",
+    cta: "Read more",
+    mediaUrl: "/epson_case.jpg",
+  },
 ];
 export const CASE_STUDIES_FULL: CaseStudyItem[] = [
   {
@@ -65,7 +80,7 @@ export const CASE_STUDIES_FULL: CaseStudyItem[] = [
       },
     ],
     titleMd:
-      "ACCELERATE AND STREAMLINE YOUR DIGITAL AD PRODUCTION *WITH STREAMEYE’S ENTERPRISE FEATURES.*",
+      "ACCELERATE AND STREAMLINE YOUR DIGITAL AD PRODUCTION *WITH STREAMEYE'S ENTERPRISE FEATURES.*",
     client: "PPB",
     bullets: [
       "Highly - relevant HTML5 ads on the fly.",
@@ -120,5 +135,60 @@ export const CASE_STUDIES_FULL: CaseStudyItem[] = [
       "Optimisation of go-to-market",
     ],
     mediaUrl: "/dazn_case.png",
+  },
+  {
+    id: "EPSON",
+    sections: [
+      {
+        title: "Company Description",
+        icon: "company",
+        copyMd:
+          "The Seiko Epson Corporation is a leading provider of digital imaging products and one of the world's largest manufacturers of imaging related equipment. The company’s wide range of scanners, printers, and 3LCD projectors are renowned for their incomparable quality, functionality, compactness and energy efficiency.  \n\nEpson is also a world-leading supplier of transaction terminals for the retail market. With €8.5 billion in global revenue, Epson has been named a Top 100 Global Innovator seven years in a row by Clarivate Analytics. The company has 85 companies throughout the world and 81,000 employees.",
+      },
+      {
+        title: "Challenge",
+        icon: "challenge",
+        copyMd:
+          "Epson’s challenges and goals were to:" +
+          "\n\n - Optimise banner production while achieving an ad production workflow that accommodated their business' needs." +
+          "\n\n - Localise ads efficiently." +
+          "\n\n - Streamline collaboration between in-house designers, outsourced translators and international teams." +
+          "\n\n - Organise all of their image assets." +
+          "\n\n - Produce numerous banner sizes quickly and efficiently." +
+          "\n\n Epson required a user-friendly interface that offered endless creative freedom while staying on-brand. The software's UI needed to be ironclad for each user to easily navigate in order to create compliant, eye-catching ads.",
+      },
+      {
+        title: "Solution",
+        icon: "solution",
+        copyMd:
+          "In order to understand Epson’s specific needs and demands, StreamEye carried out business exploration meetings between our management team, UI specialists and senior banner developers." +
+          "  \n\nWe then assisted Epson in streamlining and automating their international banner production process by employing one of our product's biggest strengths: custom banner builder UI to fit their process flow." +
+          "  \n\nThe onboarding process was straightforward and only required a few well-organised steps:" +
+          "  \n\n - Assigning a dedicated StreamEye team to work with the Epson marketing teams." +
+          "  \n\n - Negotiating a clear and detailed brief with specs to guide developers' work." +
+          "  \n\n - Communicating constantly between teams during the development process to discuss the demo version and its functionalities." +
+          "  \n\n![EPSON - Creating a custom banner builder](/case_epson_screenshot_1.png)" +
+          "  \n\nUpon completion of this task, a demo digital banner builder was linked to Epson's accounts for a one-month trial. This helped us gather detailed feedback, determine a list of possible improvements and onboard the Epson team effectively." +
+          "  \n\nThanks to StreamEye, Epson could finally meet their audience's needs across multiple regions simply by uploading location-based content into the interface. Before, this required manual preparation of multiple texts in various languages. The tool also helped Epson sort and manage hundreds of visual assets within their special assets galleries - across teams - with just a few mouse clicks.",
+      },
+      {
+        title: "Results",
+        icon: "result",
+        copyMd:
+          "\n\n - Localising content in **20 languages** and **80 different banner sizes**" +
+          "\n\n - Time and cost optimisation which allowed teams to reuse previous work and produce banners with minimal effort" +
+          "\n\n - Customised ad builder developed exclusively for Epson’s brand and specific requirements" +
+          "\n\n - Cross-team management of visual assets (where multiple parties contribute and maintain product galleries used during the ad production process)",
+      },
+    ],
+    titleMd:
+      "ADVERTISE AND OPTIMISE YOUR BUSINESS IN *OVER 20 LANGUAGES AROUND THE WORLD*",
+    client: "EPSON",
+    bullets: [
+      "Localisations at scale",
+      "Produce hundreds of banners per day",
+      "Streamlined collaboration across departments",
+    ],
+    mediaUrl: "/epson_case.jpg",
   },
 ];

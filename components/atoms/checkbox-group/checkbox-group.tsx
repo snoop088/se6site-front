@@ -50,10 +50,12 @@ export function CheckboxGroup<T>(props: StreameyeCheckboxGroupProps<T>) {
       return checkValues.includes(val);
     });
     setSelected(selectedValues);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [checks]);
 
   useEffect(() => {
     field.onChange(selected);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selected]);
 
   const handleChange = (event: SyntheticEvent) => {
