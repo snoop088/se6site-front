@@ -373,11 +373,135 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     copyMd:
       "This **interactive template** created for 32 RED is not only engaging for the audience but also has a live data integration which ensures the most up-to-date experince for the customer.  \n\nThe client can pick and choose which games and jackpots to push live and thus steer the audiences' attention to the most relavent offers.",
   },
+  {
+    id: "VirginGames-Spinning-Reels-Slot",
+    thumbUrl: "mystert_reals_preview.jpg",
+    backdropUrl: "/showcase/virgin_mystery_reels_backdrop.jpg",
+    sizes: [
+      {
+        seId: "b2684c2d-8a8c-40c9-9618-432c88d48e03",
+        w: 970,
+        h: 250,
+      },
+      {
+        seId: "b78f2637-d05e-4ead-ada6-782ca019340c",
+        w: 728,
+        h: 90,
+      },
+      {
+        seId: "d05f5736-861f-473f-8bcd-d3bf28918137",
+        w: 300,
+        h: 600,
+      },
+      {
+        seId: "15bbc4cf-37d7-485e-af38-e61aa5d0b216",
+        w: 160,
+        h: 600,
+      },
+      {
+        seId: "7c4c51a1-0a39-4d49-91a1-fd1a35540ee7",
+        w: 300,
+        h: 250,
+      },
+    ],
+    tags: ["HTML5"],
+    client: "Virgin Games",
+    title: "Virgin Games Spinning Reels Slot",
+    streameyeId: "7c4c51a1-0a39-4d49-91a1-fd1a35540ee7",
+    copyMd:
+      "The template promotes Virgin Games Reels by displaying different promotional offers reinforced by a spinning reel and diffent game specific backgrounds.  \n\nThe customizability extends to picking which real would win e.g. bells, 7's, cherries, etc and what the winnings are propped up with bespoke animation and a golden coin shower for that necessary pizzazz.",
+  },
+  {
+    id: "PP-More-Chances-To-Win",
+    thumbUrl: "pp_more_chances.jpg",
+    backdropUrl: "/showcase/games_ww_more_chances_to_win_22_backdrop.jpg",
+    sizes: [
+      {
+        seId: "301402ea-bfe7-49dc-b175-f142bdfc9050",
+        w: 970,
+        h: 250,
+      },
+      {
+        seId: "4eaf29c4-144b-41f5-886f-9f86b67ed462",
+        w: 728,
+        h: 90,
+      },
+      {
+        seId: "5ed5b6ab-0bb5-44e2-9a8f-5e6511300e91",
+        w: 300,
+        h: 600,
+      },
+      {
+        seId: "881b787d-475e-4beb-951d-e4a455fff0f7",
+        w: 160,
+        h: 600,
+      },
+      {
+        seId: "5d344315-3878-4f5d-a738-74c55c8e894d",
+        w: 300,
+        h: 250,
+      },
+      {
+        seId: "c76e9a9c-5202-460c-99ad-1087031897a5",
+        w: 320,
+        h: 50,
+      },
+    ],
+    tags: ["HTML5", "Mobile"],
+    client: "PaddyPower Games",
+    title: "PP Games More Chances To Win",
+    streameyeId: "5d344315-3878-4f5d-a738-74c55c8e894d",
+    copyMd:
+      "A template for Paddy Power was created to promote their Games across UK and Ireland with multiple offers from generic message to reactive and event specific offers.  \n\nThe bespoke animation is a key part of the campaign which attracts the customer's attention and boosts engagement with the campaign.",
+  },
+  {
+    id: "LiveScoreBet-Momentum-Lines-22",
+    thumbUrl: "livescore_preview.jpg",
+    backdropUrl: "/showcase/livescore_bet_momentum_lines_22_backdrop.jpg",
+    sizes: [
+      {
+        seId: "ba642ae2-ecc6-4629-b312-23a739a89716",
+        w: 970,
+        h: 250,
+      },
+      {
+        seId: "6a17439e-c0cf-4f4b-83f1-2922b983b743",
+        w: 728,
+        h: 90,
+      },
+      {
+        seId: "9df9e551-3ac5-4744-adb5-2f05711818da",
+        w: 300,
+        h: 600,
+      },
+      {
+        seId: "3d961913-100c-424a-8131-542df0b293f5",
+        w: 160,
+        h: 600,
+      },
+      {
+        seId: "b045a2a7-0349-48e7-ad40-6acba669855f",
+        w: 300,
+        h: 250,
+      },
+      {
+        seId: "5343645b-baec-4d52-bd5a-3fd67022d6fb",
+        w: 320,
+        h: 50,
+      },
+    ],
+    tags: ["HTML5", "Mobile", "Social"],
+    client: "LiveScore Bet",
+    title: "Live Score Bet Momentum Lines 22",
+    streameyeId: "b045a2a7-0349-48e7-ad40-6acba669855f",
+    copyMd:
+      "Livescore's most complex template which serves multiple channels with HTML5 display banners, social, responsive as well as Landing Page headers & T&C's.  \n\nThe template includes 8 different offers and more than 20 sizes each with unique animations and layout.  \n\nThis project allows Livescore team to manage their promotions by utilizing the built in scheduler and assign what is being displayed across all channels for months to come **without the need for republishing.**",
+  },
 ];
 export const SHOWCASE_TAGS = [
   "Social",
   "HTML5",
-  "Responsive",
+  "Video",
   "Mobile",
   "Live Data",
 ];

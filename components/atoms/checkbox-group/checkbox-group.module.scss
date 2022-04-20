@@ -19,7 +19,7 @@
     }
   }
   .funkyCheck {
-    fill: $color-brand;
+    fill: $color-accent;
     width: 66%;
     height: auto;
   }
@@ -29,8 +29,9 @@
     width: 2rem;
     height: 2rem;
   }
-  .funkyBoxChecked {
-    background-color: rgba($color: $color-white, $alpha: 0.9);
+  .funkyBoxChecked,
+  .funkyBox:hover {
+    background-color: rgba($color: $color-light, $alpha: 1);
   }
   .funkyLabel {
     color: $color-accent;

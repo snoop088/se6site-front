@@ -40,7 +40,12 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
 
   return (
     <div className={styles.container}>
-      <form onSubmit={handleSubmit(submitForm)}>
+      <form
+        name="contact"
+        onSubmit={handleSubmit(submitForm)}
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
         <div className={classNames([styles.interests, styles.twoCols])}>
           <h4>{interests.title}</h4>
           <CheckboxGroup
@@ -118,6 +123,7 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
             disabled={!isValid}
           />
         </div>
+        <input type="hidden" name="form-name" value="contact" />
       </form>
     </div>
   );
