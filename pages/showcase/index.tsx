@@ -38,7 +38,13 @@ export async function getStaticProps() {
       meta: {
         title: "Streameye - Showcase",
         description: "Streameye generated ads for various clients",
-        keywords: ["kw1", "kw2"],
+        keywords: [
+          "digital ads",
+          "html5",
+          "generated ads",
+          "ads for social channels",
+          "automated ads",
+        ],
       },
       showcaseItems: SHOWCASE_ITEMS,
     } as PageProps, // will be passed to the page component as props

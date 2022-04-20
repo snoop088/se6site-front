@@ -99,11 +99,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
         w: 728,
         h: 90,
       },
-      {
-        seId: "ca2869d6-db4e-4626-8aa6-d4240740aa55",
-        w: 300,
-        h: 250,
-      },
+
       {
         seId: "ec6c2276-6604-4b6f-b26b-b0ecbf83a3a3",
         w: 300,
@@ -115,6 +111,11 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
         h: 600,
       },
       {
+        seId: "ca2869d6-db4e-4626-8aa6-d4240740aa55",
+        w: 300,
+        h: 250,
+      },
+      {
         seId: "15896ab5-ce51-4116-9fe5-b62b73fa25b8",
         w: 320,
         h: 50,
@@ -124,7 +125,8 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     client: "Holland Casino",
     title: "Holland Casino Live - Cards 21",
     streameyeId: "ca2869d6-db4e-4626-8aa6-d4240740aa55",
-    copyMd: "",
+    copyMd:
+      "As a part of their launch in the Netherlands, Holland Casino required a versatile HTML5 template that has captivating animations in order to stand out and make an unforgatable first impression. The offerings include:  \n\n - Live casino,  \n\n - Sports and  \n\n - Poker",
   },
   {
     id: "Betfair-Cheltenham-19-Display",
@@ -141,11 +143,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
         w: 728,
         h: 90,
       },
-      {
-        seId: "3d68dbf3-8e88-4dac-9fcc-4f0d10fb206e",
-        w: 300,
-        h: 250,
-      },
+
       {
         seId: "640a4db6-8692-4e3f-b6e2-a72029730ab7",
         w: 300,
@@ -157,6 +155,11 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
         h: 600,
       },
       {
+        seId: "3d68dbf3-8e88-4dac-9fcc-4f0d10fb206e",
+        w: 300,
+        h: 250,
+      },
+      {
         seId: "78909830-4c1e-45ab-99b3-3c390a8c98d4",
         w: 320,
         h: 50,
@@ -166,7 +169,8 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     client: "Betfair",
     title: "Betfair Cheltenham 2019 Display",
     streameyeId: "3d68dbf3-8e88-4dac-9fcc-4f0d10fb206e",
-    copyMd: "",
+    copyMd:
+      "Betfair promoted multiple combinations of offers during the Cheltenham festival in 2019 including Best Odds, Money Back, Extra places, and many more.  \n\nThe template gave them the opportunity to be reactive and **adjust instantly** throughout the 5 day festival to ensure best customer engagement.",
   },
   {
     id: "Pokerstars-Casino-21",
@@ -207,7 +211,8 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     tags: ["Social"],
     client: "Pokerstars Casino",
     title: "Pokerstars Casino Social Ads",
-    copyMd: "Some copy would go here",
+    copyMd:
+      "PokerStars Casino banner builder is one of the most versatile templates that we have created for a client which serves a number of banner variations for different social media channels including Facebook, Snapchat, Tinder and paid social placements.  \n\nWith Streameye's help, PokerStars social media team can streamline the update of offers and make sure their Facebook Story is always relevant and produced within minutes, following their brand guidelines.  \n\n And what's more - **without the involvement of the design team.**",
   },
   {
     id: "Betfair-Chelt-2022",
@@ -249,7 +254,8 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     client: "Betfair",
     title: "Betfair Cheltenham 2022 Display",
     streameyeId: "4013ef48-df15-496f-af91-e6ed635bacd5",
-    copyMd: "",
+    copyMd:
+      "For yet another consecutive year, Betfair has relied on our team to deliver the illustrious Cheltenham campaign of 2022.  \n\nBeing one of the prominent events in the online betting world, our partner has put their trust in our team to deliver Cheltenham ads for well over 10 years.  \n\nBeing part of a greater ATL campaign, our team had to animate the key visuals provided by the client, navigating tight deadlines and providing time saving functionalities to give our client a vital edge in their communication.",
   },
   {
     id: "DAZN-Global-Fixtures-21",
@@ -292,29 +298,37 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     title: "DAZN Global Fixtures 2021",
     streameyeId: "fd9b421e-1b7f-4db2-ae86-32ad54c6877c",
     copyMd:
-      "Some cool copy about DAZN here. It would be good to point out number of sizes and the fact that the template also produces statics for social automatically.",
+      "DAZN's most versatile display template with over 150 size which can show their fixtures globally.  \n\nThe amount of sizes available ensures that our client can publish HTML5 ads to any website and application within minutes and be the first one to reach online audiences when needed.",
   },
   {
-    id: "someID_here",
-    thumbUrl: "pp_galway_responsive_thumb.jpeg",
-    backdropUrl: "/showcase/Sportsbet-Promos-2020_backdrop.jpg",
+    id: "LIDL-Summer-20",
+    thumbUrl: "summer_lidl.jpg",
+    backdropUrl: "/showcase/lidl_backdrop.jpg",
     sizes: [
       {
-        seId: "98e9adc4-2cdd-4e52-9b7f-667e37925242/637835544527234284",
+        seId: "7997defd-dff7-4ef6-a162-5c14d25318e4",
+        w: 970,
+        h: 250,
+      },
+
+      {
+        seId: "bccb4fc4-bbde-48df-9d0f-6b58e224d4c7",
+        w: 300,
+        h: 600,
+      },
+
+      {
+        seId: "249f2083-4333-4249-bb79-58336e053a04",
         w: 300,
         h: 250,
       },
-      {
-        seId: "7a3ecaae-f80f-409b-885e-7022fbacfa1c/637835545484624489",
-        w: 728,
-        h: 90,
-      },
     ],
-    tags: ["HTML5", "Responsive", "Mobile"],
-    client: "Paddy Power",
-    title: "Galway Responsive Ads",
-    streameyeId: "98e9adc4-2cdd-4e52-9b7f-667e37925242/637835544527234284",
-    copyMd: "",
+    tags: ["HTML5"],
+    client: "LIDL - Bulgaria",
+    title: "LIDL's Summer Campaign in 2020",
+    streameyeId: "249f2083-4333-4249-bb79-58336e053a04",
+    copyMd:
+      "Lidl Bulgaria HTML5 banners are the perfect example of the versatility of Streameye.  \n\nThe template allows the online media team to be proactive changing the products on promotion without relying on design team or 3rd party agencies, mirroring their in-store campaigns efficiently.  \n\nTheir ads follow different themes according to the season thus reinforcing their promotions.",
   },
 ];
 export const SHOWCASE_TAGS = [

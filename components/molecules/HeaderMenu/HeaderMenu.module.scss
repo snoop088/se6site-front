@@ -76,7 +76,6 @@
   border-radius: 4px;
   padding: em(17) em(17) em(15);
   transition: background-color $transition;
-  margin: 1rem 1rem 2rem 1rem;
 
   font-weight: 500;
   &:hover {
@@ -84,6 +83,7 @@
   }
   @media (max-width: $tablet-h) {
     width: calc(100% - 2rem);
+    margin: 1rem 1rem 2rem 1rem;
   }
 }
 

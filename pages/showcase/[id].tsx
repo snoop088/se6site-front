@@ -107,9 +107,16 @@ export async function getStaticProps({
   return {
     props: {
       meta: {
-        title: "Streameye - App",
-        description: "I am the home page",
-        keywords: ["kw1", "kw2"],
+        title: "Streameye - Showcase - " + SHOWCASE_ITEMS[index].client,
+        description:
+          "Streameye generated ads for " + SHOWCASE_ITEMS[index].client,
+        keywords: [
+          "digital ads",
+          "html5",
+          "generated ads",
+          "ads for social channels",
+          "automated ads",
+        ],
       },
       item: SHOWCASE_ITEMS[index],
       topRoute: "/showcase",
