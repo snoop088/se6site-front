@@ -77,10 +77,13 @@
   padding: em(17) em(17) em(15);
   transition: background-color $transition;
   margin: 1rem 1rem 2rem 1rem;
-  width: calc(100vw - 2rem);
+
   font-weight: 500;
   &:hover {
     background-color: $color-light;
+  }
+  @media (max-width: $tablet-h) {
+    width: calc(100% - 2rem);
   }
 }
 
