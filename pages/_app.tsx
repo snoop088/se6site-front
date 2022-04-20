@@ -3,8 +3,6 @@ import { Layout } from "@/components/templates/layout/layout";
 import { ContextProvider } from "app-context/context-provider";
 import "swiper/scss";
 import "../styles/globals.scss";
-import { useContext } from "react";
-import { AppContext } from "app-context/app-context";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

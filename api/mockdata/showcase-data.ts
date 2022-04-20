@@ -330,6 +330,49 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     copyMd:
       "Lidl Bulgaria HTML5 banners are the perfect example of the versatility of Streameye.  \n\nThe template allows the online media team to be proactive changing the products on promotion without relying on design team or 3rd party agencies, mirroring their in-store campaigns efficiently.  \n\nTheir ads follow different themes according to the season thus reinforcing their promotions.",
   },
+  {
+    id: "32Red-Wins-And-Jackpots",
+    thumbUrl: "32red_preview.jpg",
+    backdropUrl: "/showcase/32red_backdrop.jpg",
+    sizes: [
+      {
+        seId: "7b28d054-4d73-4b31-bd0c-de888980589c",
+        w: 970,
+        h: 250,
+      },
+      {
+        seId: "31baffd8-ad4d-44e6-bbef-9bbc4ab992e6",
+        w: 728,
+        h: 90,
+      },
+      {
+        seId: "4656b1c2-f330-4db4-8c6b-de2ae548d774",
+        w: 300,
+        h: 600,
+      },
+      {
+        seId: "6eb7736b-a710-49fd-acbd-84a39f5de40e",
+        w: 160,
+        h: 600,
+      },
+      {
+        seId: "26a68d36-c45f-45b8-aafc-fa537bd78a6e",
+        w: 300,
+        h: 250,
+      },
+      {
+        seId: "1aef6256-c2c1-419c-b380-7c59a87cedcd?",
+        w: 320,
+        h: 50,
+      },
+    ],
+    tags: ["HTML5", "Mobile"],
+    client: "32 Red",
+    title: "32 Red Recent Wins and Jackpots",
+    streameyeId: "26a68d36-c45f-45b8-aafc-fa537bd78a6e",
+    copyMd:
+      "This **interactive template** created for 32 RED is not only engaging for the audience but also has a live data integration which ensures the most up-to-date experince for the customer.  \n\nThe client can pick and choose which games and jackpots to push live and thus steer the audiences' attention to the most relavent offers.",
+  },
 ];
 export const SHOWCASE_TAGS = [
   "Social",
