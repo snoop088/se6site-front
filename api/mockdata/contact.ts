@@ -10,6 +10,6 @@ export const MESSAGE = {
   copyMd: "./api/content/contact/contact.md",
 };
 export const INTERESTS = {
-  title: "Interested in optimising production of",
+  title: "Optimise production of:",
   values: ["Social ads", "Display ads", "Videos", "CRM assets", "Not sure"],
 };

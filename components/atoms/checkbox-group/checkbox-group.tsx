@@ -8,6 +8,8 @@ import {
   RegisterOptions,
   useController,
 } from "react-hook-form";
+import { FunkyCheckbox } from "../funky-checkbox/funky-checkbox";
+import Icon from "../Icon/Icon";
 
 import styles from "./checkbox-group.module.scss";
 
@@ -38,7 +40,7 @@ export function CheckboxGroup<T>(props: StreameyeCheckboxGroupProps<T>) {
     : "";
   const { field } = useController({ name, control });
   const { selected, setSelected, toggle, selectAll, isSelected } =
-    useSelectedItems(
+    useSelectedItems<string, keyof string>(
       checks.map((check) => check.value),
       undefined,
       field.value as string[]
@@ -49,9 +51,9 @@ export function CheckboxGroup<T>(props: StreameyeCheckboxGroupProps<T>) {
     const selectedValues = selected.filter((val) => {
       return checkValues.includes(val);
     });
-    setSelected(selectedValues);
+    setSelected([...selectedValues]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [checks]);
+  }, [checks.length]);
 
   useEffect(() => {
     field.onChange(selected);
@@ -77,14 +79,24 @@ export function CheckboxGroup<T>(props: StreameyeCheckboxGroupProps<T>) {
       >
         {checks.map((check, i) => (
           <span key={check.value} className={styles.check}>
-            <input
+            {/* <input
               type="checkbox"
               checked={isSelected(check.value)}
               value={check.value}
               onChange={handleChange}
               id={name + i}
             />
-            <label htmlFor={name + i}>{check.label}</label>
+            <label htmlFor={name + i}>{check.label}</label> */}
+            <FunkyCheckbox
+              label={check.label}
+              icon={<Icon icon="check" className={styles.funkyCheck} />}
+              labelClass={styles.funkyLabel}
+              boxClass={styles.funkyBox}
+              boxCheckedClass={styles.funkyBoxChecked}
+              onChange={handleChange}
+              value={check.value}
+              checked={isSelected(check.value)}
+            />
           </span>
         ))}
       </div>

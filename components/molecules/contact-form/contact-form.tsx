@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import CheckboxGroup from "@/components/atoms/checkbox-group/checkbox-group";
 import classNames from "classnames";
 import Button from "../Button/Button";
+import { FunkyCheckbox } from "@/components/atoms/funky-checkbox/funky-checkbox";
+import Icon from "@/components/atoms/Icon/Icon";
 interface ContactData {
   name: string;
   company: string;
@@ -18,11 +20,11 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
   const {
     handleSubmit,
     register,
-    getValues,
     control,
     formState: { errors, isValid },
   } = useForm<ContactData>({
     mode: "onChange",
+    reValidateMode: "onBlur",
     defaultValues: {
       name: "",
       company: "",
@@ -35,11 +37,12 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
   const submitForm = (formValue: ContactData) => {
     console.log(formValue);
   };
+
   return (
     <div className={styles.container}>
       <form onSubmit={handleSubmit(submitForm)}>
-        <h3>{interests.title}</h3>
         <div className={classNames([styles.interests, styles.twoCols])}>
+          <h4>{interests.title}</h4>
           <CheckboxGroup
             columnWidth="10rem"
             control={control}
@@ -50,7 +53,6 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
             }))}
           />
         </div>
-        <h3 className={styles.twoCols}>Your details</h3>
 
         <div className={styles.formInput}>
           <label htmlFor="name">
@@ -60,9 +62,6 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
             )}
           </label>
           <input
-            className={classNames({
-              [styles.filled]: getValues("name")?.length,
-            })}
             id="name"
             type="text"
             {...register("name", {
@@ -78,9 +77,6 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
             )}
           </label>
           <input
-            className={classNames({
-              [styles.filled]: getValues("email")?.length,
-            })}
             id="email"
             type="email"
             {...register("email", {
@@ -94,33 +90,13 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
         </div>
         <div className={styles.formInput}>
           <label htmlFor="phone">Phone</label>
-          <input
-            className={classNames({
-              [styles.filled]: getValues("phone")?.length,
-            })}
-            id="phone"
-            type="text"
-            {...register("phone")}
-          />
+          <input id="phone" type="text" {...register("phone")} />
         </div>
         <div className={styles.formInput}>
           <label htmlFor="company">Company</label>
-          <input
-            className={classNames({
-              [styles.filled]: getValues("company")?.length,
-            })}
-            id="company"
-            type="text"
-            {...register("company")}
-          />
+          <input id="company" type="text" {...register("company")} />
         </div>
-        <div
-          className={classNames([
-            styles.formInput,
-            styles.twoCols,
-            { [styles.filled]: getValues("message")?.length },
-          ])}
-        >
+        <div className={classNames([styles.formInput, styles.twoCols])}>
           <label htmlFor="message">
             Tell us about your project
             {errors?.message && (

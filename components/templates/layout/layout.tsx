@@ -1,12 +1,13 @@
 import styles from "./layout.module.scss";
 import cn from "classnames";
-import { ReactElement } from "react";
+import { ReactElement, useContext, useEffect } from "react";
 import Head from "next/head";
 import Header from "@/components/organisms/Header/Header";
 import { HEADER_MENUS } from "api/mockdata/header";
 import Footer from "@/components/organisms/Footer/Footer";
 import { FOOTER_DATA, FOOTER_MENUS, SOCIAL_ICONS } from "api/mockdata/footer";
 import { PageMeta } from "interfaces/page-meta";
+import { AppContext } from "app-context/app-context";
 
 interface LayoutProps {
   children: ReactElement;
@@ -15,6 +16,10 @@ interface LayoutProps {
 // use Router or other means to decide multiple layouts later.
 // below is just the General Layout with header/ main/ footer.
 export const Layout = ({ children, meta }: LayoutProps) => {
+  const { setProp } = useContext(AppContext);
+  useEffect(() => {
+    setProp({ isMenuOpen: false });
+  }, [children]);
   return (
     <div className={cn([styles.container, styles.general])}>
       <Head>

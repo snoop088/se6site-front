@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  align-items: center;
+  .hiddenCheckbox {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+// make them weaker than overwriting them?
+.boxContainer {
+  align-self: center;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  aspect-ratio: 1 / 1;
+  .box {
+    // default checked backround
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.checked {
+      background-color: lightseagreen;
+    }
+    margin: 5%;
+    border: 1px solid seagreen;
+    width: 90%;
+    height: 90%;
+  }
+}
+.label {
+  flex: 1;
+  padding-left: 0.5rem;
+}

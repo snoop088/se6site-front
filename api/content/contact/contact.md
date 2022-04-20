@@ -6,4 +6,4 @@ This is why we will not waste time contacting you unless we have something of va
 
 We are excited to learn more about your production processes and provide concrete ideas back, concise and to the point.
 
-_Let’s start a conversation._
+## Let’s start a conversation.

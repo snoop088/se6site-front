@@ -22,6 +22,9 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    img {
+      mix-blend-mode: multiply;
+    }
   }
   h1 {
     font-weight: 700;

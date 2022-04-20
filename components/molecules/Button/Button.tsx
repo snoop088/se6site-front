@@ -19,6 +19,7 @@ const Button = ({
   small,
   variant = "white",
   elevated,
+  disabled,
   onClick,
 }: ButtonProps) => {
   return (
@@ -29,6 +30,7 @@ const Button = ({
         styles[variant + "Variant"],
         { [styles.elevated]: elevated },
         { [styles.small]: small },
+        { [styles.disabled]: disabled },
       ])}
       onClick={onClick}
     >

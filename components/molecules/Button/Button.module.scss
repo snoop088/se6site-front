@@ -35,6 +35,10 @@
       box-shadow: 0px em(10, 22) em(24, 22) rgba($color-black, 0.35);
     }
   }
+  &.disabled {
+    pointer-events: none;
+    background-color: rgba($color: $color-alt-copy, $alpha: 0.33);
+  }
   color: $color-accent;
   font-size: rem(22);
   padding: em(16, 22) em(26, 22);
