@@ -45,10 +45,6 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
   });
   const submitForm = (formValue: ContactData) => {
     // Submit is handled by the Netlify robots on the root url "/"
-    if (formValue.interests.length > 0) {
-      formValue.interests = formValue.interests.toString(); // Netlify Form accept strings as values (TS Type modified)
-    }
-    console.log(formValue);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -151,6 +147,7 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
               disabled={!isValid || isSubmitting}
             />
           </div>
+          <input type="hidden" name="interests" />
           <input type="hidden" name="form-name" value="contact" />
         </form>
       )}
