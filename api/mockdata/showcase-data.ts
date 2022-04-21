@@ -366,7 +366,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
         h: 50,
       },
     ],
-    tags: ["HTML5", "Mobile"],
+    tags: ["HTML5", "Mobile", "Interactive"],
     client: "32 Red",
     title: "32 Red Recent Wins and Jackpots",
     streameyeId: "26a68d36-c45f-45b8-aafc-fa537bd78a6e",
@@ -448,7 +448,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
       },
     ],
     tags: ["HTML5", "Mobile"],
-    client: "PaddyPower Games",
+    client: "Paddy Power Games",
     title: "PP Games More Chances To Win",
     streameyeId: "5d344315-3878-4f5d-a738-74c55c8e894d",
     copyMd:
@@ -497,11 +497,54 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     copyMd:
       "Livescore's most complex template which serves multiple channels with HTML5 display banners, social, responsive as well as Landing Page headers & T&C's.  \n\nThe template includes 8 different offers and more than 20 sizes each with unique animations and layout.  \n\nThis project allows Livescore team to manage their promotions by utilizing the built in scheduler and assign what is being displayed across all channels for months to come **without the need for republishing.**",
   },
+  {
+    id: "PPB-LiveOdds-EPL",
+    thumbUrl: "pp_football_lo_preview.jpg",
+    backdropUrl: "/showcase/ppb_lo_backdrop.jpg",
+    sizes: [
+      {
+        seId: "f344eed5-5574-4fe2-bdbb-dbcf6bdcc95a",
+        w: 970,
+        h: 250,
+      },
+      {
+        seId: "3a88e60f-c924-4abe-85f8-3296bce2a106",
+        w: 728,
+        h: 90,
+      },
+      {
+        seId: "def29f05-14a6-4827-af69-7e305267324a",
+        w: 300,
+        h: 600,
+      },
+      {
+        seId: "a285077d-cbcc-49f8-b200-62aaf196736c",
+        w: 160,
+        h: 600,
+      },
+      {
+        seId: "f7bde395-1328-447c-a518-6a458fca410f",
+        w: 300,
+        h: 250,
+      },
+      {
+        seId: "a655938c-909a-405d-872e-8e2cf8fd43d8",
+        w: 320,
+        h: 50,
+      },
+    ],
+    tags: ["HTML5", "Mobile", "Live Data"],
+    client: "Paddy Power",
+    title: "Live Odds - English Premier League",
+    streameyeId: "f7bde395-1328-447c-a518-6a458fca410f",
+    copyMd:
+      "Streameye's trademark Live Odds template which is fully automated to show upcoming games in a specific league. Elapsed games are automatically replaced by future games and odds data is updated every 10 minutes, effectively making this a 0-maintenance ad for a full football season.  \n\nThis is achieved via a **Server-2-Server** integration of Streameye and our client's API, where display team members are able to schedule how many games to show from which sport, league or event.",
+  },
 ];
 export const SHOWCASE_TAGS = [
   "Social",
   "HTML5",
-  "Video",
   "Mobile",
   "Live Data",
+  "Interactive",
 ];
