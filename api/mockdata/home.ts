@@ -108,7 +108,7 @@ export const NOT_CONVINCED: {
     },
     {
       id: "Epson",
-      client: "Epson",
+      client: "EPSON",
       summary: "Streameye automates Epson's banner production in 20 languages.",
       cta: "more",
       logo: "/epson-logo.svg",

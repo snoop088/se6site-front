@@ -2,9 +2,9 @@ import Wrapper from "@/components/organisms/Wrapper/Wrapper";
 import { CaseStudyPreview } from "@/components/molecules/case-study-preview/case-study-preview";
 import styles from "./not-convinced.module.scss";
 import Button from "../Button/Button";
+import Link from "next/link";
 interface NotConvincedProps {
   title: string;
-  cta: string;
   caseStudyPreviews: {
     id: string;
     client: string;
@@ -16,7 +16,6 @@ interface NotConvincedProps {
 }
 export const NotConvinced = ({
   title,
-  cta,
   caseStudyPreviews,
 }: NotConvincedProps) => {
   return (
@@ -37,7 +36,11 @@ export const NotConvinced = ({
         ))}
       </div>
       <div className={styles.actionButton}>
-        <Button variant="green" title="Book a live demo" />
+        <Link href="/contact" passHref>
+          <a>
+            <Button variant="green" title="Book a live demo" />
+          </a>
+        </Link>
       </div>
     </Wrapper>
   );

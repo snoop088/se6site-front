@@ -21,25 +21,25 @@ export const FOOTER_MENUS = [
   },
 ];
 export const SOCIAL_ICONS = [
-  {
-    title: "instagram",
-    icon: "button-arrow",
-    href: "https://www.instagram.com/",
-  },
-  {
-    title: "youtube",
-    icon: "button-arrow",
-    href: "https://www.youtube.com/",
-  },
+  // {
+  //   title: "instagram",
+  //   icon: "button-arrow",
+  //   href: "https://www.instagram.com/",
+  // },
+  // {
+  //   title: "youtube",
+  //   icon: "button-arrow",
+  //   href: "https://www.youtube.com/",
+  // },
   {
     title: "linkedin",
-    icon: "button-arrow",
-    href: "https://www.linkedin.com/",
+    icon: "linkedin",
+    href: "https://www.linkedin.com/company/streameye/",
   },
   {
     title: "facebook",
-    icon: "button-arrow",
-    href: "https://www.facebook.com/",
+    icon: "facebook",
+    href: "https://www.facebook.com/profile.php?id=100075719213747",
   },
 ];
 export const FOOTER_DATA = {

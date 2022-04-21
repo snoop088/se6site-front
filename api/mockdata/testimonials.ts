@@ -25,7 +25,7 @@ export const TESTIMONIALS: Testimonial[] = [
     copyMd:
       "When you're localising content in over 20 languages and supplying assets in more than 80 different sizes across a variety of different territories, time and costs can quickly skyrocket. However, switching to using *Streameye* as our banner management tool, has helped us become much more agile and efficient. Their integration team have been an excellent partner and has added value by their willingness to make adjustments and customise the software to meet our individual needs. Plus they're fast as lightning which really helps in today's dynamic social media landscape.",
     client: "EPSON",
-    studyId: "EPSON",
+    studyId: "Epson",
     person: {
       name: "Pavel Gonevski",
       position: "Online channel marketing manager Epson Europe B.V.",

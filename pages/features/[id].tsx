@@ -14,6 +14,7 @@ import ReactMarkdown from "react-markdown";
 import Button from "@/components/molecules/Button/Button";
 
 import { FeatureEnterprise } from "interfaces/feature-enterprise";
+import Link from "next/link";
 
 interface PageProps {
   feature: FeatureItem;
@@ -62,11 +63,15 @@ const Index: NextPage<PageProps> = ({
                 />
               </div>
               <div className={styles.cta}>
-                <Button
-                  title="Get in touch to start"
-                  icon="button-arrow"
-                  variant="green"
-                />
+                <Link passHref href="/contact">
+                  <a>
+                    <Button
+                      title="Get in touch to start"
+                      icon="button-arrow"
+                      variant="green"
+                    />
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

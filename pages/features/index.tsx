@@ -20,6 +20,7 @@ import {
 } from "api/mockdata/features";
 import { FeaturesSlider } from "@/components/molecules/features-slider/features-slider";
 import { useWindowSize } from "hooks/useWindowSize";
+import Link from "next/link";
 interface PageProps {
   meta?: PageMeta;
   features: FeatureItemSlim[];
@@ -38,10 +39,6 @@ const Index: NextPage<PageProps> = ({
   const scrollToTop = useRef<null | HTMLDivElement>(null);
   const wSize = useWindowSize();
 
-  const demoClickHandler = () => {
-    console.log("demo clicked");
-  };
-
   const handleRevealMore = () => {
     if (!isRevealed) {
       // scroller();
@@ -58,15 +55,16 @@ const Index: NextPage<PageProps> = ({
       <Wrapper isWide className={styles.featuresContainer}>
         {features.map((feature) => (
           <div key={feature.id} className={styles.feature}>
-            <FeatureSlim
-              featureItemSlim={feature}
-              onDemoClick={demoClickHandler}
-            />
+            <FeatureSlim featureItemSlim={feature} />
           </div>
         ))}
       </Wrapper>
       <div className={styles.cta}>
-        <Button title="Lets talk" variant="green" onClick={demoClickHandler} />
+        <Link passHref href="/contact">
+          <a>
+            <Button title="Lets talk" variant="green" />
+          </a>
+        </Link>
       </div>
       <div className={styles.findOutMore} ref={scrollToRef}>
         <RevealMore
@@ -85,11 +83,11 @@ const Index: NextPage<PageProps> = ({
           title={helping.title}
           copy={helping.copy}
           cta={
-            <Button
-              title="Get in touch"
-              variant="green"
-              onClick={demoClickHandler}
-            />
+            <Link href="/contact" passHref>
+              <a>
+                <Button title="Get in touch" variant="green" />
+              </a>
+            </Link>
           }
         />
       </div>

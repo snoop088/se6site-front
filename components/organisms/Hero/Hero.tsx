@@ -5,6 +5,7 @@ import Button from "@/components/molecules/Button/Button";
 
 import styles from "./Hero.module.scss";
 import { useWindowSize } from "hooks/useWindowSize";
+import Link from "next/link";
 
 interface Props {
   title: string;
@@ -22,12 +23,16 @@ const Hero = ({ title, buttonTitle, buttonOnClick }: Props) => {
     <div className={styles.container}>
       <Wrapper className={styles.wrapper}>
         <h1 className={styles.title}>{title}</h1>
-        <Button
-          elevated
-          title={buttonTitle}
-          onClick={buttonOnClick}
-          icon={"button-arrow"}
-        />
+        <Link href="/contact" passHref>
+          <a>
+            <Button
+              elevated
+              title={buttonTitle}
+              onClick={buttonOnClick}
+              icon={"button-arrow"}
+            />
+          </a>
+        </Link>
       </Wrapper>
       <div className={styles.videoContainer}>
         <video

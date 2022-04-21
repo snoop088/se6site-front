@@ -7,11 +7,9 @@ import Button from "../Button/Button";
 import styles from "./feature-slim.module.scss";
 interface FeatureSlimProps {
   featureItemSlim: FeatureItemSlim;
-  onDemoClick: () => void;
 }
 export const FeatureSlim = ({
   featureItemSlim: { id, icon, title, benefits, mediaUrl },
-  onDemoClick,
 }: FeatureSlimProps) => {
   return (
     <div className={styles.container}>
@@ -22,13 +20,16 @@ export const FeatureSlim = ({
 
       <div className={styles.actionButtons}>
         <span className={styles.bookADemo}>
-          <Button
-            title="Book a demo"
-            onClick={onDemoClick}
-            variant="green"
-            icon="button-arrow"
-            small
-          />
+          <Link passHref href="/contact">
+            <a>
+              <Button
+                title="Book a demo"
+                variant="green"
+                icon="button-arrow"
+                small
+              />
+            </a>
+          </Link>
         </span>
         <span className={styles.readMore}>
           <Link href={"/features/" + id}>

@@ -33,7 +33,7 @@ export const CASE_STUDIES_SLIM: CaseStudyItemSlim[] = [
     mediaUrl: "/dazn_case.png",
   },
   {
-    id: "EPSON",
+    id: "Epson",
     client: "EPSON",
     titleMd:
       "ADVERTISE AND OPTIMISE YOUR BUSINESS IN *OVER 20 LANGUAGES AROUND THE WORLD*",
@@ -137,7 +137,7 @@ export const CASE_STUDIES_FULL: CaseStudyItem[] = [
     mediaUrl: "/dazn_case.png",
   },
   {
-    id: "EPSON",
+    id: "Epson",
     sections: [
       {
         title: "Company Description",

@@ -14,6 +14,7 @@ import {
   WHY_STREAMEYE,
 } from "api/mockdata/home";
 import type { NextPage } from "next";
+import Link from "next/link";
 import styles from "./index.module.scss";
 
 const Home: NextPage = () => {
@@ -53,7 +54,6 @@ const Home: NextPage = () => {
       <div className={styles.notConvinced}>
         <NotConvinced
           title={NOT_CONVINCED.title}
-          cta={NOT_CONVINCED.cta}
           caseStudyPreviews={NOT_CONVINCED.caseStudyPreviews}
         />
       </div>
@@ -62,12 +62,16 @@ const Home: NextPage = () => {
           title={WHY_IS_STREAMEYE_RIGHT.title}
           copy={WHY_IS_STREAMEYE_RIGHT.copy}
           cta={
-            <Button
-              variant="white"
-              elevated
-              title="Talk to us"
-              icon="button-arrow"
-            />
+            <Link href="/contact" passHref>
+              <a>
+                <Button
+                  variant="white"
+                  elevated
+                  title="Talk to us"
+                  icon="button-arrow"
+                />
+              </a>
+            </Link>
           }
         />
       </div>

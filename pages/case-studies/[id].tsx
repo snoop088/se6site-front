@@ -10,6 +10,7 @@ import { PageWithMeta } from "interfaces/page-with-meta";
 import { Testimonial } from "interfaces/testimonial";
 import { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
 import styles from "./[id].module.scss";
@@ -83,12 +84,16 @@ const CaseStudy: NextPage<PageProps> = ({
           copy={whyStreameye.copy}
           title={whyStreameye.title}
           cta={
-            <Button
-              variant="white"
-              elevated
-              title="Ask us how"
-              icon="button-arrow"
-            />
+            <Link passHref href="/contact">
+              <a>
+                <Button
+                  variant="white"
+                  elevated
+                  title="Ask us how"
+                  icon="button-arrow"
+                />
+              </a>
+            </Link>
           }
         />
       </section>

@@ -1,4 +1,5 @@
 import Wrapper from "@/components/organisms/Wrapper/Wrapper";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import Button from "../Button/Button";
 import styles from "./what-is-streameye.module.scss";
@@ -25,7 +26,11 @@ export const WhatIsStreameye = ({
         <ReactMarkdown>{copyMd}</ReactMarkdown>
         <h2>{boldCopy}</h2>
         <p>
-          <Button title={cta} variant="green" />
+          <Link passHref href="/contact">
+            <a>
+              <Button title={cta} variant="green" />
+            </a>
+          </Link>
         </p>
       </div>
     </Wrapper>

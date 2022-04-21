@@ -38,6 +38,10 @@
   }
   p.address {
     max-width: 14rem;
+    @media (max-width: $phone-v) {
+      text-align: center;
+      max-width: 100%;
+    }
   }
   @media (max-width: $desktop) {
     grid-template-columns: 1fr max-content;
@@ -81,9 +85,6 @@
   font-size: 0.9em;
   grid-area: address;
   margin: 0;
-  @media (max-width: $phone-v) {
-    text-align: center;
-  }
 }
 
 .mail {

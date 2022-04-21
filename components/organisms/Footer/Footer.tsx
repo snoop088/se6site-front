@@ -6,7 +6,6 @@ import Logo from "@/components/atoms/Logo/Logo";
 import FooterSocials from "@/components/molecules/FooterSocials/FooterSocials";
 
 import styles from "./Footer.module.scss";
-import { AppContext } from "app-context/app-context";
 interface Props {
   menuLinks: {
     href: string;
