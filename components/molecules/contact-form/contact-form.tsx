@@ -17,6 +17,15 @@ interface ContactFormProps {
   interests: { title: string; values: string[] };
 }
 export const ContactForm = ({ interests }: ContactFormProps) => {
+  // Encoding function to format the form data for Netlify
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   const {
     handleSubmit,
     register,
@@ -36,6 +45,13 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
   });
   const submitForm = (formValue: ContactData) => {
     console.log(formValue);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formValue }),
+    })
+      .then((data) => console.log("Success: ", data))
+      .catch((error) => console.log("Error: ", error));
   };
 
   return (
