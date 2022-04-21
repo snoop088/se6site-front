@@ -1,10 +1,11 @@
+import React, { useState } from "react";
 import styles from "./contact-form.module.scss";
 import { useForm } from "react-hook-form";
 import CheckboxGroup from "@/components/atoms/checkbox-group/checkbox-group";
 import classNames from "classnames";
 import Button from "../Button/Button";
-import { FunkyCheckbox } from "@/components/atoms/funky-checkbox/funky-checkbox";
-import Icon from "@/components/atoms/Icon/Icon";
+// import { FunkyCheckbox } from "@/components/atoms/funky-checkbox/funky-checkbox";
+// import Icon from "@/components/atoms/Icon/Icon";
 interface ContactData {
   name: string;
   company: string;
@@ -17,6 +18,7 @@ interface ContactFormProps {
   interests: { title: string; values: string[] };
 }
 export const ContactForm = ({ interests }: ContactFormProps) => {
+  const [submitted, setSubmitted] = useState(false);
   // Encoding function to format the form data for Netlify
   const encode = (data: { [key: string]: any }) => {
     return Object.keys(data)
@@ -30,7 +32,7 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
     handleSubmit,
     register,
     control,
-    formState: { errors, isValid, isSubmitted, isSubmitting },
+    formState: { errors, isValid, isSubmitting },
   } = useForm<ContactData>({
     mode: "onChange",
     reValidateMode: "onBlur",
@@ -52,13 +54,14 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
     })
       .then((data) => {
         console.log("Success: ", data);
+        setSubmitted(true);
       })
       .catch((error) => console.log("Error: ", error));
   };
 
   return (
     <div className={styles.container}>
-      {isSubmitted ? (
+      {submitted ? (
         <div>
           <h2>Thank you for contacting us!</h2>
           <p>We will be in touch with you shortly.</p>
@@ -75,7 +78,7 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
             <CheckboxGroup
               columnWidth="10rem"
               control={control}
-              name="interests"
+              name="interests" // Netlify Form doesn't detect this so I have added a hidden input at the end of the form
               checks={interests.values.map((interest) => ({
                 label: interest,
                 value: interest,
