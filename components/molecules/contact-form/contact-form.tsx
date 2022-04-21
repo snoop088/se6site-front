@@ -8,7 +8,7 @@ import Icon from "@/components/atoms/Icon/Icon";
 interface ContactData {
   name: string;
   company: string;
-  interests: string[];
+  interests: string[] | string;
   email: string;
   phone: string;
   message: string;
@@ -45,6 +45,10 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
   });
   const submitForm = (formValue: ContactData) => {
     // Submit is handled by the Netlify robots on the root url "/"
+    if (formValue.interests.length > 0) {
+      formValue.interests = formValue.interests.toString(); // Netlify Form accept strings as values (TS Type modified)
+    }
+    console.log(formValue);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
