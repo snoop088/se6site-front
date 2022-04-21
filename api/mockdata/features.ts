@@ -189,6 +189,6 @@ export const FEATURES_FULL: FeatureItem[] = [
         "Take advantage of a 1 month free trial with your own branded ads.",
       ],
     },
-    mediaUrl: "builders.mp4",
+    mediaUrl: "galleries.mp4",
   },
 ];
