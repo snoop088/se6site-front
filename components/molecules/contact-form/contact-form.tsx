@@ -74,7 +74,6 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
           data-netlify="true"
           data-netlify-recaptcha="true"
           data-netlify-honeypot="bot-field"
-          data-netlify-recaptcha="true"
         >
           <div className={classNames([styles.interests, styles.twoCols])}>
             <h4>{interests.title}</h4>
