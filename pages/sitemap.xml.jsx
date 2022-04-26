@@ -1,5 +1,3 @@
-import React from "react";
-import * as fs from "fs";
 import { BLOG_POSTS_SLIM } from "../api/mockdata/blog";
 import { CASE_STUDIES_SLIM } from "../api/mockdata/case-studies";
 import { SHOWCASE_ITEMS } from "../api/mockdata/showcase-data";
