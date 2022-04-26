@@ -6,6 +6,7 @@ import classNames from "classnames";
 import Button from "../Button/Button";
 // import { FunkyCheckbox } from "@/components/atoms/funky-checkbox/funky-checkbox";
 // import Icon from "@/components/atoms/Icon/Icon";
+
 interface ContactData {
   name: string;
   company: string;
@@ -72,6 +73,7 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
           onSubmit={handleSubmit(submitForm)}
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          data-netlify-recaptcha="true"
         >
           <div className={classNames([styles.interests, styles.twoCols])}>
             <h4>{interests.title}</h4>
@@ -142,6 +144,7 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
               })}
             ></textarea>
           </div>
+          <div data-netlify-recaptcha="true" />
           <div className={classNames([styles.action, styles.twoCols])}>
             <Button
               title="Send"
