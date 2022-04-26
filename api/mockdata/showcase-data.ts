@@ -331,6 +331,30 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
       "Lidl Bulgaria HTML5 banners are the perfect example of the versatility of Streameye.  \n\nThe template allows the online media team to be proactive changing the products on promotion without relying on design team or 3rd party agencies, mirroring their in-store campaigns efficiently.  \n\nTheir ads follow different themes according to the season thus reinforcing their promotions.",
   },
   {
+    id: "PP-Video-TurboPowerPrice",
+    thumbUrl: "pp-turbo-power-price.jpg",
+    backdropUrl: "/showcase/video_pp_backdrop.jpg",
+    sizes: [
+      {
+        adUrl: "1920x1080_1651001246283.mp4",
+        adType: "video",
+        w: 1920,
+        h: 1080,
+      },
+      {
+        adUrl: "1080x1080_1651001184105.mp4",
+        adType: "video",
+        w: 1080,
+        h: 1080,
+      },
+    ],
+    tags: ["Video", "Social"],
+    client: "Paddy Power",
+    title: "Paddy Power Turbo Power Price",
+    copyMd:
+      "Paddy Power social video generating template.  \n\nThe client is able to select different voice overs, type in the turbo odds and select relevant players from a Streameye Gallery",
+  },
+  {
     id: "32Red-Wins-And-Jackpots",
     thumbUrl: "32red_preview.jpg",
     backdropUrl: "/showcase/32red_backdrop.jpg",
@@ -547,4 +571,5 @@ export const SHOWCASE_TAGS = [
   "Mobile",
   "Live Data",
   "Interactive",
+  "Video",
 ];

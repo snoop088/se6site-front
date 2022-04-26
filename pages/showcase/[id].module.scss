@@ -13,10 +13,16 @@
     width: 100%;
     height: 100%;
   }
-  .backdropImage {
+
+  .backdrop {
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
     z-index: -1;
-    pointer-events: none;
-    position: fixed !important;
+    animation: fade-in 2000ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
   }
   .wrapper {
     display: flex;
@@ -33,6 +39,12 @@
       figure {
         padding: 0;
         margin: 0;
+      }
+      video {
+        source {
+          width: 100%;
+          height: auto;
+        }
       }
       @media (max-width: 1440px) {
         div[data-width="970"] {
@@ -78,5 +90,14 @@
         }
       }
     }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
