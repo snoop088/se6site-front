@@ -3,7 +3,9 @@ import { Layout } from "@/components/templates/layout/layout";
 import { ContextProvider } from "app-context/context-provider";
 import "swiper/scss";
 import "../styles/globals.scss";
+import "../public/libs/cookieconsent.css";
 import Script from "next/script";
+import { Consent } from "@/components/molecules/consent/consent";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -33,6 +35,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <Component {...pageProps} />
         </Layout>
       </ContextProvider>
+      <Consent />
     </>
   );
 }
