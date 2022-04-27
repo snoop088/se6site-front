@@ -2,13 +2,12 @@
 @import "@/styles/variables";
 .videoAdContainer {
   position: relative;
-  width: 100%;
   cursor: pointer;
-  video {
-    source {
-      width: 100%;
-      height: auto;
-    }
+  video,
+  source {
+    max-width: 100%;
+    height: auto;
+    max-height: 90vh;
   }
   .videoOverlay {
     position: absolute;
