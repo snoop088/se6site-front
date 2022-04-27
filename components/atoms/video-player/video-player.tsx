@@ -18,12 +18,10 @@ export const VideoPlayer = ({ videoSourceUrl }: VideoPlayerProps) => {
   return (
     <div className={styles.videoAdContainer} onClick={handleVidepPlayClick}>
       <video
-        width={"100%"}
-        height={"auto"}
         ref={videoRef}
-        src={"/showcase/videos/" + videoSourceUrl}
+        src={"/showcase/videos/" + videoSourceUrl + "#t=0.001"}
       >
-        <source src={"/showcase/videos/" + videoSourceUrl} />
+        <source src={"/showcase/videos/" + videoSourceUrl + "#t=0.001"} />
       </video>
       {!videoPlaying && (
         <div className={styles.videoOverlay}>
