@@ -77,7 +77,6 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
           name="contact"
           onSubmit={handleSubmit(submitForm)}
           data-netlify="true"
-          // data-netlify-recaptcha="true"
           data-netlify-honeypot="bot-field"
         >
           <div className={classNames([styles.interests, styles.twoCols])}>
@@ -149,7 +148,6 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
               })}
             ></textarea>
           </div>
-          {/* <div data-netlify-recaptcha="true" /> */}
           <div className={classNames([styles.action, styles.twoCols])}>
             <Button
               title="Send"
