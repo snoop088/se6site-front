@@ -352,7 +352,7 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     client: "Paddy Power",
     title: "Paddy Power Turbo Power Price",
     copyMd:
-      "Paddy Power social video generating template.  \n\nThe client is able to select different voice overs, type in the turbo odds and select relevant players from a Streameye Gallery",
+      "Paddy Power social video generating template.  \n\nOur client is able to select different voice overs for different offers, type the appropriate offer copy and select relevant players from a Streameye Gallery to make the visuals more relevant.  \n\nEffects such as snow or sun flare can be superimposed in the video output and more offer presets added in future to accomodate different messages and promotions.",
   },
   {
     id: "32Red-Wins-And-Jackpots",
@@ -563,6 +563,36 @@ export const SHOWCASE_ITEMS: IShowcaseItem[] = [
     streameyeId: "f7bde395-1328-447c-a518-6a458fca410f",
     copyMd:
       "Streameye's trademark Live Odds template which is fully automated to show upcoming games in a specific league. Elapsed games are automatically replaced by future games and odds data is updated every 10 minutes, effectively making this a 0-maintenance ad for a full football season.  \n\nThis is achieved via a **Server-2-Server** integration of Streameye and our client's API, where display team members are able to schedule how many games to show from which sport, league or event.",
+  },
+  {
+    id: "TSG-Video-Casino-Free-Spins",
+    thumbUrl: "ps_casino_preview.jpeg",
+    backdropUrl: "/showcase/Pokerstars-Casino-21_backdrop.jpg",
+    sizes: [
+      {
+        adUrl: "1920x1080_1651052642338.mp4",
+        adType: "video",
+        w: 1920,
+        h: 1080,
+      },
+      {
+        adUrl: "1080x1080_1651052513179.mp4",
+        adType: "video",
+        w: 1080,
+        h: 1080,
+      },
+      {
+        adUrl: "1080x1920_1651052563956.mp4",
+        adType: "video",
+        w: 1080,
+        h: 1920,
+      },
+    ],
+    tags: ["Video", "Social"],
+    client: "PokerStars Casino",
+    title: "PokerStars Casino Video Exporter",
+    copyMd:
+      "During the full implementation of Pokerstars Ads into Streameye, we were tasked with automating the video production for all of their active social media channels.  \n\nThe video template created has to cover not only different video lengths and the normal size ratios but also account for specific safe zones for each placement. The template allows Pokerstars Social Media team to export videos almost instantly and publish across Snapchat, Snapchat Stories, Facebook, Facebook Stories among others with the correct specifications in order to deliver the optimal ad experience to their customers.",
   },
 ];
 export const SHOWCASE_TAGS = [

@@ -9,6 +9,9 @@ import Image from "next/image";
 import { Tags } from "@/components/atoms/tags/tags";
 import { PageWithMeta } from "interfaces/page-with-meta";
 import classNames from "classnames";
+import { useRef, useState } from "react";
+import Icon from "@/components/atoms/Icon/Icon";
+import { VideoPlayer } from "@/components/atoms/video-player/video-player";
 
 interface PageProps extends PageWithMeta {
   item: IShowcaseItem;
@@ -70,15 +73,7 @@ const ShowcaseDetail: NextPage<PageProps> = ({
                   </figure>
                 )}
                 {size.adUrl && size.adType === "video" && (
-                  <video
-                    width={"100%"}
-                    height={"auto"}
-                    controls
-                    muted
-                    src={"/showcase/videos/" + size.adUrl}
-                  >
-                    <source src={"/showcase/videos/" + size.adUrl} />
-                  </video>
+                  <VideoPlayer videoSourceUrl={size.adUrl} />
                 )}
               </div>
             ))}
