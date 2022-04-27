@@ -54,8 +54,13 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
       body: encode({ "form-name": "contact", ...formValue }),
     })
       .then((data) => {
-        console.log("Success: ", data);
-        setSubmitted(true);
+        console.log(data);
+        if (data.status == 200) {
+          console.log("Success:", data);
+          setSubmitted(true);
+        } else {
+          console.log("Error:", data);
+        }
       })
       .catch((error) => console.log("Error: ", error));
   };
