@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import styles from "./[id].module.scss";
 import { SHOWCASE_ITEMS } from "api/mockdata/showcase-data";
-import { PageMeta } from "interfaces/page-meta";
 import { IShowcaseItem } from "interfaces/showcase-item";
 import { PageTitle } from "@/components/atoms/page-title/page-title";
 import Wrapper from "@/components/organisms/Wrapper/Wrapper";
@@ -9,6 +8,10 @@ import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import { Tags } from "@/components/atoms/tags/tags";
 import { PageWithMeta } from "interfaces/page-with-meta";
+import classNames from "classnames";
+import { useRef, useState } from "react";
+import Icon from "@/components/atoms/Icon/Icon";
+import { VideoPlayer } from "@/components/atoms/video-player/video-player";
 
 interface PageProps extends PageWithMeta {
   item: IShowcaseItem;
@@ -25,17 +28,14 @@ const ShowcaseDetail: NextPage<PageProps> = ({
 }) => {
   return (
     <div className={styles.container}>
-      <Image
-        src={item.backdropUrl}
-        layout="fill"
-        alt={item.client}
-        className={styles.backdropImage}
-        priority
-        objectFit="cover"
-        objectPosition={"center center"}
-        placeholder="empty"
-        quality={95}
-      />
+      <div
+        style={{
+          backgroundImage: `url(${item.backdropUrl})`,
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+        }}
+        className={classNames([styles.backdrop])}
+      ></div>
       <section className={styles.content}>
         <PageTitle
           title={item.client}
@@ -71,6 +71,9 @@ const ShowcaseDetail: NextPage<PageProps> = ({
                       alt={item.client}
                     />
                   </figure>
+                )}
+                {size.adUrl && size.adType === "video" && (
+                  <VideoPlayer videoSourceUrl={size.adUrl} />
                 )}
               </div>
             ))}
