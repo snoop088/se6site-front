@@ -4,8 +4,7 @@ import { useForm } from "react-hook-form";
 import CheckboxGroup from "@/components/atoms/checkbox-group/checkbox-group";
 import classNames from "classnames";
 import Button from "../Button/Button";
-// import { FunkyCheckbox } from "@/components/atoms/funky-checkbox/funky-checkbox";
-// import Icon from "@/components/atoms/Icon/Icon";
+
 interface ContactData {
   name: string;
   company: string;
@@ -47,14 +46,19 @@ export const ContactForm = ({ interests }: ContactFormProps) => {
   });
   const submitForm = (formValue: ContactData) => {
     // Submit is handled by the Netlify robots on the root url "/"
-    fetch("/", {
+    fetch("/index.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formValue }),
     })
       .then((data) => {
-        console.log("Success: ", data);
-        setSubmitted(true);
+        console.log(data);
+        if (data.status == 200) {
+          console.log("Success:", data);
+          setSubmitted(true);
+        } else {
+          console.log("Error:", data);
+        }
       })
       .catch((error) => console.log("Error: ", error));
   };
