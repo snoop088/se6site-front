@@ -110,7 +110,7 @@ export async function getStaticPaths() {
   const paths = CASE_STUDIES_FULL.map((item) => ({ params: { id: item.id } }));
   return {
     paths,
-    fallback: false, // false or 'blocking'
+    fallback: "blocking", // false or 'blocking'
   };
 }
 export async function getStaticProps({
@@ -120,6 +120,14 @@ export async function getStaticProps({
 }) {
   // eventually get meta data from CMS?
   const index = CASE_STUDIES_FULL.findIndex((item) => item.id === id);
+  if (index === -1) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
   const nextId =
     index < CASE_STUDIES_FULL.length - 1 ? CASE_STUDIES_FULL[index + 1].id : 0;
   const testimonial = TESTIMONIALS.find(
