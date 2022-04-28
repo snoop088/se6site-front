@@ -9,8 +9,7 @@ import Image from "next/image";
 import { Tags } from "@/components/atoms/tags/tags";
 import { PageWithMeta } from "interfaces/page-with-meta";
 import classNames from "classnames";
-import { useRef, useState } from "react";
-import Icon from "@/components/atoms/Icon/Icon";
+
 import { VideoPlayer } from "@/components/atoms/video-player/video-player";
 
 interface PageProps extends PageWithMeta {

@@ -8,8 +8,6 @@ import { NextPage } from "next";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 
-import { readFile } from "fs";
-
 import styles from "./[id].module.scss";
 import { readTheFile } from "helpers/read-the-file";
 
@@ -20,10 +18,15 @@ interface PageProps extends PageWithMeta {
 }
 
 const BlogArticle: NextPage<PageProps> = ({
-  blogItem: { title, mediaUrl, author, date, copyMd },
+  blogItem,
   selectedArticles,
   blogCopyString,
 }: PageProps) => {
+  // const { isFallback } = useRouter();
+  // if (isFallback) {
+  //   return <div>WHAT!</div>;
+  // }
+  const { title, mediaUrl, author, date, copyMd } = blogItem;
   const formattedDate = new Date(date).toDateString();
   return (
     <div className={styles.container}>
@@ -54,7 +57,7 @@ export async function getStaticPaths() {
   const paths = BLOG_POSTS_FULL.map((item) => ({ params: { id: item.id } }));
   return {
     paths,
-    fallback: false, // false or 'blocking'
+    fallback: "blocking", // false or 'blocking'
   };
 }
 export async function getStaticProps({
@@ -64,6 +67,14 @@ export async function getStaticProps({
 }) {
   // eventually get meta data from CMS?
   const index = BLOG_POSTS_FULL.findIndex((item) => item.id === id);
+  if (index === -1) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
   const nextId =
     index < BLOG_POSTS_FULL.length - 1 ? BLOG_POSTS_FULL[index + 1].id : 0;
 
