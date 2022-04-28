@@ -100,7 +100,7 @@ export async function getStaticPaths() {
   const paths = FEATURES_FULL.map((item) => ({ params: { id: item.id } }));
   return {
     paths,
-    fallback: false, // false or 'blocking'
+    fallback: "blocking", // false or 'blocking'
   };
 }
 export async function getStaticProps({
@@ -110,6 +110,14 @@ export async function getStaticProps({
 }) {
   // eventually get meta data from CMS?
   const index = FEATURES_FULL.findIndex((item) => item.id === id);
+  if (index === -1) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
   const prevId = index > 0 ? FEATURES_FULL[index - 1].id : null;
   const nextId =
     index < FEATURES_FULL.length - 1 ? FEATURES_FULL[index + 1].id : null;

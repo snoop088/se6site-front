@@ -93,7 +93,7 @@ export async function getStaticPaths() {
   const paths = SHOWCASE_ITEMS.map((item) => ({ params: { id: item.id } }));
   return {
     paths,
-    fallback: false, // false or 'blocking'
+    fallback: "blocking", // false or 'blocking'
   };
 }
 export async function getStaticProps({
@@ -102,7 +102,16 @@ export async function getStaticProps({
   params: { id: string };
 }) {
   // eventually get meta data from CMS?
+
   const index = SHOWCASE_ITEMS.findIndex((item) => item.id === id);
+  if (index === -1) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
   const prevId = index > 0 ? SHOWCASE_ITEMS[index - 1].id : null;
   const nextId =
     index < SHOWCASE_ITEMS.length - 1 ? SHOWCASE_ITEMS[index + 1].id : null;
