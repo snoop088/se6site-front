@@ -44,7 +44,6 @@ export const Layout = ({ children, meta }: LayoutProps) => {
           socialsItems={SOCIAL_ICONS}
         />
       </footer>
-      {/* <Consent /> */}
     </div>
   );
 };
